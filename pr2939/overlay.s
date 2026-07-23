@@ -91,11 +91,11 @@ walk:
     b walk
 create:
     li 3, 9                     # id (game debug uses 1/7/8)
-    li 4, 20                    # x
-    li 5, 420                   # y
+    li 4, 24                    # x
+    li 5, 380                   # y (3 rows x 18px, above the bottom edge)
     li 6, 32
-    li 7, 3
-    addi 8, 31, -336
+    li 7, 4
+    addi 8, 31, -344
     CALL CREATE
     cmplwi 3, 0
     bne created
@@ -172,29 +172,32 @@ got_ext:
     beq judged
     addi 23, 31, 104
 judged:
-    mr 3, 29
+    mr 3, 29                    # "ext  0x07 CORNERIA"
     addi 4, 31, 24
     mr 5, 28
     mr 6, 24
-    mr 7, 27
     CALL PRINTF
-    mr 3, 29
+    mr 3, 29                    # "int  0x0E (map 0x0E) OK"
     addi 4, 31, 64
     mr 5, 26
-    mr 6, 25
+    mr 6, 27
     mr 7, 23
     CALL PRINTF
-    # third line: pending kiosk target, while it differs from current
+    mr 3, 29                    # "file GrCn.dat"
+    addi 4, 31, 40
+    mr 5, 25
+    CALL PRINTF
+    # fourth line: pending target, while it differs from current
     lwz 8, 0(31)
     cmplwi 8, 0
-    beq no_line3
+    beq no_line4
     cmpw 8, 28
-    beq no_line3
+    beq no_line4
     mr 3, 29
-    addi 4, 31, 80
+    addi 4, 31, 48
     mr 5, 8
     CALL PRINTF
-no_line3:
+no_line4:
     # buttons (mode >= 1): P1 D-pad Right/Left cycles the external stage id
     lwz 5, 116(31)
     cmplwi 5, 0
@@ -202,14 +205,24 @@ no_line3:
     lis 5, PAD@h
     ori 5, 5, PAD@l
     lwz 6, 8(5)                 # HSD_PadCopyStatus[0].trigger
+    andi. 7, 6, 0x100           # A: arm autoplay
+    beq no_arm
+    li 0, 1
+    stw 0, -352(31)
+no_arm:
     andi. 7, 6, 2               # D-pad Right: next
     bne adv_next
     andi. 7, 6, 1               # D-pad Left: prev
     bne adv_prev
-    # autosweep (mode 2): walk external ids without input, record results
+    # autoplay: walk external ids without input, record results.
+    # Runs always in mode 2 (headless autosweep); in mode 1 after A arms it.
     lwz 5, 116(31)
     cmplwi 5, 2
-    bne done
+    beq sweep_go
+    lwz 5, -352(31)
+    cmplwi 5, 0
+    beq done
+sweep_go:
     lwz 5, -844(31)
     cmplwi 5, 0
     bne done
@@ -220,10 +233,27 @@ no_line3:
     stw 8, 0(31)
 sweep_check:
     cmpw 8, 28                  # still waiting for a pending reload?
-    beq sweep_stable
+    bne sweep_wait
+    cmplwi 26, 0                # and for an actually loaded stage
+    bne sweep_stable
+sweep_wait:
     li 0, 0
     stw 0, -840(31)
-    b done
+    lwz 9, -836(31)
+    addi 9, 9, 1
+    stw 9, -836(31)
+    cmpwi 9, 60                 # scene stuck (e.g. CSS): poke the exit again
+    blt done
+    li 0, 0
+    stw 0, -836(31)
+    lwz 9, -348(31)
+    addi 9, 9, 1
+    stw 9, -348(31)
+    cmpwi 9, 16                 # target never loads (the game short-circuits
+    blt poke                    # same-stage reloads, e.g. 0x19->0x1A): skip it
+    li 0, 0
+    stw 0, -348(31)
+    b adv_next
 sweep_stable:
     lwz 9, -840(31)
     addi 9, 9, 1
@@ -249,32 +279,26 @@ sweep_stable:
     stw 0, -844(31)
     b done
 adv_next:
-    lwz 8, 0(31)
-    cmplwi 8, 0
-    bne 1f
-    mr 8, 28
-1:  addi 8, 8, 1
-    cmplwi 8, 21
-    bne 2f
-    addi 8, 8, 1
-2:  cmplwi 8, 32
-    ble commit
-    li 8, 2
-    b commit
+    addi 5, 31, -84
+    b adv_common
 adv_prev:
+    addi 5, 31, -48
+adv_common:
     lwz 8, 0(31)
     cmplwi 8, 0
     bne 1f
     mr 8, 28
-1:  addi 8, 8, -1
-    cmplwi 8, 21
-    bne 2f
-    addi 8, 8, -1
-2:  cmplwi 8, 2
+1:  cmplwi 8, 32
+    bgt 2f
+    lbzx 8, 5, 8                # order table: avoids same-stage reloads
+    cmplwi 8, 2
     bge commit
-    li 8, 32
+2:  li 8, 2
 commit:
     stw 8, 0(31)
+    li 0, 0
+    stw 0, -348(31)
+poke:
     li 6, 3                     # force current minor scene to exit,
     lis 5, PENDSC@h             # fn_8016E730 will apply the pending id
     ori 5, 5, PENDSC@l

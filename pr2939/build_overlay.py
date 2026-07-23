@@ -75,8 +75,9 @@ OFF_FG = 0x0C
 OFF_SCALE_X = 0x10
 OFF_SCALE_Y = 0x14
 OFF_FMT1 = 0x18
+OFF_FMT3 = 0x28
+OFF_FMT4 = 0x30
 OFF_FMT2 = 0x40
-OFF_FMT3 = 0x50
 OFF_STR_OK = 0x60
 OFF_STR_UNK = 0x64
 OFF_STR_BAD = 0x68
@@ -89,19 +90,46 @@ OFF_BLOB_END = 0x210
 OFF_RES_N = -0x350  # number of recorded result rows
 OFF_RES_DONE = -0x34C  # autosweep-finished flag
 OFF_RES_STABLE = -0x348  # frames the current stage has been stable
+OFF_RES_WAIT = -0x344  # frames spent waiting for a pending reload
 OFF_RES_ROWS = -0x340  # rows of {ext, map_internal, live_internal}
 RES_MAX = 40
-OFF_BUF = -0x150  # DevText glyph buffer: w*h*2+4 = 32*3*2+4 = 0xC4
-BUF_W, BUF_H = 32, 3
-assert OFF_RES_ROWS + RES_MAX * 12 <= OFF_BUF
-assert OFF_BUF + BUF_W * BUF_H * 2 + 4 <= 0
+OFF_ARMED = -0x160  # autoplay armed (A press in kiosk; always in autosweep)
+OFF_POKECNT = -0x15C  # failed reload pokes for the current pending target
+OFF_BUF = -0x158  # DevText glyph buffer: w*h*2+4 = 32*4*2+4 = 0x104
+BUF_W, BUF_H = 32, 4
+# Stage-cycle order tables (written by a second gecko 06 block). 0x15 (the
+# deleted entry) and 0x1A (the second Icicle Mountain entry) are excluded:
+# loading either through the VS flow hard-freezes/crashes the game — found
+# empirically; 0x1A froze both interactively and headlessly, from 0x19
+# (same-internal reload) AND from 0x1B (Flat Zone).
+OFF_NEXT_TBL = -0x54  # next[33]: cur external -> next external
+OFF_PREV_TBL = -0x30  # prev[33]
+assert OFF_RES_ROWS + RES_MAX * 12 <= OFF_ARMED
+assert OFF_BUF + BUF_W * BUF_H * 2 + 4 <= OFF_NEXT_TBL
+assert OFF_NEXT_TBL + 33 <= OFF_PREV_TBL and OFF_PREV_TBL + 33 <= 0
+
+CYCLE = (list(range(0x02, 0x15)) + [0x16, 0x17, 0x18, 0x19]
+         + list(range(0x1B, 0x21)))
+
+
+def build_cycle_tables() -> bytes:
+    nxt = bytearray([EXT_MIN] * 33)
+    prv = bytearray([EXT_MIN] * 33)
+    for i, cur in enumerate(CYCLE):
+        nxt[cur] = CYCLE[(i + 1) % len(CYCLE)]
+        prv[cur] = CYCLE[(i - 1) % len(CYCLE)]
+    blob = bytearray(OFF_PREV_TBL - OFF_NEXT_TBL + 33)
+    blob[0:33] = nxt
+    blob[OFF_PREV_TBL - OFF_NEXT_TBL:] = prv
+    return bytes(blob)
 OFF_CODE = 0x210
 CODE_BASE = STATE + OFF_CODE
 DATA_BASE = STATE + OFF_BG
 
-FMT1 = "ext=%02X %s map=%02X\n"
-FMT2 = "live=%02X %s %s"
-FMT3 = "\nnext=%02X"
+FMT1 = "ext  0x%02X %s\n"
+FMT2 = "int  0x%02X (map 0x%02X) %s\n"
+FMT3 = "file %s"
+FMT4 = "\nnext 0x%02X"
 
 EXT_MIN, EXT_MAX, EXT_SKIP = 0x02, 0x20, 0x15
 
@@ -128,11 +156,12 @@ def build_data(external_names: dict, mode: int) -> bytes:
 
     put(OFF_BG, struct.pack(">I", 0x000000C0))  # GXColor black, a=0xC0
     put(OFF_FG, struct.pack(">I", 0xFFFFFFFF))  # GXColor white
-    put(OFF_SCALE_X, struct.pack(">f", 9.0))
-    put(OFF_SCALE_Y, struct.pack(">f", 12.0))
+    put(OFF_SCALE_X, struct.pack(">f", 14.0))
+    put(OFF_SCALE_Y, struct.pack(">f", 18.0))
     put(OFF_FMT1, FMT1.encode() + b"\0")
     put(OFF_FMT2, FMT2.encode() + b"\0")
     put(OFF_FMT3, FMT3.encode() + b"\0")
+    put(OFF_FMT4, FMT4.encode() + b"\0")
     put(OFF_STR_OK, b"OK\0")
     put(OFF_STR_UNK, b"?\0")
     put(OFF_STR_BAD, b"MISMATCH\0")
@@ -241,8 +270,8 @@ walk:
     b walk
 create:
     li 3, 9                     # id (game debug uses 1/7/8)
-    li 4, 20                    # x
-    li 5, 420                   # y
+    li 4, 24                    # x
+    li 5, 380                   # y (3 rows x 18px, above the bottom edge)
     li 6, {BUF_W}
     li 7, {BUF_H}
     addi 8, 31, {OFF_BUF}
@@ -322,29 +351,32 @@ got_ext:
     beq judged
     addi 23, 31, {OFF_STR_BAD}
 judged:
-    mr 3, 29
+    mr 3, 29                    # "ext  0x07 CORNERIA"
     addi 4, 31, {OFF_FMT1}
     mr 5, 28
     mr 6, 24
-    mr 7, 27
     CALL PRINTF
-    mr 3, 29
+    mr 3, 29                    # "int  0x0E (map 0x0E) OK"
     addi 4, 31, {OFF_FMT2}
     mr 5, 26
-    mr 6, 25
+    mr 6, 27
     mr 7, 23
     CALL PRINTF
-    # third line: pending kiosk target, while it differs from current
+    mr 3, 29                    # "file GrCn.dat"
+    addi 4, 31, {OFF_FMT3}
+    mr 5, 25
+    CALL PRINTF
+    # fourth line: pending target, while it differs from current
     lwz 8, {OFF_PENDING}(31)
     cmplwi 8, 0
-    beq no_line3
+    beq no_line4
     cmpw 8, 28
-    beq no_line3
+    beq no_line4
     mr 3, 29
-    addi 4, 31, {OFF_FMT3}
+    addi 4, 31, {OFF_FMT4}
     mr 5, 8
     CALL PRINTF
-no_line3:
+no_line4:
     # buttons (mode >= 1): P1 D-pad Right/Left cycles the external stage id
     lwz 5, {OFF_MODE}(31)
     cmplwi 5, 0
@@ -352,14 +384,24 @@ no_line3:
     lis 5, PAD@h
     ori 5, 5, PAD@l
     lwz 6, 8(5)                 # HSD_PadCopyStatus[0].trigger
+    andi. 7, 6, 0x100           # A: arm autoplay
+    beq no_arm
+    li 0, 1
+    stw 0, {OFF_ARMED}(31)
+no_arm:
     andi. 7, 6, 2               # D-pad Right: next
     bne adv_next
     andi. 7, 6, 1               # D-pad Left: prev
     bne adv_prev
-    # autosweep (mode 2): walk external ids without input, record results
+    # autoplay: walk external ids without input, record results.
+    # Runs always in mode 2 (headless autosweep); in mode 1 after A arms it.
     lwz 5, {OFF_MODE}(31)
     cmplwi 5, 2
-    bne done
+    beq sweep_go
+    lwz 5, {OFF_ARMED}(31)
+    cmplwi 5, 0
+    beq done
+sweep_go:
     lwz 5, {OFF_RES_DONE}(31)
     cmplwi 5, 0
     bne done
@@ -370,10 +412,27 @@ no_line3:
     stw 8, {OFF_PENDING}(31)
 sweep_check:
     cmpw 8, 28                  # still waiting for a pending reload?
-    beq sweep_stable
+    bne sweep_wait
+    cmplwi 26, 0                # and for an actually loaded stage
+    bne sweep_stable
+sweep_wait:
     li 0, 0
     stw 0, {OFF_RES_STABLE}(31)
-    b done
+    lwz 9, {OFF_RES_WAIT}(31)
+    addi 9, 9, 1
+    stw 9, {OFF_RES_WAIT}(31)
+    cmpwi 9, 60                 # scene stuck (e.g. CSS): poke the exit again
+    blt done
+    li 0, 0
+    stw 0, {OFF_RES_WAIT}(31)
+    lwz 9, {OFF_POKECNT}(31)
+    addi 9, 9, 1
+    stw 9, {OFF_POKECNT}(31)
+    cmpwi 9, 16                 # target never loads (the game short-circuits
+    blt poke                    # same-stage reloads, e.g. 0x19->0x1A): skip it
+    li 0, 0
+    stw 0, {OFF_POKECNT}(31)
+    b adv_next
 sweep_stable:
     lwz 9, {OFF_RES_STABLE}(31)
     addi 9, 9, 1
@@ -399,32 +458,26 @@ sweep_stable:
     stw 0, {OFF_RES_DONE}(31)
     b done
 adv_next:
-    lwz 8, {OFF_PENDING}(31)
-    cmplwi 8, 0
-    bne 1f
-    mr 8, 28
-1:  addi 8, 8, 1
-    cmplwi 8, {EXT_SKIP}
-    bne 2f
-    addi 8, 8, 1
-2:  cmplwi 8, {EXT_MAX}
-    ble commit
-    li 8, {EXT_MIN}
-    b commit
+    addi 5, 31, {OFF_NEXT_TBL}
+    b adv_common
 adv_prev:
+    addi 5, 31, {OFF_PREV_TBL}
+adv_common:
     lwz 8, {OFF_PENDING}(31)
     cmplwi 8, 0
     bne 1f
     mr 8, 28
-1:  addi 8, 8, -1
-    cmplwi 8, {EXT_SKIP}
-    bne 2f
-    addi 8, 8, -1
-2:  cmplwi 8, {EXT_MIN}
+1:  cmplwi 8, {EXT_MAX}
+    bgt 2f
+    lbzx 8, 5, 8                # order table: avoids same-stage reloads
+    cmplwi 8, {EXT_MIN}
     bge commit
-    li 8, {EXT_MAX}
+2:  li 8, {EXT_MIN}
 commit:
     stw 8, {OFF_PENDING}(31)
+    li 0, 0
+    stw 0, {OFF_POKECNT}(31)
+poke:
     li 6, 3                     # force current minor scene to exit,
     lis 5, PENDSC@h             # fn_8016E730 will apply the pending id
     ori 5, 5, PENDSC@l
@@ -444,8 +497,9 @@ orig_tail:
     b DRAWALL_RET               # resolved by ld (stripped for the Gecko C2 variant)
 """
 
-# Hook at fn_8016E730(StartMeleeData* r3): apply the kiosk's pending external
-# id to rules.xE; first time through, adopt the game's own value instead.
+# Hook at fn_8016E730(StartMeleeData* r3): the pending external id is the
+# single source of truth for rules.xE (a per-frame static INI write would race
+# with this store and pin every match to its value). Defaults to EXT_MIN.
 MATCHHOOK_ASM = f"""
 .set STATE, {STATE:#x}
 .text
@@ -455,13 +509,11 @@ match_hook:
     ori 12, 12, STATE@l
     lwz 11, {OFF_PENDING}(12)
     cmplwi 11, 0
-    beq init_pending
-    sth 11, 0xE(3)
-    b tail
-init_pending:
-    lhz 11, 0xE(3)
+    bne have_pending
+    li 11, {EXT_MIN}
     stw 11, {OFF_PENDING}(12)
-tail:
+have_pending:
+    sth 11, 0xE(3)
 """
 
 
@@ -521,8 +573,9 @@ def w8c(addr: int, value: int) -> list:
 
 
 def ini(title: str, lines: list) -> str:
-    return "\n".join(["[Gecko]", f"${title}", *lines,
-                      "[Gecko_Enabled]", f"${title}", ""])
+    # `+$` marks the code enabled directly; Dolphin splits the name at '['
+    # (creator suffix), so a [Gecko_Enabled] entry would have to omit it.
+    return "\n".join(["[Gecko]", f"+${title}", *lines, ""])
 
 
 def kiosk_lines(core, data, matchhook, displaced_match) -> list:
@@ -530,6 +583,7 @@ def kiosk_lines(core, data, matchhook, displaced_match) -> list:
     lines = []
     lines += c2(A.DEVTEXT_DRAW_ALL, core)
     lines += w06(DATA_BASE, data)
+    lines += w06(STATE + OFF_NEXT_TBL, build_cycle_tables())
     # memory card prompt -> li r3, 45; blr
     lines += w32c(A.MEMCARD_PROMPT, 0x3860002D)
     lines += w32c(A.MEMCARD_PROMPT + 4, 0x4E800020)
@@ -538,9 +592,10 @@ def kiosk_lines(core, data, matchhook, displaced_match) -> list:
         lines += c2(addr, struct.pack(">II", 0x38600002, read_dol_word(addr)))
     # fn_8016E730: apply pending external id to StartMeleeRules::xE
     lines += c2(A.MATCH_START, matchhook + struct.pack(">I", displaced_match))
-    # StartMeleeData defaults in both scene-data blocks: stage + 2 CPU players
+    # StartMeleeData defaults in both scene-data blocks: 2 CPU players.
+    # No stage write here: the fn_8016E730 hook owns rules.xE (an every-frame
+    # static write would race with it and pin every match to one stage).
     for base in (A.VS_DATA, A.GS_VS_DATA):
-        lines += w16c(base + 0x0E, EXT_MIN)
         for i in range(6):
             p = base + 0x60 + i * 0x24
             if i < 2:
@@ -583,6 +638,8 @@ def main() -> None:
         "res_n": STATE + OFF_RES_N, "res_done": STATE + OFF_RES_DONE,
         "res_rows": STATE + OFF_RES_ROWS, "res_max": RES_MAX,
         "ext_range": [EXT_MIN, EXT_MAX, EXT_SKIP],
+        "targets": CYCLE,
+        "untestable": [0x15, 0x1A],
         "head_sha": expected["head_sha"],
     }
     (HERE / "overlay_meta.json").write_text(json.dumps(meta, indent=1))

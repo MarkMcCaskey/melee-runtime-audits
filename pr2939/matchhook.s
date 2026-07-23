@@ -7,10 +7,8 @@ match_hook:
     ori 12, 12, STATE@l
     lwz 11, 0(12)
     cmplwi 11, 0
-    beq init_pending
-    sth 11, 0xE(3)
-    b tail
-init_pending:
-    lhz 11, 0xE(3)
+    bne have_pending
+    li 11, 2
     stw 11, 0(12)
-tail:
+have_pending:
+    sth 11, 0xE(3)
