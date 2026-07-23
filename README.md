@@ -14,15 +14,17 @@ claims against the live game, in two mutually reinforcing ways:
    (`-C Dolphin.General.GDBPort=...`): boots the game headless, forces the
    relevant code paths, and reads back what the engine actually does. Results
    stream to JSONL and render to a markdown report.
-2. **Human-visible overlay** — Gecko codes (usable on any Dolphin, no tooling)
-   that render the audited values on screen with the game's own
-   develop-mode text console, so a reviewer can see the claim hold while
-   playing.
+2. **Human-verifiable Gecko artifact** — Gecko codes usable on any Dolphin,
+   with reviewable assembly and a documented result block. Audits may also
+   render the values on screen with the game's develop-mode text console.
 
 Each audit lives in its own directory, self-contained:
 
 - `pr2939/` — external vs internal stage IDs
   ([PR #2939](https://github.com/doldecomp/melee/pull/2939)).
+- `venom-platform-links/` — the target object, ordered platform joints, and
+  smash-taunt timer in Venom's platform controller
+  ([refactor commit](https://github.com/MarkMcCaskey/melee/commit/079bee437e70819ac6932cae51cfc1b27dedcb82)).
 
 ## Requirements
 
