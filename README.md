@@ -25,6 +25,10 @@ Each audit lives in its own directory, self-contained:
 - `venom-platform-links/` — the target object, ordered platform joints, and
   smash-taunt timer in Venom's platform controller
   ([refactor commit](https://github.com/MarkMcCaskey/melee/commit/079bee437e70819ac6932cae51cfc1b27dedcb82)).
+- `grkind-stkind/` — which stage-id space the game's own `grkind` / `stkind`
+  names refer to (PR #2939 follow-up). Also the one audit here whose main
+  result needs no emulator: the claim is checkable against the stage archives
+  on the disc.
 
 ## Requirements
 
