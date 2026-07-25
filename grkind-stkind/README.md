@@ -135,3 +135,32 @@ emulator or scene-flow artifact.
 | `icetop.gecko.ini` | that code set, ready to drop into Dolphin |
 | `icetop_marker.py` | boots it and reads back the recorded grkind/stkind/num |
 | `icetop_marker.json` | the recorded run |
+
+## Where the enum member names come from (PR #2969 review follow-up)
+
+`stage_names.py` pulls every stage name the shipped DOL contains
+(`stage_names.txt` is a recorded run):
+
+- **The decomp's ALL-CAPS spellings are invented.** Of 41 member names probed,
+  only two occur anywhere in `main.dol`: `TEST`, which is verbatim the stage
+  list's entry 1, and `BATTLE`, only inside the assert `i<BATTLE_BG_MAX` in
+  `grbattle.c`. None appear as enum members in asserts.
+- **The stkind space has a complete original name list.** 12-byte strings at
+  `0x803FAB04` with a pointer array at `0x803FAF0C`, 86 entries indexed
+  `0x00..0x55`, aligning index-for-index with stkind (`0x02` Izumi, `0x49`
+  `8-1bbroute`, `0x55` `heal`). It names the three holes the decomp calls Unk:
+  `0x00` dummy, `0x15` Akaneia, `0x1A` Icetop. Note `0x1A` Icetop and `0x4D`
+  `10-2` (blank label) are exactly the two stkinds with no `grGroundParam` row
+  -- the pair that hangs the game.
+- **The grkind space has a different original source**: the per-stage `gr*.c`
+  module names embedded as `__FILE__` in asserts, 79 of them. 70 of the 71
+  `GrKind` members match one exactly; the lone mismatch is `ICEMTN`, whose
+  module is `gricemt.c` (the tree already names the file `gricemt.c`).
+- **The two sources disagree**, so the stage list cannot simply be applied to
+  `GrKind`: it spells Yoshi's Island `Yoster` while the module is
+  `gryorster.c`, and it shortens to display labels (`old ppp`, `old yosh`,
+  `old kong`, lowercase `battle`/`last`) where the modules spell them out.
+- **Original identifier style** in this code, from assert text: `Gr_CObj_Max`,
+  `Gr_Fzero_Car_Max`, `Gr_Greens_Block_Max`, `Gr_Greens_Block_Status_None`,
+  `Gr_Homerun_Parts_Max`, `St_Player_InitPos_None` -- prefix plus capitalised
+  words, with `BATTLE_BG_MAX` the one all-caps exception.
