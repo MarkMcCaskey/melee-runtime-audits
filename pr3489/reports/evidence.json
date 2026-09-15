@@ -1,0 +1,6260 @@
+{
+  "exit_status": 0,
+  "provenance": {
+    "source_repository": "https://github.com/doldecomp/melee",
+    "source_pr": "https://github.com/doldecomp/melee/pull/3489",
+    "commit": "26a2fdf763b56fd2071cb115f92925379c0a6701",
+    "dol_sha1": "08e0bf20134dfcb260699671004527b2d6bb1a45",
+    "elf_sha256": "00fbfcb4d3b5ebc0b6b14c9c1172a773ba9a8d2bcc6a276f4b77237ebd454993",
+    "source_sha256": {
+      "src/melee/lb/lbcardnew.c": "fd6ae0a537024923fcdc337e3e2af145d2b2656e2a40545dd6f53c35748a51f9",
+      "src/melee/lb/lbcardnew.h": "6361dacd497c5db7b38881526f4445c0046640ee7821dd338d18bf855b5674a2",
+      "src/sysdolphin/baselib/hsd_3A94.c": "0cd5d579f29388d38625e71a85b12c2904cfa0c008be1d202cbced32611abe60",
+      "src/sysdolphin/baselib/hsd_3A94.h": "edfd667423412ae6142ce57071f21e1dab26705566f198f20a938bc0f940cdc1",
+      "src/sysdolphin/baselib/hsd_3B27.c": "a4a69c81e736bf0fc7c0eaaa0dfd0f53ae5c47bf7a4243db0896c09c272436e8",
+      "src/sysdolphin/baselib/hsd_3B27.h": "37d26074d33856fca270a28e13a683b8795c5e55bddc78e3aedaa730da84fc4b",
+      "src/sysdolphin/baselib/hsd_3B2B.c": "2e0442b1f2836a20b4046df409615e5a14a7acb747be6d27d6c05f3ce1b3e3d1",
+      "src/sysdolphin/baselib/hsd_3B2B.h": "33100cdfbce4086d97d78af458f69d924ab1e06be88851e7c0e6aaaecb62a0f5",
+      "src/sysdolphin/baselib/hsd_3B2E.c": "21073cf2c5e1cd0934693a51899ed7d6300574981971d82a0c2c13edc3832ad9",
+      "src/sysdolphin/baselib/hsd_3B2E.h": "b6b9ac5cdade690fbffd7cb44aca3b27c9e9fb5ae327386e1f571227c135c469",
+      "src/sysdolphin/baselib/hsd_4D11.c": "c3ec23cf5366773b2b287e908b30514aa3764104cc275022f4b4a6cef8ba5551",
+      "extern/dolphin/include/dolphin/card.h": "2e14ca2faba918ab561a210e3505efcb9c55ceb38782a890a0771ef4bb15cff2",
+      "extern/dolphin/include/dolphin/card/CARDStat.h": "a621d5777fed08808a38085a03a59f9699d2df70b41e2ffa716b6b1899b14146",
+      "extern/dolphin/src/dolphin/card/CARDCreate.c": "3a153179401f6a7773b50566dab00f1cecde2e4b0b3ec13d1db74211cf6bc6f3"
+    },
+    "object_sha256": {
+      "build/GALE01/src/melee/lb/lbcardnew.o": "a8cc65b8caa6e10480f743fb3f56a9f5b387ab095292c4a818be2732e41ad32c",
+      "build/GALE01/src/sysdolphin/baselib/hsd_3A94.o": "052ee5a85b6742ed7c72352c58cb6c15a992e69d9853d0fb037cdc333f3313be",
+      "build/GALE01/src/sysdolphin/baselib/hsd_3B27.o": "4b85aba13e399a81c0208192ebdb5315e167f45c3dd38d131e7bfbd734fcf80d",
+      "build/GALE01/src/sysdolphin/baselib/hsd_3B2B.o": "6321d497889bba638b9db2452f1ed8d19d2f630a53dd7bcf6f4dbef6b0707e4f",
+      "build/GALE01/src/sysdolphin/baselib/hsd_3B2E.o": "1ada04dd1d43b0103e8111db6fba7ad6ed03e67a32ac0cf57bccc4c787309d90",
+      "build/GALE01/src/sysdolphin/baselib/hsd_4D11.o": "8782c260f1e2b9d75de357237566468bae3c278ba77ae7c1b83d1305d8f6f9b8"
+    },
+    "harness_sha256": {
+      "audit.py": "a600c324950358bce1357f109924029225f27fc9f2afd47f57ff227263b7988b",
+      "cardlab/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cardlab/card.py": "2cd9b4001f24ee31a7eca96f31e51370881e6b88261c17b3d37f8061ee5cb37f",
+      "cardlab/lab.py": "80678bb9c12676ec4c6032e926d051e908fa261837c2a7eb4f5e7504b5330ba6",
+      "cardlab/machine.py": "0fcae501cad940d31f5c64e62bf0ccf3e55e90607ed3ae562203d9303f49fcbd",
+      "pyproject.toml": "a10803ace94a36416ed876441aca37d702ebb91ea1e7a45da9338b5849b11be1",
+      "requirements.txt": "655dc6709b0125053257b0204e8523b645062af003efea22b9f0f828f63e313e",
+      "tests/conftest.py": "b0bf0646b656680715945ea934738d6283f61d36e354573fe552e52465cbf172",
+      "tests/test_errors_and_timing.py": "9095cb6adbf3e7f53ca0b097ea570995fe2e80b7225926dc5e2d0c1093d7fb6a",
+      "tests/test_format_semantics.py": "34a4a4222c523538fdd60247e1150b51f7786545a12b668619436ca23e2d03f2",
+      "tests/test_headers.py": "ef18a65b11008ea06068ea7864810cd3c97a2f9aab16af04d850ab0516694b15",
+      "tests/test_queue_contracts.py": "f9319cc2c326213e40b3f669a738cbef1828c7c4f2baff59e0ffe0e75b4d86b9",
+      "tests/test_repair_and_sectors.py": "6c07f6c13703faf4cae1e89bd6e793f77efd6d7597e041d7fb9ed63451d1310d",
+      "tests/test_roundtrip.py": "a8c8ea4b56fb7ccf0a1c9f523eea96790dc64d347aab793847b57593845e2e83",
+      "tests/test_smoke.py": "9847a0a3b50623f8dbd1871f8741414adddfce577d2e934b0584005ea23a0a2a",
+      "tests/test_tasks.py": "07e1dc3a22bf48f98fbe20914cecd7db663e6ef1e0deef70bb8daa9ab74749ab"
+    }
+  },
+  "outcomes": {
+    "tests/test_errors_and_timing.py::test_busy_open_is_retried_up_to_ten_attempts[1]": "passed",
+    "tests/test_errors_and_timing.py::test_busy_open_is_retried_up_to_ten_attempts[9]": "passed",
+    "tests/test_errors_and_timing.py::test_tenth_busy_result_is_reported_and_remaining_commands_are_cancelled": "passed",
+    "tests/test_errors_and_timing.py::test_read_errors_propagate_without_modifying_destination[CARDFastOpen-False]": "passed",
+    "tests/test_errors_and_timing.py::test_read_errors_propagate_without_modifying_destination[CARDReadAsync-False]": "passed",
+    "tests/test_errors_and_timing.py::test_read_errors_propagate_without_modifying_destination[CARDReadAsync-True]": "passed",
+    "tests/test_errors_and_timing.py::test_read_callback_is_deferred_and_blocked_while_interrupts_disabled": "passed",
+    "tests/test_errors_and_timing.py::test_card_removal_before_io_is_reported": "passed",
+    "tests/test_errors_and_timing.py::test_card_capacity_failure_is_not_reported_as_successful_creation": "passed",
+    "tests/test_errors_and_timing.py::test_write_completion_failure_does_not_commit_new_payload": "passed",
+    "tests/test_errors_and_timing.py::test_inline_card_callback_is_ignored_and_leaves_request_waiting": "passed",
+    "tests/test_format_semantics.py::test_digest_matches_independent_byte_reference[0]": "passed",
+    "tests/test_format_semantics.py::test_digest_matches_independent_byte_reference[1]": "passed",
+    "tests/test_format_semantics.py::test_digest_matches_independent_byte_reference[15]": "passed",
+    "tests/test_format_semantics.py::test_digest_matches_independent_byte_reference[16]": "passed",
+    "tests/test_format_semantics.py::test_digest_matches_independent_byte_reference[17]": "passed",
+    "tests/test_format_semantics.py::test_digest_matches_independent_byte_reference[8192]": "passed",
+    "tests/test_format_semantics.py::test_sector_codec_roundtrip_and_corruption_detection[32]": "passed",
+    "tests/test_format_semantics.py::test_sector_codec_roundtrip_and_corruption_detection[128]": "passed",
+    "tests/test_format_semantics.py::test_sector_codec_roundtrip_and_corruption_detection[8192]": "passed",
+    "tests/test_format_semantics.py::test_sequence_order_including_wrap[0-255-1]": "passed",
+    "tests/test_format_semantics.py::test_sequence_order_including_wrap[255-0--1]": "passed",
+    "tests/test_format_semantics.py::test_sequence_order_including_wrap[1-2--1]": "passed",
+    "tests/test_format_semantics.py::test_sequence_order_including_wrap[2-1-1]": "passed",
+    "tests/test_format_semantics.py::test_sequence_order_including_wrap[42-42-0]": "passed",
+    "tests/test_format_semantics.py::test_sequence_order_including_wrap[-1-3--1]": "passed",
+    "tests/test_format_semantics.py::test_sequence_order_including_wrap[3--1-1]": "passed",
+    "tests/test_format_semantics.py::test_sequence_order_including_wrap[5-200-1]": "passed",
+    "tests/test_format_semantics.py::test_sequence_order_including_wrap[200-5--1]": "passed",
+    "tests/test_format_semantics.py::test_header_size_banner_icons_shared_palette_and_zero_speed_terminator[0-formats0-speeds0-64]": "passed",
+    "tests/test_format_semantics.py::test_header_size_banner_icons_shared_palette_and_zero_speed_terminator[1-formats1-speeds1-3648]": "passed",
+    "tests/test_format_semantics.py::test_header_size_banner_icons_shared_palette_and_zero_speed_terminator[2-formats2-speeds2-6208]": "passed",
+    "tests/test_format_semantics.py::test_header_size_banner_icons_shared_palette_and_zero_speed_terminator[0-formats3-speeds3-1600]": "passed",
+    "tests/test_format_semantics.py::test_header_size_banner_icons_shared_palette_and_zero_speed_terminator[0-formats4-speeds4-2624]": "passed",
+    "tests/test_format_semantics.py::test_header_size_banner_icons_shared_palette_and_zero_speed_terminator[0-formats5-speeds5-4160]": "passed",
+    "tests/test_format_semantics.py::test_header_size_banner_icons_shared_palette_and_zero_speed_terminator[2-formats6-speeds6-22592]": "passed",
+    "tests/test_format_semantics.py::test_header_size_banner_icons_shared_palette_and_zero_speed_terminator[0-formats7-speeds7-64]": "passed",
+    "tests/test_format_semantics.py::test_file_table_pack_and_unpack": "passed",
+    "tests/test_format_semantics.py::test_block_verifier_checks_id_sequence_and_payload[none]": "passed",
+    "tests/test_format_semantics.py::test_block_verifier_checks_id_sequence_and_payload[id]": "passed",
+    "tests/test_format_semantics.py::test_block_verifier_checks_id_sequence_and_payload[sequence]": "passed",
+    "tests/test_format_semantics.py::test_block_verifier_checks_id_sequence_and_payload[payload]": "passed",
+    "tests/test_format_semantics.py::test_zero_length_verification_returns_without_card_io": "passed",
+    "tests/test_headers.py::test_create_read_update_header_and_preserve_shared_block[0-0-0]": "passed",
+    "tests/test_headers.py::test_create_read_update_header_and_preserve_shared_block[1-1-3]": "passed",
+    "tests/test_headers.py::test_create_read_update_header_and_preserve_shared_block[2-2-8]": "passed",
+    "tests/test_headers.py::test_header_output_buffers_are_independently_optional[True-False-False]": "passed",
+    "tests/test_headers.py::test_header_output_buffers_are_independently_optional[False-True-False]": "passed",
+    "tests/test_headers.py::test_header_output_buffers_are_independently_optional[False-False-True]": "passed",
+    "tests/test_headers.py::test_header_output_buffers_are_independently_optional[True-True-True]": "passed",
+    "tests/test_headers.py::test_corrupt_header_digest_rejected_on_open": "passed",
+    "tests/test_queue_contracts.py::test_command_descriptor_is_copied_but_payload_pointer_is_borrowed": "passed",
+    "tests/test_queue_contracts.py::test_command_queue_capacity_and_wrap": "passed",
+    "tests/test_queue_contracts.py::test_full_request_queue_still_copies_comment_without_callback[hsd_803B286C]": "passed",
+    "tests/test_queue_contracts.py::test_full_request_queue_still_copies_comment_without_callback[hsd_803B2928]": "passed",
+    "tests/test_queue_contracts.py::test_request_queue_reuses_drained_slots": "passed",
+    "tests/test_queue_contracts.py::test_write_empty_logical_file_fails_before_queueing": "passed",
+    "tests/test_queue_contracts.py::test_check_verified_controls_following_clear[0-1]": "passed",
+    "tests/test_queue_contracts.py::test_check_verified_controls_following_clear[1-1]": "passed",
+    "tests/test_queue_contracts.py::test_check_verified_controls_following_clear[2-0]": "passed",
+    "tests/test_queue_contracts.py::test_unknown_command_stalls_without_an_invented_operation": "passed",
+    "tests/test_queue_contracts.py::test_request_queue_reset_marks_every_slot_empty": "passed",
+    "tests/test_repair_and_sectors.py::test_scan_and_repair_rebuild_a_corrupted_mirror_from_valid_copy": "passed",
+    "tests/test_repair_and_sectors.py::test_repair_replaces_stale_mirror_sequence_and_payload": "passed",
+    "tests/test_repair_and_sectors.py::test_repair_clears_a_surplus_mirror_but_preserves_other_logical_file": "passed",
+    "tests/test_repair_and_sectors.py::test_missing_all_mirrors_reports_metadata_or_missing_data_error[False--257]": "passed",
+    "tests/test_repair_and_sectors.py::test_missing_all_mirrors_reports_metadata_or_missing_data_error[True--259]": "passed",
+    "tests/test_repair_and_sectors.py::test_read_sector_decodes_and_write_sector_reencodes_the_work_buffer": "passed",
+    "tests/test_repair_and_sectors.py::test_corrupt_read_sector_reports_checksum_error": "passed",
+    "tests/test_roundtrip.py::test_create_and_logical_file_read_roundtrip": "passed",
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[1-0]": "passed",
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[1-1]": "passed",
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[1-2]": "passed",
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[1-3]": "passed",
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[8160-0]": "passed",
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[8160-1]": "passed",
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[8160-2]": "passed",
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[8160-3]": "passed",
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[8161-0]": "passed",
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[8161-1]": "passed",
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[8161-2]": "passed",
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[8161-3]": "passed",
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[16331-0]": "passed",
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[16331-1]": "passed",
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[16331-2]": "passed",
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[16331-3]": "passed",
+    "tests/test_roundtrip.py::test_unchanged_write_verifies_and_avoids_card_writes[0]": "passed",
+    "tests/test_roundtrip.py::test_unchanged_write_verifies_and_avoids_card_writes[1]": "passed",
+    "tests/test_roundtrip.py::test_unchanged_write_verifies_and_avoids_card_writes[2]": "passed",
+    "tests/test_roundtrip.py::test_unchanged_write_verifies_and_avoids_card_writes[3]": "passed",
+    "tests/test_roundtrip.py::test_mirrored_shared_block_zero_can_report_repair_error_despite_readable_data[1]": "passed",
+    "tests/test_roundtrip.py::test_mirrored_shared_block_zero_can_report_repair_error_despite_readable_data[2]": "passed",
+    "tests/test_smoke.py::test_powerpc_executes_decomp_initializers_and_real_checksum": "passed",
+    "tests/test_tasks.py::test_card_task_dispatch_runs_real_handler_and_card_operation[CARD_TASK_MOUNT_CARD-lb_8001A184-CARDMountAsync]": "passed",
+    "tests/test_tasks.py::test_card_task_dispatch_runs_real_handler_and_card_operation[CARD_TASK_CHECK_CARD-lb_8001A3A4-CARDCheckAsync]": "passed",
+    "tests/test_tasks.py::test_card_task_dispatch_runs_real_handler_and_card_operation[CARD_TASK_FORMAT_CARD-lb_8001A8A4-CARDFormatAsync]": "passed",
+    "tests/test_tasks.py::test_card_task_dispatch_runs_real_handler_and_card_operation[CARD_TASK_DELETE_FILE-lb_8001A9CC-CARDDeleteAsync]": "passed",
+    "tests/test_tasks.py::test_card_task_dispatch_runs_real_handler_and_card_operation[CARD_TASK_RENAME_FILE-lb_8001AAE4-CARDRenameAsync]": "passed",
+    "tests/test_tasks.py::test_unknown_task_03_only_normalizes_observed_result_values[0-1]": "passed",
+    "tests/test_tasks.py::test_unknown_task_03_only_normalizes_observed_result_values[1-1]": "passed",
+    "tests/test_tasks.py::test_unknown_task_03_only_normalizes_observed_result_values[2-1]": "passed",
+    "tests/test_tasks.py::test_unknown_task_03_only_normalizes_observed_result_values[3-3]": "passed",
+    "tests/test_tasks.py::test_unknown_task_03_only_normalizes_observed_result_values[4-4]": "passed",
+    "tests/test_tasks.py::test_unknown_task_03_only_normalizes_observed_result_values[7-7]": "passed",
+    "tests/test_tasks.py::test_unknown_task_03_only_normalizes_observed_result_values[10-10]": "passed",
+    "tests/test_tasks.py::test_unknown_task_03_only_normalizes_observed_result_values[13-13]": "passed",
+    "tests/test_tasks.py::test_result_mask_rejects_task_and_clears_remaining_slots": "passed",
+    "tests/test_tasks.py::test_unused_slots_do_not_dispatch_mount_even_though_mount_is_zero": "passed",
+    "tests/test_tasks.py::test_find_file_matches_filename_company_and_game[needle-0]": "passed",
+    "tests/test_tasks.py::test_find_file_matches_filename_company_and_game[missing-13]": "passed",
+    "tests/test_tasks.py::test_list_snapshots_filters_and_sorts_numeric_filenames": "passed",
+    "tests/test_tasks.py::test_save_tasks_execute_through_hsd_and_card[CARD_TASK_OPEN_FILE-lb_8001A594]": "passed",
+    "tests/test_tasks.py::test_save_tasks_execute_through_hsd_and_card[CARD_TASK_READ_FILES-lb_8001ACEC]": "passed",
+    "tests/test_tasks.py::test_save_tasks_execute_through_hsd_and_card[CARD_TASK_WRITE_FILES-lb_8001AE38]": "passed",
+    "tests/test_tasks.py::test_save_tasks_execute_through_hsd_and_card[CARD_TASK_SET_STATUS-lb_8001AF84]": "passed",
+    "tests/test_tasks.py::test_save_tasks_execute_through_hsd_and_card[CARD_TASK_READ_HEADER-lb_8001B068]": "passed",
+    "tests/test_tasks.py::test_create_task_creates_file_using_stored_filename_and_header": "passed"
+  },
+  "enums": {
+    "command": {
+      "CARD_CMD_NONE": 0,
+      "CARD_CMD_WRITE_BLOCK": 1,
+      "CARD_CMD_READ_BLOCK": 2,
+      "CARD_CMD_UNK_0x03": 3,
+      "CARD_CMD_CLEAR_BUF": 4,
+      "CARD_CMD_VERIFY_BLOCK": 5,
+      "CARD_CMD_CHECK_VERIFIED": 6,
+      "CARD_CMD_CREATE_FILE": 7,
+      "CARD_CMD_SET_STATUS": 8,
+      "CARD_CMD_WRITE_HEADER": 9,
+      "CARD_CMD_VERIFY_HEADER": 10,
+      "CARD_CMD_READ_HEADER": 11,
+      "CARD_CMD_GET_STATUS": 12,
+      "CARD_CMD_SCAN_BLOCK": 13,
+      "CARD_CMD_REPAIR": 14,
+      "CARD_CMD_READ_SECTOR": 15,
+      "CARD_CMD_WRITE_SECTOR": 16,
+      "CARD_CMD_SCAN_FILE": 17
+    },
+    "request": {
+      "CARD_REQ_NONE": 0,
+      "CARD_REQ_READ_FILE": 1,
+      "CARD_REQ_WRITE_FILE": 2,
+      "CARD_REQ_CREATE_FILE": 3,
+      "CARD_REQ_SET_STATUS": 4,
+      "CARD_REQ_OPEN_FILE": 5,
+      "CARD_REQ_READ_HEADER": 6
+    },
+    "active": {
+      "CARD_ACTIVE_NONE": 0,
+      "CARD_ACTIVE_READ_FILE": 1,
+      "CARD_ACTIVE_WRITE_FILE": 2,
+      "CARD_ACTIVE_WRITE_FILE_1_2": 3,
+      "CARD_ACTIVE_WRITE_FILE_3": 4,
+      "CARD_ACTIVE_OPEN_OR_READ_HEADER": 5,
+      "CARD_ACTIVE_CREATE_FILE": 6,
+      "CARD_ACTIVE_SET_STATUS": 7
+    },
+    "task": {
+      "CARD_TASK_MOUNT_CARD": 0,
+      "CARD_TASK_CHECK_CARD": 1,
+      "CARD_TASK_OPEN_FILE": 2,
+      "CARD_TASK_UNK_0x03": 3,
+      "CARD_TASK_FORMAT_CARD": 4,
+      "CARD_TASK_DELETE_FILE": 5,
+      "CARD_TASK_RENAME_FILE": 6,
+      "CARD_TASK_CREATE_FILE": 7,
+      "CARD_TASK_READ_FILES": 8,
+      "CARD_TASK_WRITE_FILES": 9,
+      "CARD_TASK_SET_STATUS": 10,
+      "CARD_TASK_READ_HEADER": 11,
+      "CARD_TASK_LIST_SNAPSHOTS": 12,
+      "CARD_TASK_FIND_FILE": 13,
+      "CARD_TASK_NONE": 14
+    }
+  },
+  "tests": {
+    "tests/test_errors_and_timing.py::test_busy_open_is_retried_up_to_ten_attempts[1]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        7,
+        8,
+        9
+      ],
+      "requests_dispatched": [
+        1,
+        3
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 2,
+        "fn_803AC168": 6,
+        "fn_803AC3F8": 1,
+        "fn_803AC7DC": 3,
+        "fn_803ADF90": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 8176,
+        "fn_803B302C": 8176,
+        "hsd_803A949C": 5,
+        "hsd_803AAA48": 7,
+        "hsd_803AC340": 3,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 1,
+        "hsd_803B2B20": 3,
+        "hsd_803B2FA0": 1,
+        "hsd_803B31CC": 1
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDFastOpen",
+        "CARDReadAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_errors_and_timing.py::test_busy_open_is_retried_up_to_ten_attempts[9]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        7,
+        8,
+        9
+      ],
+      "requests_dispatched": [
+        1,
+        3
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 2,
+        "fn_803AC168": 6,
+        "fn_803AC3F8": 1,
+        "fn_803AC7DC": 3,
+        "fn_803ADF90": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 8176,
+        "fn_803B302C": 8176,
+        "hsd_803A949C": 5,
+        "hsd_803AAA48": 7,
+        "hsd_803AC340": 3,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 1,
+        "hsd_803B2B20": 3,
+        "hsd_803B2FA0": 1,
+        "hsd_803B31CC": 1
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDFastOpen",
+        "CARDReadAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_errors_and_timing.py::test_tenth_busy_result_is_reported_and_remaining_commands_are_cancelled": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        7,
+        8,
+        9
+      ],
+      "requests_dispatched": [
+        1,
+        3
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 2,
+        "fn_803AC168": 6,
+        "fn_803AC3F8": 1,
+        "fn_803AC7DC": 3,
+        "fn_803ADF90": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 8176,
+        "hsd_803A949C": 4,
+        "hsd_803AAA48": 6,
+        "hsd_803AC340": 3,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 1,
+        "hsd_803B2B20": 2,
+        "hsd_803B2FA0": 1
+      },
+      "card_calls": [
+        "CARDFastOpen"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_errors_and_timing.py::test_read_errors_propagate_without_modifying_destination[CARDFastOpen-False]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        7,
+        8,
+        9
+      ],
+      "requests_dispatched": [
+        1,
+        3
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 2,
+        "fn_803AC168": 6,
+        "fn_803AC3F8": 1,
+        "fn_803AC7DC": 3,
+        "fn_803ADF90": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 8176,
+        "hsd_803A949C": 4,
+        "hsd_803AAA48": 6,
+        "hsd_803AC340": 3,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 1,
+        "hsd_803B2B20": 2,
+        "hsd_803B2FA0": 1
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -5
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_errors_and_timing.py::test_read_errors_propagate_without_modifying_destination[CARDReadAsync-False]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        7,
+        8,
+        9
+      ],
+      "requests_dispatched": [
+        1,
+        3
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 2,
+        "fn_803AC168": 6,
+        "fn_803AC3F8": 1,
+        "fn_803AC7DC": 3,
+        "fn_803ADF90": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 8176,
+        "hsd_803A949C": 4,
+        "hsd_803AAA48": 6,
+        "hsd_803AC340": 3,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 1,
+        "hsd_803B2B20": 2,
+        "hsd_803B2FA0": 1
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -5
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_errors_and_timing.py::test_read_errors_propagate_without_modifying_destination[CARDReadAsync-True]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        7,
+        8,
+        9
+      ],
+      "requests_dispatched": [
+        1,
+        3
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 2,
+        "fn_803AC168": 6,
+        "fn_803AC3F8": 1,
+        "fn_803AC7DC": 3,
+        "fn_803ADF90": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 8176,
+        "hsd_803A949C": 5,
+        "hsd_803AAA48": 7,
+        "hsd_803AC340": 3,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 1,
+        "hsd_803B2B20": 2,
+        "hsd_803B2FA0": 1
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -5
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_errors_and_timing.py::test_read_callback_is_deferred_and_blocked_while_interrupts_disabled": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        7,
+        8,
+        9
+      ],
+      "requests_dispatched": [
+        1,
+        3
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 2,
+        "fn_803AC168": 6,
+        "fn_803AC3F8": 1,
+        "fn_803AC7DC": 3,
+        "fn_803ADF90": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 8176,
+        "fn_803B302C": 8176,
+        "hsd_803A949C": 5,
+        "hsd_803AAA48": 7,
+        "hsd_803AC340": 3,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 1,
+        "hsd_803B2B20": 3,
+        "hsd_803B2FA0": 1,
+        "hsd_803B31CC": 1
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_errors_and_timing.py::test_card_removal_before_io_is_reported": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        7,
+        8,
+        9
+      ],
+      "requests_dispatched": [
+        1,
+        3
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 2,
+        "fn_803AC168": 6,
+        "fn_803AC3F8": 1,
+        "fn_803AC7DC": 3,
+        "fn_803ADF90": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 8176,
+        "hsd_803A949C": 4,
+        "hsd_803AAA48": 6,
+        "hsd_803AC340": 3,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 1,
+        "hsd_803B2B20": 2,
+        "hsd_803B2FA0": 1
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -3
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_errors_and_timing.py::test_card_capacity_failure_is_not_reported_as_successful_creation": {
+      "commands_dispatched": [
+        0,
+        7
+      ],
+      "requests_dispatched": [
+        3
+      ],
+      "active_types_observed": [
+        0,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 1,
+        "fn_803AC168": 5,
+        "fn_803AC7DC": 2,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "hsd_803AAA48": 1,
+        "hsd_803AC340": 3,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1
+      },
+      "card_calls": [
+        "CARDCreateAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          -9
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_errors_and_timing.py::test_write_completion_failure_does_not_commit_new_payload": {
+      "commands_dispatched": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "requests_dispatched": [
+        2,
+        3
+      ],
+      "active_types_observed": [
+        0,
+        4,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 2,
+        "fn_803AC168": 8,
+        "fn_803AC3F8": 2,
+        "fn_803AC7DC": 3,
+        "fn_803B0120": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 16352,
+        "fn_803B302C": 8176,
+        "hsd_803A949C": 6,
+        "hsd_803AAA48": 8,
+        "hsd_803AC340": 3,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B2A4C": 1,
+        "hsd_803B2B20": 4,
+        "hsd_803B2FA0": 2,
+        "hsd_803B31CC": 1
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -5
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_errors_and_timing.py::test_inline_card_callback_is_ignored_and_leaves_request_waiting": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        7,
+        8,
+        9
+      ],
+      "requests_dispatched": [
+        1,
+        3
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 2,
+        "fn_803AC168": 6,
+        "fn_803AC3F8": 1,
+        "fn_803AC7DC": 3,
+        "fn_803ADF90": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 8176,
+        "hsd_803A949C": 5,
+        "hsd_803AAA48": 7,
+        "hsd_803AC340": 3,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 1,
+        "hsd_803B2B20": 2,
+        "hsd_803B2FA0": 1
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_digest_matches_independent_byte_reference[0]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2B20": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_digest_matches_independent_byte_reference[1]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2B20": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_digest_matches_independent_byte_reference[15]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2B20": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_digest_matches_independent_byte_reference[16]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2B20": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_digest_matches_independent_byte_reference[17]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2B20": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_digest_matches_independent_byte_reference[8192]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2B20": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_sector_codec_roundtrip_and_corruption_detection[32]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803B2E04": 16,
+        "fn_803B302C": 32,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2B20": 3,
+        "hsd_803B2FA0": 1,
+        "hsd_803B31CC": 2
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_sector_codec_roundtrip_and_corruption_detection[128]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803B2E04": 112,
+        "fn_803B302C": 224,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2B20": 3,
+        "hsd_803B2FA0": 1,
+        "hsd_803B31CC": 2
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_sector_codec_roundtrip_and_corruption_detection[8192]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803B2E04": 8176,
+        "fn_803B302C": 16352,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2B20": 3,
+        "hsd_803B2FA0": 1,
+        "hsd_803B31CC": 2
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_sequence_order_including_wrap[0-255-1]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803ACB74": 1,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_sequence_order_including_wrap[255-0--1]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803ACB74": 1,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_sequence_order_including_wrap[1-2--1]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803ACB74": 1,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_sequence_order_including_wrap[2-1-1]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803ACB74": 1,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_sequence_order_including_wrap[42-42-0]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803ACB74": 1,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_sequence_order_including_wrap[-1-3--1]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803ACB74": 1,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_sequence_order_including_wrap[3--1-1]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803ACB74": 1,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_sequence_order_including_wrap[5-200-1]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803ACB74": 1,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_sequence_order_including_wrap[200-5--1]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803ACB74": 1,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_header_size_banner_icons_shared_palette_and_zero_speed_terminator[0-formats0-speeds0-64]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AC7DC": 1,
+        "hsd_803AC340": 1,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_header_size_banner_icons_shared_palette_and_zero_speed_terminator[1-formats1-speeds1-3648]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AC7DC": 1,
+        "hsd_803AC340": 1,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_header_size_banner_icons_shared_palette_and_zero_speed_terminator[2-formats2-speeds2-6208]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AC7DC": 1,
+        "hsd_803AC340": 1,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_header_size_banner_icons_shared_palette_and_zero_speed_terminator[0-formats3-speeds3-1600]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AC7DC": 1,
+        "hsd_803AC340": 1,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_header_size_banner_icons_shared_palette_and_zero_speed_terminator[0-formats4-speeds4-2624]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AC7DC": 1,
+        "hsd_803AC340": 1,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_header_size_banner_icons_shared_palette_and_zero_speed_terminator[0-formats5-speeds5-4160]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AC7DC": 1,
+        "hsd_803AC340": 1,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_header_size_banner_icons_shared_palette_and_zero_speed_terminator[2-formats6-speeds6-22592]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AC7DC": 1,
+        "hsd_803AC340": 1,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_header_size_banner_icons_shared_palette_and_zero_speed_terminator[0-formats7-speeds7-64]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AC7DC": 1,
+        "hsd_803AC340": 1,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_file_table_pack_and_unpack": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AC3F8": 1,
+        "hsd_803AC3E0": 3,
+        "hsd_803AC558": 1,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_block_verifier_checks_id_sequence_and_payload[none]": {
+      "commands_dispatched": [
+        0,
+        1,
+        4,
+        7,
+        8,
+        9
+      ],
+      "requests_dispatched": [
+        3
+      ],
+      "active_types_observed": [
+        0,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 1,
+        "fn_803AC168": 5,
+        "fn_803AC3F8": 1,
+        "fn_803AC7DC": 2,
+        "fn_803ACC0C": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 8176,
+        "fn_803B302C": 8176,
+        "hsd_803A949C": 4,
+        "hsd_803AAA48": 5,
+        "hsd_803AC340": 3,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B2B20": 3,
+        "hsd_803B2FA0": 1,
+        "hsd_803B31CC": 1
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDRead",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_block_verifier_checks_id_sequence_and_payload[id]": {
+      "commands_dispatched": [
+        0,
+        1,
+        4,
+        7,
+        8,
+        9
+      ],
+      "requests_dispatched": [
+        3
+      ],
+      "active_types_observed": [
+        0,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 1,
+        "fn_803AC168": 5,
+        "fn_803AC3F8": 1,
+        "fn_803AC7DC": 2,
+        "fn_803ACC0C": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 8176,
+        "fn_803B302C": 8176,
+        "hsd_803A949C": 4,
+        "hsd_803AAA48": 5,
+        "hsd_803AC340": 3,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B2B20": 3,
+        "hsd_803B2FA0": 1,
+        "hsd_803B31CC": 1
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDRead",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_block_verifier_checks_id_sequence_and_payload[sequence]": {
+      "commands_dispatched": [
+        0,
+        1,
+        4,
+        7,
+        8,
+        9
+      ],
+      "requests_dispatched": [
+        3
+      ],
+      "active_types_observed": [
+        0,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 1,
+        "fn_803AC168": 5,
+        "fn_803AC3F8": 1,
+        "fn_803AC7DC": 2,
+        "fn_803ACC0C": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 8176,
+        "fn_803B302C": 8176,
+        "hsd_803A949C": 4,
+        "hsd_803AAA48": 5,
+        "hsd_803AC340": 3,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B2B20": 3,
+        "hsd_803B2FA0": 1,
+        "hsd_803B31CC": 1
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDRead",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_block_verifier_checks_id_sequence_and_payload[payload]": {
+      "commands_dispatched": [
+        0,
+        1,
+        4,
+        7,
+        8,
+        9
+      ],
+      "requests_dispatched": [
+        3
+      ],
+      "active_types_observed": [
+        0,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 1,
+        "fn_803AC168": 5,
+        "fn_803AC3F8": 1,
+        "fn_803AC7DC": 2,
+        "fn_803ACC0C": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 8176,
+        "fn_803B302C": 8176,
+        "hsd_803A949C": 4,
+        "hsd_803AAA48": 5,
+        "hsd_803AC340": 3,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B2B20": 3,
+        "hsd_803B2FA0": 1,
+        "hsd_803B31CC": 1
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDRead",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_format_semantics.py::test_zero_length_verification_returns_without_card_io": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803ACC0C": 1,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_headers.py::test_create_read_update_header_and_preserve_shared_block[0-0-0]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "requests_dispatched": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        5,
+        6,
+        7
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 5,
+        "fn_803AC168": 19,
+        "fn_803AC3F8": 2,
+        "fn_803AC7DC": 3,
+        "fn_803ADF90": 1,
+        "fn_803B0E9C": 3,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B21E8": 2,
+        "fn_803B26CC": 1,
+        "fn_803B2E04": 16240,
+        "fn_803B302C": 8064,
+        "hsd_803A949C": 13,
+        "hsd_803AAA48": 18,
+        "hsd_803AC340": 6,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B27F4": 1,
+        "hsd_803B286C": 1,
+        "hsd_803B2928": 2,
+        "hsd_803B29D8": 1,
+        "hsd_803B2B20": 7,
+        "hsd_803B2FA0": 2,
+        "hsd_803B31CC": 1
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_headers.py::test_create_read_update_header_and_preserve_shared_block[1-1-3]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "requests_dispatched": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        5,
+        6,
+        7
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 5,
+        "fn_803AC168": 19,
+        "fn_803AC3F8": 2,
+        "fn_803AC7DC": 3,
+        "fn_803ADF90": 1,
+        "fn_803B0E9C": 3,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B21E8": 2,
+        "fn_803B26CC": 1,
+        "fn_803B2E04": 9072,
+        "fn_803B302C": 896,
+        "hsd_803A949C": 13,
+        "hsd_803AAA48": 18,
+        "hsd_803AC340": 6,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B27F4": 1,
+        "hsd_803B286C": 1,
+        "hsd_803B2928": 2,
+        "hsd_803B29D8": 1,
+        "hsd_803B2B20": 7,
+        "hsd_803B2FA0": 2,
+        "hsd_803B31CC": 1
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_headers.py::test_create_read_update_header_and_preserve_shared_block[2-2-8]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "requests_dispatched": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        5,
+        6,
+        7
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 5,
+        "fn_803AC168": 31,
+        "fn_803AC3F8": 2,
+        "fn_803AC7DC": 3,
+        "fn_803ADF90": 1,
+        "fn_803B0E9C": 3,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B21E8": 2,
+        "fn_803B26CC": 1,
+        "fn_803B2E04": 10096,
+        "fn_803B302C": 1920,
+        "hsd_803A949C": 21,
+        "hsd_803AAA48": 26,
+        "hsd_803AC340": 6,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B27F4": 1,
+        "hsd_803B286C": 1,
+        "hsd_803B2928": 2,
+        "hsd_803B29D8": 1,
+        "hsd_803B2B20": 15,
+        "hsd_803B2FA0": 2,
+        "hsd_803B31CC": 1
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_headers.py::test_header_output_buffers_are_independently_optional[True-False-False]": {
+      "commands_dispatched": [
+        0,
+        1,
+        4,
+        7,
+        8,
+        9,
+        11
+      ],
+      "requests_dispatched": [
+        3,
+        6
+      ],
+      "active_types_observed": [
+        0,
+        5,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 2,
+        "fn_803AC168": 6,
+        "fn_803AC3F8": 1,
+        "fn_803AC7DC": 2,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B26CC": 1,
+        "fn_803B2E04": 8176,
+        "hsd_803A949C": 5,
+        "hsd_803AAA48": 7,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B27F4": 1,
+        "hsd_803B286C": 1,
+        "hsd_803B2B20": 3,
+        "hsd_803B2FA0": 1
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_headers.py::test_header_output_buffers_are_independently_optional[False-True-False]": {
+      "commands_dispatched": [
+        0,
+        1,
+        4,
+        7,
+        8,
+        9,
+        11
+      ],
+      "requests_dispatched": [
+        3,
+        6
+      ],
+      "active_types_observed": [
+        0,
+        5,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 2,
+        "fn_803AC168": 6,
+        "fn_803AC3F8": 1,
+        "fn_803AC7DC": 2,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B26CC": 1,
+        "fn_803B2E04": 8176,
+        "hsd_803A949C": 5,
+        "hsd_803AAA48": 7,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B27F4": 1,
+        "hsd_803B286C": 1,
+        "hsd_803B2B20": 3,
+        "hsd_803B2FA0": 1
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_headers.py::test_header_output_buffers_are_independently_optional[False-False-True]": {
+      "commands_dispatched": [
+        0,
+        1,
+        4,
+        7,
+        8,
+        9,
+        11
+      ],
+      "requests_dispatched": [
+        3,
+        6
+      ],
+      "active_types_observed": [
+        0,
+        5,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 2,
+        "fn_803AC168": 6,
+        "fn_803AC3F8": 1,
+        "fn_803AC7DC": 2,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B26CC": 1,
+        "fn_803B2E04": 8176,
+        "hsd_803A949C": 5,
+        "hsd_803AAA48": 7,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B27F4": 1,
+        "hsd_803B286C": 1,
+        "hsd_803B2B20": 3,
+        "hsd_803B2FA0": 1
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_headers.py::test_header_output_buffers_are_independently_optional[True-True-True]": {
+      "commands_dispatched": [
+        0,
+        1,
+        4,
+        7,
+        8,
+        9,
+        11
+      ],
+      "requests_dispatched": [
+        3,
+        6
+      ],
+      "active_types_observed": [
+        0,
+        5,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 2,
+        "fn_803AC168": 6,
+        "fn_803AC3F8": 1,
+        "fn_803AC7DC": 2,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B26CC": 1,
+        "fn_803B2E04": 8176,
+        "hsd_803A949C": 5,
+        "hsd_803AAA48": 7,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B27F4": 1,
+        "hsd_803B286C": 1,
+        "hsd_803B2B20": 3,
+        "hsd_803B2FA0": 1
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_headers.py::test_corrupt_header_digest_rejected_on_open": {
+      "commands_dispatched": [
+        0,
+        1,
+        4,
+        7,
+        8,
+        9,
+        11,
+        12,
+        17
+      ],
+      "requests_dispatched": [
+        3,
+        5
+      ],
+      "active_types_observed": [
+        0,
+        5,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 2,
+        "fn_803AC168": 11,
+        "fn_803AC258": 2,
+        "fn_803AC2A4": 1,
+        "fn_803AC2D4": 1,
+        "fn_803AC334": 1,
+        "fn_803AC3F8": 1,
+        "fn_803AC7DC": 2,
+        "fn_803ACBE8": 2,
+        "fn_803ACF30": 1,
+        "fn_803ADE4C": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 8176,
+        "hsd_803A949C": 5,
+        "hsd_803AAA48": 7,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2550": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B2B20": 3,
+        "hsd_803B2FA0": 1
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDOpen",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          -263
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_queue_contracts.py::test_command_descriptor_is_copied_but_payload_pointer_is_borrowed": {
+      "commands_dispatched": [
+        0,
+        4
+      ],
+      "requests_dispatched": [],
+      "active_types_observed": [
+        0
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AC168": 1,
+        "hsd_803AAA48": 1,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_queue_contracts.py::test_command_queue_capacity_and_wrap": {
+      "commands_dispatched": [
+        0,
+        4
+      ],
+      "requests_dispatched": [],
+      "active_types_observed": [
+        0
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AC168": 130,
+        "hsd_803AAA48": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_queue_contracts.py::test_full_request_queue_still_copies_comment_without_callback[hsd_803B286C]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B27F4": 33,
+        "hsd_803B286C": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_queue_contracts.py::test_full_request_queue_still_copies_comment_without_callback[hsd_803B2928]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B27F4": 33,
+        "hsd_803B2928": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_queue_contracts.py::test_request_queue_reuses_drained_slots": {
+      "commands_dispatched": [
+        0,
+        1,
+        4,
+        7,
+        8,
+        9,
+        11
+      ],
+      "requests_dispatched": [
+        3,
+        6
+      ],
+      "active_types_observed": [
+        0,
+        5,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 41,
+        "fn_803AC168": 45,
+        "fn_803AC3F8": 1,
+        "fn_803AC7DC": 2,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B26CC": 40,
+        "fn_803B2E04": 8176,
+        "hsd_803A949C": 44,
+        "hsd_803AAA48": 85,
+        "hsd_803AC340": 43,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B27F4": 40,
+        "hsd_803B286C": 1,
+        "hsd_803B2B20": 42,
+        "hsd_803B2FA0": 1
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_queue_contracts.py::test_write_empty_logical_file_fails_before_queueing": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2A4C": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_queue_contracts.py::test_check_verified_controls_following_clear[0-1]": {
+      "commands_dispatched": [
+        0,
+        4,
+        6
+      ],
+      "requests_dispatched": [],
+      "active_types_observed": [
+        0,
+        1
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AC168": 2,
+        "hsd_803AAA48": 1,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [
+        [
+          1,
+          1
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_queue_contracts.py::test_check_verified_controls_following_clear[1-1]": {
+      "commands_dispatched": [
+        0,
+        4,
+        6
+      ],
+      "requests_dispatched": [],
+      "active_types_observed": [
+        0,
+        1
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AC168": 2,
+        "hsd_803AAA48": 1,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [
+        [
+          1,
+          1
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_queue_contracts.py::test_check_verified_controls_following_clear[2-0]": {
+      "commands_dispatched": [
+        0,
+        4,
+        6
+      ],
+      "requests_dispatched": [],
+      "active_types_observed": [
+        0,
+        1
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AC168": 2,
+        "hsd_803AAA48": 1,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [
+        [
+          1,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_queue_contracts.py::test_unknown_command_stalls_without_an_invented_operation": {
+      "commands_dispatched": [
+        3
+      ],
+      "requests_dispatched": [],
+      "active_types_observed": [
+        0
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AC168": 1,
+        "hsd_803AAA48": 1,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_queue_contracts.py::test_request_queue_reset_marks_every_slot_empty": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "hsd_803B2374": 2,
+        "hsd_803B24E4": 1,
+        "hsd_803B27F4": 32
+      },
+      "card_calls": [],
+      "hsd_callbacks": [],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_repair_and_sectors.py::test_scan_and_repair_rebuild_a_corrupted_mirror_from_valid_copy": {
+      "commands_dispatched": [
+        0,
+        1,
+        4,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "requests_dispatched": [
+        3,
+        5
+      ],
+      "active_types_observed": [
+        0,
+        5,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 2,
+        "fn_803AC168": 15,
+        "fn_803AC258": 3,
+        "fn_803AC2A4": 1,
+        "fn_803AC2D4": 1,
+        "fn_803AC334": 1,
+        "fn_803AC3F8": 2,
+        "fn_803AC7DC": 3,
+        "fn_803ACBE8": 3,
+        "fn_803ACF30": 1,
+        "fn_803AD16C": 1,
+        "fn_803ADE4C": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 24528,
+        "fn_803B302C": 32592,
+        "hsd_803A949C": 11,
+        "hsd_803AAA48": 13,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803AC558": 1,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 2,
+        "hsd_803B2550": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B2B20": 9,
+        "hsd_803B2FA0": 3,
+        "hsd_803B31CC": 4
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDOpen",
+        "CARDReadAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_repair_and_sectors.py::test_repair_replaces_stale_mirror_sequence_and_payload": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "requests_dispatched": [
+        1,
+        3,
+        5
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 3,
+        "fn_803AC168": 16,
+        "fn_803AC258": 3,
+        "fn_803AC2A4": 1,
+        "fn_803AC2D4": 1,
+        "fn_803AC334": 1,
+        "fn_803AC3F8": 2,
+        "fn_803AC7DC": 4,
+        "fn_803ACBE8": 3,
+        "fn_803ACF30": 1,
+        "fn_803AD16C": 1,
+        "fn_803ADE4C": 1,
+        "fn_803ADF90": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 32704,
+        "fn_803B302C": 48944,
+        "hsd_803A949C": 12,
+        "hsd_803AAA48": 15,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803AC558": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 2,
+        "hsd_803B2550": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 1,
+        "hsd_803B2B20": 12,
+        "hsd_803B2FA0": 4,
+        "hsd_803B31CC": 6
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDOpen",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_repair_and_sectors.py::test_repair_clears_a_surplus_mirror_but_preserves_other_logical_file": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        17
+      ],
+      "requests_dispatched": [
+        1,
+        3,
+        5
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 3,
+        "fn_803AC168": 18,
+        "fn_803AC258": 5,
+        "fn_803AC2A4": 1,
+        "fn_803AC2D4": 1,
+        "fn_803AC334": 1,
+        "fn_803AC3F8": 4,
+        "fn_803AC634": 3,
+        "fn_803AC7DC": 4,
+        "fn_803ACBE8": 5,
+        "fn_803ACF30": 1,
+        "fn_803AD16C": 1,
+        "fn_803ADE4C": 1,
+        "fn_803ADF90": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 32704,
+        "fn_803B302C": 48944,
+        "hsd_803A949C": 14,
+        "hsd_803AAA48": 17,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 3,
+        "hsd_803AC558": 3,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 2,
+        "hsd_803B2550": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 1,
+        "hsd_803B2B20": 12,
+        "hsd_803B2FA0": 4,
+        "hsd_803B31CC": 6
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDOpen",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_repair_and_sectors.py::test_missing_all_mirrors_reports_metadata_or_missing_data_error[False--257]": {
+      "commands_dispatched": [
+        0,
+        1,
+        4,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        17
+      ],
+      "requests_dispatched": [
+        3,
+        5
+      ],
+      "active_types_observed": [
+        0,
+        5,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 2,
+        "fn_803AC168": 13,
+        "fn_803AC258": 3,
+        "fn_803AC2A4": 1,
+        "fn_803AC2D4": 1,
+        "fn_803AC334": 1,
+        "fn_803AC3F8": 2,
+        "fn_803AC7DC": 3,
+        "fn_803ACBE8": 3,
+        "fn_803ACF30": 1,
+        "fn_803AD16C": 1,
+        "fn_803ADE4C": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 16352,
+        "fn_803B302C": 24416,
+        "hsd_803A949C": 9,
+        "hsd_803AAA48": 11,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 2,
+        "hsd_803B2550": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B2B20": 7,
+        "hsd_803B2FA0": 2,
+        "hsd_803B31CC": 3
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDOpen",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          -257
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_repair_and_sectors.py::test_missing_all_mirrors_reports_metadata_or_missing_data_error[True--259]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        17
+      ],
+      "requests_dispatched": [
+        3,
+        5
+      ],
+      "active_types_observed": [
+        0,
+        5,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 2,
+        "fn_803AC168": 15,
+        "fn_803AC258": 3,
+        "fn_803AC2A4": 1,
+        "fn_803AC2D4": 1,
+        "fn_803AC334": 1,
+        "fn_803AC3F8": 3,
+        "fn_803AC634": 2,
+        "fn_803AC7DC": 3,
+        "fn_803ACBE8": 3,
+        "fn_803ACF30": 1,
+        "fn_803AD16C": 1,
+        "fn_803ADE4C": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 24416,
+        "fn_803B302C": 24416,
+        "hsd_803A949C": 11,
+        "hsd_803AAA48": 13,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803AC558": 1,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 2,
+        "hsd_803B2550": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B2B20": 8,
+        "hsd_803B2FA0": 3,
+        "hsd_803B31CC": 3
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDOpen",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          -259
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_repair_and_sectors.py::test_read_sector_decodes_and_write_sector_reencodes_the_work_buffer": {
+      "commands_dispatched": [
+        0,
+        1,
+        4,
+        7,
+        8,
+        9,
+        15,
+        16
+      ],
+      "requests_dispatched": [
+        3
+      ],
+      "active_types_observed": [
+        0,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 1,
+        "fn_803AC168": 8,
+        "fn_803AC3F8": 2,
+        "fn_803AC7DC": 2,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 24528,
+        "fn_803B302C": 8176,
+        "hsd_803A949C": 7,
+        "hsd_803AAA48": 10,
+        "hsd_803AC340": 3,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B2B20": 5,
+        "hsd_803B2FA0": 3,
+        "hsd_803B31CC": 1
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_repair_and_sectors.py::test_corrupt_read_sector_reports_checksum_error": {
+      "commands_dispatched": [
+        0,
+        1,
+        4,
+        7,
+        8,
+        9,
+        15
+      ],
+      "requests_dispatched": [
+        3
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 1,
+        "fn_803AC168": 6,
+        "fn_803AC3F8": 1,
+        "fn_803AC7DC": 2,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 8176,
+        "fn_803B302C": 8176,
+        "hsd_803A949C": 5,
+        "hsd_803AAA48": 7,
+        "hsd_803AC340": 3,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B2B20": 3,
+        "hsd_803B2FA0": 1,
+        "hsd_803B31CC": 1
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -261
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_roundtrip.py::test_create_and_logical_file_read_roundtrip": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        7,
+        8,
+        9
+      ],
+      "requests_dispatched": [
+        1,
+        3
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 2,
+        "fn_803AC168": 6,
+        "fn_803AC3F8": 1,
+        "fn_803AC7DC": 3,
+        "fn_803ADF90": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 8176,
+        "fn_803B302C": 8176,
+        "hsd_803A949C": 5,
+        "hsd_803AAA48": 7,
+        "hsd_803AC340": 3,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 1,
+        "hsd_803B2B20": 3,
+        "hsd_803B2FA0": 1,
+        "hsd_803B31CC": 1
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[1-0]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        17
+      ],
+      "requests_dispatched": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 6,
+        "fn_803AC168": 23,
+        "fn_803AC258": 3,
+        "fn_803AC2A4": 1,
+        "fn_803AC2D4": 1,
+        "fn_803AC334": 1,
+        "fn_803AC3F8": 5,
+        "fn_803AC634": 5,
+        "fn_803AC7DC": 7,
+        "fn_803ACBE8": 3,
+        "fn_803ACF30": 1,
+        "fn_803AD16C": 1,
+        "fn_803ADE4C": 1,
+        "fn_803ADF90": 3,
+        "fn_803AE7F8": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 40768,
+        "fn_803B302C": 57008,
+        "hsd_803A949C": 17,
+        "hsd_803AAA48": 23,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803AC558": 3,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 2,
+        "hsd_803B2550": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 3,
+        "hsd_803B2A4C": 1,
+        "hsd_803B2B20": 14,
+        "hsd_803B2FA0": 5,
+        "hsd_803B31CC": 7
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDOpen",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[1-1]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        17
+      ],
+      "requests_dispatched": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        3,
+        5,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 6,
+        "fn_803AC168": 21,
+        "fn_803AC258": 3,
+        "fn_803AC2A4": 1,
+        "fn_803AC2D4": 1,
+        "fn_803AC334": 1,
+        "fn_803AC3F8": 4,
+        "fn_803AC634": 6,
+        "fn_803AC6B8": 1,
+        "fn_803AC7DC": 8,
+        "fn_803ACB74": 1,
+        "fn_803ACBE8": 3,
+        "fn_803ACF30": 1,
+        "fn_803AD16C": 1,
+        "fn_803ADE4C": 1,
+        "fn_803ADF90": 3,
+        "fn_803AF3F0": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 32592,
+        "fn_803B302C": 57008,
+        "hsd_803A949C": 16,
+        "hsd_803AAA48": 22,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803AC558": 3,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 2,
+        "hsd_803B2550": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 3,
+        "hsd_803B2A4C": 1,
+        "hsd_803B2B20": 13,
+        "hsd_803B2FA0": 4,
+        "hsd_803B31CC": 7
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDOpen",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[1-2]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        17
+      ],
+      "requests_dispatched": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        3,
+        5,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 6,
+        "fn_803AC168": 21,
+        "fn_803AC258": 3,
+        "fn_803AC2A4": 1,
+        "fn_803AC2D4": 1,
+        "fn_803AC334": 1,
+        "fn_803AC3F8": 4,
+        "fn_803AC634": 6,
+        "fn_803AC6B8": 1,
+        "fn_803AC7DC": 8,
+        "fn_803ACB74": 1,
+        "fn_803ACBE8": 3,
+        "fn_803ACF30": 1,
+        "fn_803AD16C": 1,
+        "fn_803ADE4C": 1,
+        "fn_803ADF90": 3,
+        "fn_803AF3F0": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 32592,
+        "fn_803B302C": 57008,
+        "hsd_803A949C": 16,
+        "hsd_803AAA48": 22,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803AC558": 3,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 2,
+        "hsd_803B2550": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 3,
+        "hsd_803B2A4C": 1,
+        "hsd_803B2B20": 13,
+        "hsd_803B2FA0": 4,
+        "hsd_803B31CC": 7
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDOpen",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[1-3]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        17
+      ],
+      "requests_dispatched": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        4,
+        5,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 6,
+        "fn_803AC168": 19,
+        "fn_803AC258": 2,
+        "fn_803AC2A4": 1,
+        "fn_803AC2D4": 1,
+        "fn_803AC334": 1,
+        "fn_803AC3F8": 3,
+        "fn_803AC634": 4,
+        "fn_803AC7DC": 7,
+        "fn_803ACBE8": 2,
+        "fn_803ACF30": 1,
+        "fn_803AD16C": 1,
+        "fn_803ADE4C": 1,
+        "fn_803ADF90": 3,
+        "fn_803B0120": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 24416,
+        "fn_803B302C": 48832,
+        "hsd_803A949C": 14,
+        "hsd_803AAA48": 20,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803AC558": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 2,
+        "hsd_803B2550": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 3,
+        "hsd_803B2A4C": 1,
+        "hsd_803B2B20": 11,
+        "hsd_803B2FA0": 3,
+        "hsd_803B31CC": 6
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDOpen",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[8160-0]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        17
+      ],
+      "requests_dispatched": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 6,
+        "fn_803AC168": 23,
+        "fn_803AC258": 3,
+        "fn_803AC2A4": 1,
+        "fn_803AC2D4": 1,
+        "fn_803AC334": 1,
+        "fn_803AC3F8": 5,
+        "fn_803AC634": 5,
+        "fn_803AC7DC": 7,
+        "fn_803ACBE8": 3,
+        "fn_803ACF30": 1,
+        "fn_803AD16C": 1,
+        "fn_803ADE4C": 1,
+        "fn_803ADF90": 3,
+        "fn_803AE7F8": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 40768,
+        "fn_803B302C": 57008,
+        "hsd_803A949C": 17,
+        "hsd_803AAA48": 23,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803AC558": 3,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 2,
+        "hsd_803B2550": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 3,
+        "hsd_803B2A4C": 1,
+        "hsd_803B2B20": 14,
+        "hsd_803B2FA0": 5,
+        "hsd_803B31CC": 7
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDOpen",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[8160-1]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        17
+      ],
+      "requests_dispatched": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        3,
+        5,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 6,
+        "fn_803AC168": 21,
+        "fn_803AC258": 3,
+        "fn_803AC2A4": 1,
+        "fn_803AC2D4": 1,
+        "fn_803AC334": 1,
+        "fn_803AC3F8": 4,
+        "fn_803AC634": 6,
+        "fn_803AC6B8": 1,
+        "fn_803AC7DC": 8,
+        "fn_803ACB74": 1,
+        "fn_803ACBE8": 3,
+        "fn_803ACF30": 1,
+        "fn_803AD16C": 1,
+        "fn_803ADE4C": 1,
+        "fn_803ADF90": 3,
+        "fn_803AF3F0": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 32592,
+        "fn_803B302C": 57008,
+        "hsd_803A949C": 16,
+        "hsd_803AAA48": 22,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803AC558": 3,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 2,
+        "hsd_803B2550": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 3,
+        "hsd_803B2A4C": 1,
+        "hsd_803B2B20": 13,
+        "hsd_803B2FA0": 4,
+        "hsd_803B31CC": 7
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDOpen",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[8160-2]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        17
+      ],
+      "requests_dispatched": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        3,
+        5,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 6,
+        "fn_803AC168": 21,
+        "fn_803AC258": 3,
+        "fn_803AC2A4": 1,
+        "fn_803AC2D4": 1,
+        "fn_803AC334": 1,
+        "fn_803AC3F8": 4,
+        "fn_803AC634": 6,
+        "fn_803AC6B8": 1,
+        "fn_803AC7DC": 8,
+        "fn_803ACB74": 1,
+        "fn_803ACBE8": 3,
+        "fn_803ACF30": 1,
+        "fn_803AD16C": 1,
+        "fn_803ADE4C": 1,
+        "fn_803ADF90": 3,
+        "fn_803AF3F0": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 32592,
+        "fn_803B302C": 57008,
+        "hsd_803A949C": 16,
+        "hsd_803AAA48": 22,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803AC558": 3,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 2,
+        "hsd_803B2550": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 3,
+        "hsd_803B2A4C": 1,
+        "hsd_803B2B20": 13,
+        "hsd_803B2FA0": 4,
+        "hsd_803B31CC": 7
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDOpen",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[8160-3]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        17
+      ],
+      "requests_dispatched": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        4,
+        5,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 6,
+        "fn_803AC168": 19,
+        "fn_803AC258": 2,
+        "fn_803AC2A4": 1,
+        "fn_803AC2D4": 1,
+        "fn_803AC334": 1,
+        "fn_803AC3F8": 3,
+        "fn_803AC634": 4,
+        "fn_803AC7DC": 7,
+        "fn_803ACBE8": 2,
+        "fn_803ACF30": 1,
+        "fn_803AD16C": 1,
+        "fn_803ADE4C": 1,
+        "fn_803ADF90": 3,
+        "fn_803B0120": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 24416,
+        "fn_803B302C": 48832,
+        "hsd_803A949C": 14,
+        "hsd_803AAA48": 20,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803AC558": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 2,
+        "hsd_803B2550": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 3,
+        "hsd_803B2A4C": 1,
+        "hsd_803B2B20": 11,
+        "hsd_803B2FA0": 3,
+        "hsd_803B31CC": 6
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDOpen",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[8161-0]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        17
+      ],
+      "requests_dispatched": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 6,
+        "fn_803AC168": 33,
+        "fn_803AC258": 5,
+        "fn_803AC2A4": 1,
+        "fn_803AC2D4": 1,
+        "fn_803AC334": 1,
+        "fn_803AC3F8": 9,
+        "fn_803AC634": 5,
+        "fn_803AC7DC": 7,
+        "fn_803ACBE8": 5,
+        "fn_803ACF30": 1,
+        "fn_803AD16C": 1,
+        "fn_803ADE4C": 1,
+        "fn_803ADF90": 3,
+        "fn_803AE7F8": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 73472,
+        "fn_803B302C": 89712,
+        "hsd_803A949C": 25,
+        "hsd_803AAA48": 31,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803AC558": 5,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 2,
+        "hsd_803B2550": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 3,
+        "hsd_803B2A4C": 1,
+        "hsd_803B2B20": 22,
+        "hsd_803B2FA0": 9,
+        "hsd_803B31CC": 11
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDOpen",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[8161-1]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        17
+      ],
+      "requests_dispatched": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        3,
+        5,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 6,
+        "fn_803AC168": 29,
+        "fn_803AC258": 5,
+        "fn_803AC2A4": 1,
+        "fn_803AC2D4": 1,
+        "fn_803AC334": 1,
+        "fn_803AC3F8": 7,
+        "fn_803AC634": 6,
+        "fn_803AC6B8": 1,
+        "fn_803AC7DC": 8,
+        "fn_803ACB74": 2,
+        "fn_803ACBE8": 5,
+        "fn_803ACF30": 1,
+        "fn_803AD16C": 1,
+        "fn_803ADE4C": 1,
+        "fn_803ADF90": 3,
+        "fn_803AF3F0": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 57120,
+        "fn_803B302C": 89712,
+        "hsd_803A949C": 23,
+        "hsd_803AAA48": 29,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803AC558": 5,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 2,
+        "hsd_803B2550": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 3,
+        "hsd_803B2A4C": 1,
+        "hsd_803B2B20": 20,
+        "hsd_803B2FA0": 7,
+        "hsd_803B31CC": 11
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDOpen",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[8161-2]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        17
+      ],
+      "requests_dispatched": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        3,
+        5,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 6,
+        "fn_803AC168": 27,
+        "fn_803AC258": 4,
+        "fn_803AC2A4": 1,
+        "fn_803AC2D4": 1,
+        "fn_803AC334": 1,
+        "fn_803AC3F8": 6,
+        "fn_803AC634": 6,
+        "fn_803AC6B8": 1,
+        "fn_803AC7DC": 8,
+        "fn_803ACB74": 1,
+        "fn_803ACBE8": 4,
+        "fn_803ACF30": 1,
+        "fn_803AD16C": 1,
+        "fn_803ADE4C": 1,
+        "fn_803ADF90": 3,
+        "fn_803AF3F0": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 48944,
+        "fn_803B302C": 81536,
+        "hsd_803A949C": 21,
+        "hsd_803AAA48": 27,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803AC558": 4,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 2,
+        "hsd_803B2550": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 3,
+        "hsd_803B2A4C": 1,
+        "hsd_803B2B20": 18,
+        "hsd_803B2FA0": 6,
+        "hsd_803B31CC": 10
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDOpen",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[8161-3]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        17
+      ],
+      "requests_dispatched": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        4,
+        5,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 6,
+        "fn_803AC168": 25,
+        "fn_803AC258": 3,
+        "fn_803AC2A4": 1,
+        "fn_803AC2D4": 1,
+        "fn_803AC334": 1,
+        "fn_803AC3F8": 5,
+        "fn_803AC634": 4,
+        "fn_803AC7DC": 7,
+        "fn_803ACBE8": 3,
+        "fn_803ACF30": 1,
+        "fn_803AD16C": 1,
+        "fn_803ADE4C": 1,
+        "fn_803ADF90": 3,
+        "fn_803B0120": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 40768,
+        "fn_803B302C": 73360,
+        "hsd_803A949C": 19,
+        "hsd_803AAA48": 25,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803AC558": 3,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 2,
+        "hsd_803B2550": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 3,
+        "hsd_803B2A4C": 1,
+        "hsd_803B2B20": 16,
+        "hsd_803B2FA0": 5,
+        "hsd_803B31CC": 9
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDOpen",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[16331-0]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        17
+      ],
+      "requests_dispatched": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 6,
+        "fn_803AC168": 43,
+        "fn_803AC258": 7,
+        "fn_803AC2A4": 1,
+        "fn_803AC2D4": 1,
+        "fn_803AC334": 1,
+        "fn_803AC3F8": 13,
+        "fn_803AC634": 5,
+        "fn_803AC7DC": 7,
+        "fn_803ACBE8": 7,
+        "fn_803ACF30": 1,
+        "fn_803AD16C": 1,
+        "fn_803ADE4C": 1,
+        "fn_803ADF90": 3,
+        "fn_803AE7F8": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 106176,
+        "fn_803B302C": 122416,
+        "hsd_803A949C": 33,
+        "hsd_803AAA48": 39,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803AC558": 7,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 2,
+        "hsd_803B2550": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 3,
+        "hsd_803B2A4C": 1,
+        "hsd_803B2B20": 30,
+        "hsd_803B2FA0": 13,
+        "hsd_803B31CC": 15
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDOpen",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[16331-1]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        17
+      ],
+      "requests_dispatched": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        3,
+        5,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 6,
+        "fn_803AC168": 37,
+        "fn_803AC258": 7,
+        "fn_803AC2A4": 1,
+        "fn_803AC2D4": 1,
+        "fn_803AC334": 1,
+        "fn_803AC3F8": 10,
+        "fn_803AC634": 6,
+        "fn_803AC6B8": 1,
+        "fn_803AC7DC": 8,
+        "fn_803ACB74": 3,
+        "fn_803ACBE8": 7,
+        "fn_803ACF30": 1,
+        "fn_803AD16C": 1,
+        "fn_803ADE4C": 1,
+        "fn_803ADF90": 3,
+        "fn_803AF3F0": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 81648,
+        "fn_803B302C": 122416,
+        "hsd_803A949C": 30,
+        "hsd_803AAA48": 36,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803AC558": 7,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 2,
+        "hsd_803B2550": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 3,
+        "hsd_803B2A4C": 1,
+        "hsd_803B2B20": 27,
+        "hsd_803B2FA0": 10,
+        "hsd_803B31CC": 15
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDOpen",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[16331-2]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        17
+      ],
+      "requests_dispatched": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        3,
+        5,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 6,
+        "fn_803AC168": 33,
+        "fn_803AC258": 5,
+        "fn_803AC2A4": 1,
+        "fn_803AC2D4": 1,
+        "fn_803AC334": 1,
+        "fn_803AC3F8": 8,
+        "fn_803AC634": 6,
+        "fn_803AC6B8": 1,
+        "fn_803AC7DC": 8,
+        "fn_803ACB74": 1,
+        "fn_803ACBE8": 5,
+        "fn_803ACF30": 1,
+        "fn_803AD16C": 1,
+        "fn_803ADE4C": 1,
+        "fn_803ADF90": 3,
+        "fn_803AF3F0": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 65296,
+        "fn_803B302C": 106064,
+        "hsd_803A949C": 26,
+        "hsd_803AAA48": 32,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803AC558": 5,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 2,
+        "hsd_803B2550": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 3,
+        "hsd_803B2A4C": 1,
+        "hsd_803B2B20": 23,
+        "hsd_803B2FA0": 8,
+        "hsd_803B31CC": 13
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDOpen",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_roundtrip.py::test_create_write_read_reopen_across_modes_and_sector_boundaries[16331-3]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        17
+      ],
+      "requests_dispatched": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        4,
+        5,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 6,
+        "fn_803AC168": 31,
+        "fn_803AC258": 4,
+        "fn_803AC2A4": 1,
+        "fn_803AC2D4": 1,
+        "fn_803AC334": 1,
+        "fn_803AC3F8": 7,
+        "fn_803AC634": 4,
+        "fn_803AC7DC": 7,
+        "fn_803ACBE8": 4,
+        "fn_803ACF30": 1,
+        "fn_803AD16C": 1,
+        "fn_803ADE4C": 1,
+        "fn_803ADF90": 3,
+        "fn_803B0120": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 57120,
+        "fn_803B302C": 97888,
+        "hsd_803A949C": 24,
+        "hsd_803AAA48": 30,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803AC558": 4,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 2,
+        "hsd_803B2550": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 3,
+        "hsd_803B2A4C": 1,
+        "hsd_803B2B20": 21,
+        "hsd_803B2FA0": 7,
+        "hsd_803B31CC": 12
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDOpen",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_roundtrip.py::test_unchanged_write_verifies_and_avoids_card_writes[0]": {
+      "commands_dispatched": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "requests_dispatched": [
+        2,
+        3
+      ],
+      "active_types_observed": [
+        0,
+        2,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 2,
+        "fn_803AC168": 11,
+        "fn_803AC3F8": 2,
+        "fn_803AC7DC": 3,
+        "fn_803AE7F8": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 16352,
+        "fn_803B302C": 16352,
+        "hsd_803A949C": 7,
+        "hsd_803AAA48": 9,
+        "hsd_803AC340": 3,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B2A4C": 1,
+        "hsd_803B2B20": 5,
+        "hsd_803B2FA0": 2,
+        "hsd_803B31CC": 2
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDFastOpen",
+        "CARDReadAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_roundtrip.py::test_unchanged_write_verifies_and_avoids_card_writes[1]": {
+      "commands_dispatched": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "requests_dispatched": [
+        2,
+        3
+      ],
+      "active_types_observed": [
+        0,
+        3,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 2,
+        "fn_803AC168": 9,
+        "fn_803AC3F8": 2,
+        "fn_803AC634": 1,
+        "fn_803AC6B8": 1,
+        "fn_803AC7DC": 4,
+        "fn_803AF3F0": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 16352,
+        "fn_803B302C": 8176,
+        "hsd_803A949C": 6,
+        "hsd_803AAA48": 8,
+        "hsd_803AC340": 3,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B2A4C": 1,
+        "hsd_803B2B20": 4,
+        "hsd_803B2FA0": 2,
+        "hsd_803B31CC": 1
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDFastOpen",
+        "CARDReadAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_roundtrip.py::test_unchanged_write_verifies_and_avoids_card_writes[2]": {
+      "commands_dispatched": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "requests_dispatched": [
+        2,
+        3
+      ],
+      "active_types_observed": [
+        0,
+        3,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 2,
+        "fn_803AC168": 9,
+        "fn_803AC3F8": 2,
+        "fn_803AC634": 1,
+        "fn_803AC6B8": 1,
+        "fn_803AC7DC": 4,
+        "fn_803AF3F0": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 16352,
+        "fn_803B302C": 8176,
+        "hsd_803A949C": 6,
+        "hsd_803AAA48": 8,
+        "hsd_803AC340": 3,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B2A4C": 1,
+        "hsd_803B2B20": 4,
+        "hsd_803B2FA0": 2,
+        "hsd_803B31CC": 1
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDFastOpen",
+        "CARDReadAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_roundtrip.py::test_unchanged_write_verifies_and_avoids_card_writes[3]": {
+      "commands_dispatched": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "requests_dispatched": [
+        2,
+        3
+      ],
+      "active_types_observed": [
+        0,
+        4,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 2,
+        "fn_803AC168": 8,
+        "fn_803AC3F8": 1,
+        "fn_803AC7DC": 3,
+        "fn_803B0120": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 8176,
+        "fn_803B302C": 8176,
+        "hsd_803A949C": 5,
+        "hsd_803AAA48": 7,
+        "hsd_803AC340": 3,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B2A4C": 1,
+        "hsd_803B2B20": 3,
+        "hsd_803B2FA0": 1,
+        "hsd_803B31CC": 1
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDFastOpen",
+        "CARDReadAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_roundtrip.py::test_mirrored_shared_block_zero_can_report_repair_error_despite_readable_data[1]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        17
+      ],
+      "requests_dispatched": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        3,
+        5,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 4,
+        "fn_803AC168": 19,
+        "fn_803AC258": 3,
+        "fn_803AC2A4": 1,
+        "fn_803AC2D4": 1,
+        "fn_803AC334": 1,
+        "fn_803AC3F8": 4,
+        "fn_803AC634": 5,
+        "fn_803AC6B8": 1,
+        "fn_803AC7DC": 6,
+        "fn_803ACB74": 1,
+        "fn_803ACBE8": 3,
+        "fn_803ACF30": 1,
+        "fn_803AD16C": 1,
+        "fn_803ADE4C": 1,
+        "fn_803ADF90": 1,
+        "fn_803AF3F0": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 32592,
+        "fn_803B302C": 40768,
+        "hsd_803A949C": 14,
+        "hsd_803AAA48": 18,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803AC558": 3,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 2,
+        "hsd_803B2550": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 1,
+        "hsd_803B2A4C": 1,
+        "hsd_803B2B20": 11,
+        "hsd_803B2FA0": 4,
+        "hsd_803B31CC": 5
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDOpen",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          -258
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_roundtrip.py::test_mirrored_shared_block_zero_can_report_repair_error_despite_readable_data[2]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        17
+      ],
+      "requests_dispatched": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        3,
+        5,
+        6
+      ],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "fn_803AA790": 4,
+        "fn_803AC168": 19,
+        "fn_803AC258": 3,
+        "fn_803AC2A4": 1,
+        "fn_803AC2D4": 1,
+        "fn_803AC334": 1,
+        "fn_803AC3F8": 4,
+        "fn_803AC634": 5,
+        "fn_803AC6B8": 1,
+        "fn_803AC7DC": 6,
+        "fn_803ACB74": 1,
+        "fn_803ACBE8": 3,
+        "fn_803ACF30": 1,
+        "fn_803AD16C": 1,
+        "fn_803ADE4C": 1,
+        "fn_803ADF90": 1,
+        "fn_803AF3F0": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 32592,
+        "fn_803B302C": 40768,
+        "hsd_803A949C": 14,
+        "hsd_803AAA48": 18,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803AC558": 3,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 2,
+        "hsd_803B2550": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 1,
+        "hsd_803B2A4C": 1,
+        "hsd_803B2B20": 11,
+        "hsd_803B2FA0": 4,
+        "hsd_803B31CC": 5
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDOpen",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          -258
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "lb_callbacks": [],
+      "outcome": "passed"
+    },
+    "tests/test_tasks.py::test_card_task_dispatch_runs_real_handler_and_card_operation[CARD_TASK_MOUNT_CARD-lb_8001A184-CARDMountAsync]": {
+      "commands_dispatched": [
+        0
+      ],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [
+        0
+      ],
+      "functions_executed": {
+        "fn_8001A008": 1,
+        "hsd_803AAA48": 1,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "lb_80019CB0": 2,
+        "lb_80019EF0": 1,
+        "lb_8001A184": 1,
+        "lb_8001B6F8": 1
+      },
+      "card_calls": [
+        "CARDMountAsync",
+        "CARDProbeEx",
+        "CARDUnmount"
+      ],
+      "hsd_callbacks": [],
+      "lb_callbacks": [
+        0
+      ],
+      "outcome": "passed"
+    },
+    "tests/test_tasks.py::test_card_task_dispatch_runs_real_handler_and_card_operation[CARD_TASK_CHECK_CARD-lb_8001A3A4-CARDCheckAsync]": {
+      "commands_dispatched": [
+        0
+      ],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [
+        1
+      ],
+      "functions_executed": {
+        "fn_8001A008": 1,
+        "hsd_803AAA48": 1,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "lb_80019CB0": 2,
+        "lb_80019EF0": 1,
+        "lb_8001A3A4": 1,
+        "lb_8001B6F8": 1
+      },
+      "card_calls": [
+        "CARDCheckAsync",
+        "CARDUnmount"
+      ],
+      "hsd_callbacks": [],
+      "lb_callbacks": [
+        0
+      ],
+      "outcome": "passed"
+    },
+    "tests/test_tasks.py::test_card_task_dispatch_runs_real_handler_and_card_operation[CARD_TASK_FORMAT_CARD-lb_8001A8A4-CARDFormatAsync]": {
+      "commands_dispatched": [
+        0
+      ],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [
+        4
+      ],
+      "functions_executed": {
+        "fn_8001A008": 1,
+        "hsd_803AAA48": 1,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "lb_80019CB0": 2,
+        "lb_80019EF0": 1,
+        "lb_8001A8A4": 1,
+        "lb_8001B6F8": 1
+      },
+      "card_calls": [
+        "CARDFormatAsync",
+        "CARDUnmount"
+      ],
+      "hsd_callbacks": [],
+      "lb_callbacks": [
+        0
+      ],
+      "outcome": "passed"
+    },
+    "tests/test_tasks.py::test_card_task_dispatch_runs_real_handler_and_card_operation[CARD_TASK_DELETE_FILE-lb_8001A9CC-CARDDeleteAsync]": {
+      "commands_dispatched": [
+        0
+      ],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [
+        5
+      ],
+      "functions_executed": {
+        "fn_8001A008": 1,
+        "hsd_803AAA48": 1,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "lb_80019CB0": 2,
+        "lb_80019EF0": 1,
+        "lb_8001A9CC": 1,
+        "lb_8001B6F8": 1
+      },
+      "card_calls": [
+        "CARDDeleteAsync",
+        "CARDUnmount"
+      ],
+      "hsd_callbacks": [],
+      "lb_callbacks": [
+        0
+      ],
+      "outcome": "passed"
+    },
+    "tests/test_tasks.py::test_card_task_dispatch_runs_real_handler_and_card_operation[CARD_TASK_RENAME_FILE-lb_8001AAE4-CARDRenameAsync]": {
+      "commands_dispatched": [
+        0
+      ],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [
+        6
+      ],
+      "functions_executed": {
+        "fn_8001A008": 1,
+        "hsd_803AAA48": 1,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "lb_80019CB0": 2,
+        "lb_80019EF0": 1,
+        "lb_8001AAE4": 1,
+        "lb_8001B6F8": 1
+      },
+      "card_calls": [
+        "CARDRenameAsync",
+        "CARDUnmount"
+      ],
+      "hsd_callbacks": [],
+      "lb_callbacks": [
+        0
+      ],
+      "outcome": "passed"
+    },
+    "tests/test_tasks.py::test_unknown_task_03_only_normalizes_observed_result_values[0-1]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [
+        3
+      ],
+      "functions_executed": {
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "lb_80019CB0": 1,
+        "lb_80019EF0": 1,
+        "lb_8001A860": 1
+      },
+      "card_calls": [
+        "CARDUnmount"
+      ],
+      "hsd_callbacks": [],
+      "lb_callbacks": [
+        1
+      ],
+      "outcome": "passed"
+    },
+    "tests/test_tasks.py::test_unknown_task_03_only_normalizes_observed_result_values[1-1]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [
+        3
+      ],
+      "functions_executed": {
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "lb_80019CB0": 1,
+        "lb_80019EF0": 1,
+        "lb_8001A860": 1
+      },
+      "card_calls": [
+        "CARDUnmount"
+      ],
+      "hsd_callbacks": [],
+      "lb_callbacks": [
+        1
+      ],
+      "outcome": "passed"
+    },
+    "tests/test_tasks.py::test_unknown_task_03_only_normalizes_observed_result_values[2-1]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [
+        3
+      ],
+      "functions_executed": {
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "lb_80019CB0": 1,
+        "lb_80019EF0": 1,
+        "lb_8001A860": 1
+      },
+      "card_calls": [
+        "CARDUnmount"
+      ],
+      "hsd_callbacks": [],
+      "lb_callbacks": [
+        1
+      ],
+      "outcome": "passed"
+    },
+    "tests/test_tasks.py::test_unknown_task_03_only_normalizes_observed_result_values[3-3]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [
+        3
+      ],
+      "functions_executed": {
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "lb_80019CB0": 1,
+        "lb_80019EF0": 1,
+        "lb_8001A860": 1
+      },
+      "card_calls": [
+        "CARDUnmount"
+      ],
+      "hsd_callbacks": [],
+      "lb_callbacks": [
+        3
+      ],
+      "outcome": "passed"
+    },
+    "tests/test_tasks.py::test_unknown_task_03_only_normalizes_observed_result_values[4-4]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [
+        3
+      ],
+      "functions_executed": {
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "lb_80019CB0": 1,
+        "lb_80019EF0": 1,
+        "lb_8001A860": 1
+      },
+      "card_calls": [
+        "CARDUnmount"
+      ],
+      "hsd_callbacks": [],
+      "lb_callbacks": [
+        4
+      ],
+      "outcome": "passed"
+    },
+    "tests/test_tasks.py::test_unknown_task_03_only_normalizes_observed_result_values[7-7]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [
+        3
+      ],
+      "functions_executed": {
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "lb_80019CB0": 1,
+        "lb_80019EF0": 1,
+        "lb_8001A860": 1
+      },
+      "card_calls": [
+        "CARDUnmount"
+      ],
+      "hsd_callbacks": [],
+      "lb_callbacks": [
+        7
+      ],
+      "outcome": "passed"
+    },
+    "tests/test_tasks.py::test_unknown_task_03_only_normalizes_observed_result_values[10-10]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [
+        3
+      ],
+      "functions_executed": {
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "lb_80019CB0": 1,
+        "lb_80019EF0": 1,
+        "lb_8001A860": 1
+      },
+      "card_calls": [
+        "CARDUnmount"
+      ],
+      "hsd_callbacks": [],
+      "lb_callbacks": [
+        10
+      ],
+      "outcome": "passed"
+    },
+    "tests/test_tasks.py::test_unknown_task_03_only_normalizes_observed_result_values[13-13]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [
+        3
+      ],
+      "functions_executed": {
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "lb_80019CB0": 1,
+        "lb_80019EF0": 1,
+        "lb_8001A860": 1
+      },
+      "card_calls": [
+        "CARDUnmount"
+      ],
+      "hsd_callbacks": [],
+      "lb_callbacks": [
+        13
+      ],
+      "outcome": "passed"
+    },
+    "tests/test_tasks.py::test_result_mask_rejects_task_and_clears_remaining_slots": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "lb_80019CB0": 1,
+        "lb_80019EF0": 1
+      },
+      "card_calls": [
+        "CARDUnmount"
+      ],
+      "hsd_callbacks": [],
+      "lb_callbacks": [
+        4
+      ],
+      "outcome": "passed"
+    },
+    "tests/test_tasks.py::test_unused_slots_do_not_dispatch_mount_even_though_mount_is_zero": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [],
+      "functions_executed": {
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "lb_80019CB0": 1,
+        "lb_80019EF0": 1
+      },
+      "card_calls": [
+        "CARDUnmount"
+      ],
+      "hsd_callbacks": [],
+      "lb_callbacks": [
+        16
+      ],
+      "outcome": "passed"
+    },
+    "tests/test_tasks.py::test_find_file_matches_filename_company_and_game[needle-0]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [
+        13
+      ],
+      "functions_executed": {
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "lb_80019CB0": 1,
+        "lb_80019EF0": 1,
+        "lb_8001B614": 1
+      },
+      "card_calls": [
+        "CARDGetStatus",
+        "CARDUnmount"
+      ],
+      "hsd_callbacks": [],
+      "lb_callbacks": [
+        0
+      ],
+      "outcome": "passed"
+    },
+    "tests/test_tasks.py::test_find_file_matches_filename_company_and_game[missing-13]": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [
+        13
+      ],
+      "functions_executed": {
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "lb_80019CB0": 1,
+        "lb_80019EF0": 1,
+        "lb_8001B614": 1
+      },
+      "card_calls": [
+        "CARDGetStatus",
+        "CARDUnmount"
+      ],
+      "hsd_callbacks": [],
+      "lb_callbacks": [
+        13
+      ],
+      "outcome": "passed"
+    },
+    "tests/test_tasks.py::test_list_snapshots_filters_and_sorts_numeric_filenames": {
+      "commands_dispatched": [],
+      "requests_dispatched": [],
+      "active_types_observed": [],
+      "tasks_dispatched": [
+        12
+      ],
+      "functions_executed": {
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "lb_80019CB0": 1,
+        "lb_80019EF0": 1,
+        "lb_8001B14C": 1
+      },
+      "card_calls": [
+        "CARDGetStatus",
+        "CARDUnmount"
+      ],
+      "hsd_callbacks": [],
+      "lb_callbacks": [
+        0
+      ],
+      "outcome": "passed"
+    },
+    "tests/test_tasks.py::test_save_tasks_execute_through_hsd_and_card[CARD_TASK_OPEN_FILE-lb_8001A594]": {
+      "commands_dispatched": [
+        0,
+        1,
+        4,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        17
+      ],
+      "requests_dispatched": [
+        3,
+        5
+      ],
+      "active_types_observed": [
+        0,
+        5,
+        6
+      ],
+      "tasks_dispatched": [
+        2
+      ],
+      "functions_executed": {
+        "fn_8001A0B0": 1,
+        "fn_803AA790": 2,
+        "fn_803AC168": 11,
+        "fn_803AC258": 2,
+        "fn_803AC2A4": 1,
+        "fn_803AC2D4": 1,
+        "fn_803AC334": 1,
+        "fn_803AC3F8": 1,
+        "fn_803AC7DC": 3,
+        "fn_803ACBE8": 2,
+        "fn_803ACF30": 1,
+        "fn_803AD16C": 1,
+        "fn_803ADE4C": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 8176,
+        "fn_803B302C": 16240,
+        "hsd_803A949C": 7,
+        "hsd_803AAA48": 9,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803AC558": 1,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 2,
+        "hsd_803B2550": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B2B20": 5,
+        "hsd_803B2FA0": 1,
+        "hsd_803B31CC": 2,
+        "lb_80019CB0": 2,
+        "lb_80019EF0": 1,
+        "lb_8001A594": 1,
+        "lb_8001B6F8": 4
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDFreeBlocks",
+        "CARDGetStatus",
+        "CARDOpen",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDUnmount",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [],
+      "lb_callbacks": [
+        0
+      ],
+      "outcome": "passed"
+    },
+    "tests/test_tasks.py::test_save_tasks_execute_through_hsd_and_card[CARD_TASK_READ_FILES-lb_8001ACEC]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        7,
+        8,
+        9
+      ],
+      "requests_dispatched": [
+        1,
+        3
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        6
+      ],
+      "tasks_dispatched": [
+        8
+      ],
+      "functions_executed": {
+        "fn_8001A0B0": 1,
+        "fn_803AA790": 2,
+        "fn_803AC168": 6,
+        "fn_803AC3F8": 1,
+        "fn_803AC7DC": 3,
+        "fn_803ADF90": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 8176,
+        "fn_803B302C": 8176,
+        "hsd_803A949C": 5,
+        "hsd_803AAA48": 7,
+        "hsd_803AC340": 3,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 1,
+        "hsd_803B2B20": 3,
+        "hsd_803B2FA0": 1,
+        "hsd_803B31CC": 1,
+        "lb_80019CB0": 2,
+        "lb_80019EF0": 1,
+        "lb_8001ACEC": 1,
+        "lb_8001B6F8": 2
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDUnmount",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [],
+      "lb_callbacks": [
+        0
+      ],
+      "outcome": "passed"
+    },
+    "tests/test_tasks.py::test_save_tasks_execute_through_hsd_and_card[CARD_TASK_WRITE_FILES-lb_8001AE38]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "requests_dispatched": [
+        1,
+        2,
+        3
+      ],
+      "active_types_observed": [
+        0,
+        1,
+        4,
+        6
+      ],
+      "tasks_dispatched": [
+        9
+      ],
+      "functions_executed": {
+        "fn_8001A0B0": 1,
+        "fn_803AA790": 3,
+        "fn_803AC168": 9,
+        "fn_803AC3F8": 2,
+        "fn_803AC7DC": 4,
+        "fn_803ADF90": 1,
+        "fn_803B0120": 1,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 16352,
+        "fn_803B302C": 16352,
+        "hsd_803A949C": 7,
+        "hsd_803AAA48": 10,
+        "hsd_803AC340": 3,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B29D8": 1,
+        "hsd_803B2A4C": 1,
+        "hsd_803B2B20": 5,
+        "hsd_803B2FA0": 2,
+        "hsd_803B31CC": 2,
+        "lb_80019CB0": 2,
+        "lb_80019EF0": 1,
+        "lb_8001AE38": 1,
+        "lb_8001B6F8": 3
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDUnmount",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [
+        [
+          1,
+          0
+        ]
+      ],
+      "lb_callbacks": [
+        0
+      ],
+      "outcome": "passed"
+    },
+    "tests/test_tasks.py::test_save_tasks_execute_through_hsd_and_card[CARD_TASK_SET_STATUS-lb_8001AF84]": {
+      "commands_dispatched": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "requests_dispatched": [
+        3,
+        4
+      ],
+      "active_types_observed": [
+        0,
+        6,
+        7
+      ],
+      "tasks_dispatched": [
+        10
+      ],
+      "functions_executed": {
+        "fn_8001A0B0": 1,
+        "fn_803AA790": 2,
+        "fn_803AC168": 10,
+        "fn_803AC3F8": 1,
+        "fn_803AC7DC": 2,
+        "fn_803B0E9C": 2,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B21E8": 1,
+        "fn_803B2E04": 8176,
+        "hsd_803A949C": 8,
+        "hsd_803AAA48": 10,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B2928": 1,
+        "hsd_803B2B20": 3,
+        "hsd_803B2FA0": 1,
+        "lb_80019CB0": 2,
+        "lb_80019EF0": 1,
+        "lb_8001AF84": 1,
+        "lb_8001B6F8": 5
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDUnmount",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [],
+      "lb_callbacks": [
+        0
+      ],
+      "outcome": "passed"
+    },
+    "tests/test_tasks.py::test_save_tasks_execute_through_hsd_and_card[CARD_TASK_READ_HEADER-lb_8001B068]": {
+      "commands_dispatched": [
+        0,
+        1,
+        4,
+        7,
+        8,
+        9,
+        11
+      ],
+      "requests_dispatched": [
+        3,
+        6
+      ],
+      "active_types_observed": [
+        0,
+        5,
+        6
+      ],
+      "tasks_dispatched": [
+        11
+      ],
+      "functions_executed": {
+        "fn_8001A0B0": 1,
+        "fn_803AA790": 2,
+        "fn_803AC168": 6,
+        "fn_803AC3F8": 1,
+        "fn_803AC7DC": 2,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B26CC": 1,
+        "fn_803B2E04": 8176,
+        "hsd_803A949C": 5,
+        "hsd_803AAA48": 7,
+        "hsd_803AC340": 4,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B27F4": 1,
+        "hsd_803B286C": 1,
+        "hsd_803B2B20": 3,
+        "hsd_803B2FA0": 1,
+        "lb_80019CB0": 2,
+        "lb_80019EF0": 1,
+        "lb_8001B068": 1,
+        "lb_8001B6F8": 2
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDReadAsync",
+        "CARDSetStatusAsync",
+        "CARDUnmount",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [],
+      "lb_callbacks": [
+        0
+      ],
+      "outcome": "passed"
+    },
+    "tests/test_tasks.py::test_create_task_creates_file_using_stored_filename_and_header": {
+      "commands_dispatched": [
+        0,
+        1,
+        4,
+        7,
+        8,
+        9
+      ],
+      "requests_dispatched": [
+        3
+      ],
+      "active_types_observed": [
+        6
+      ],
+      "tasks_dispatched": [
+        7
+      ],
+      "functions_executed": {
+        "fn_8001A0B0": 1,
+        "fn_803AA790": 1,
+        "fn_803AC168": 5,
+        "fn_803AC3F8": 1,
+        "fn_803AC7DC": 2,
+        "fn_803B0E9C": 1,
+        "fn_803B1338": 1,
+        "fn_803B1F78": 1,
+        "fn_803B2E04": 8176,
+        "hsd_803A949C": 4,
+        "hsd_803AAA48": 5,
+        "hsd_803AC340": 3,
+        "hsd_803AC3E0": 2,
+        "hsd_803B2374": 1,
+        "hsd_803B24E4": 1,
+        "hsd_803B2674": 2,
+        "hsd_803B286C": 1,
+        "hsd_803B2B20": 2,
+        "hsd_803B2FA0": 1,
+        "lb_80019CB0": 2,
+        "lb_80019EF0": 1,
+        "lb_8001AC04": 1,
+        "lb_8001B6F8": 5
+      },
+      "card_calls": [
+        "CARDClose",
+        "CARDCreateAsync",
+        "CARDFastOpen",
+        "CARDGetStatus",
+        "CARDSetStatusAsync",
+        "CARDUnmount",
+        "CARDWriteAsync"
+      ],
+      "hsd_callbacks": [],
+      "lb_callbacks": [
+        0
+      ],
+      "outcome": "passed"
+    }
+  }
+}

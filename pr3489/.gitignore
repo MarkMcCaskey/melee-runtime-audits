@@ -1,0 +1,8 @@
+.venv/
+.local-inputs/
+__pycache__/
+.pytest_cache/
+*.pyc
+reports/*development*
+reports/junit.xml
+reports/test-output.txt
