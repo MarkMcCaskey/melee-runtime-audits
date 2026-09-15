@@ -1,0 +1,2857 @@
+{
+  "provenance": {
+    "source_repository": "https://github.com/doldecomp/melee",
+    "source_pr": "https://github.com/doldecomp/melee/pull/3489",
+    "commit": "26a2fdf763b56fd2071cb115f92925379c0a6701",
+    "dol_sha1": "08e0bf20134dfcb260699671004527b2d6bb1a45",
+    "elf_sha256": "00fbfcb4d3b5ebc0b6b14c9c1172a773ba9a8d2bcc6a276f4b77237ebd454993",
+    "source_sha256": {
+      "src/melee/lb/lbcardnew.c": "fd6ae0a537024923fcdc337e3e2af145d2b2656e2a40545dd6f53c35748a51f9",
+      "src/melee/lb/lbcardnew.h": "6361dacd497c5db7b38881526f4445c0046640ee7821dd338d18bf855b5674a2",
+      "src/sysdolphin/baselib/hsd_3A94.c": "0cd5d579f29388d38625e71a85b12c2904cfa0c008be1d202cbced32611abe60",
+      "src/sysdolphin/baselib/hsd_3A94.h": "edfd667423412ae6142ce57071f21e1dab26705566f198f20a938bc0f940cdc1",
+      "src/sysdolphin/baselib/hsd_3B27.c": "a4a69c81e736bf0fc7c0eaaa0dfd0f53ae5c47bf7a4243db0896c09c272436e8",
+      "src/sysdolphin/baselib/hsd_3B27.h": "37d26074d33856fca270a28e13a683b8795c5e55bddc78e3aedaa730da84fc4b",
+      "src/sysdolphin/baselib/hsd_3B2B.c": "2e0442b1f2836a20b4046df409615e5a14a7acb747be6d27d6c05f3ce1b3e3d1",
+      "src/sysdolphin/baselib/hsd_3B2B.h": "33100cdfbce4086d97d78af458f69d924ab1e06be88851e7c0e6aaaecb62a0f5",
+      "src/sysdolphin/baselib/hsd_3B2E.c": "21073cf2c5e1cd0934693a51899ed7d6300574981971d82a0c2c13edc3832ad9",
+      "src/sysdolphin/baselib/hsd_3B2E.h": "b6b9ac5cdade690fbffd7cb44aca3b27c9e9fb5ae327386e1f571227c135c469",
+      "src/sysdolphin/baselib/hsd_4D11.c": "c3ec23cf5366773b2b287e908b30514aa3764104cc275022f4b4a6cef8ba5551",
+      "extern/dolphin/include/dolphin/card.h": "2e14ca2faba918ab561a210e3505efcb9c55ceb38782a890a0771ef4bb15cff2",
+      "extern/dolphin/include/dolphin/card/CARDStat.h": "a621d5777fed08808a38085a03a59f9699d2df70b41e2ffa716b6b1899b14146",
+      "extern/dolphin/src/dolphin/card/CARDCreate.c": "3a153179401f6a7773b50566dab00f1cecde2e4b0b3ec13d1db74211cf6bc6f3"
+    },
+    "object_sha256": {
+      "build/GALE01/src/melee/lb/lbcardnew.o": "a8cc65b8caa6e10480f743fb3f56a9f5b387ab095292c4a818be2732e41ad32c",
+      "build/GALE01/src/sysdolphin/baselib/hsd_3A94.o": "052ee5a85b6742ed7c72352c58cb6c15a992e69d9853d0fb037cdc333f3313be",
+      "build/GALE01/src/sysdolphin/baselib/hsd_3B27.o": "4b85aba13e399a81c0208192ebdb5315e167f45c3dd38d131e7bfbd734fcf80d",
+      "build/GALE01/src/sysdolphin/baselib/hsd_3B2B.o": "6321d497889bba638b9db2452f1ed8d19d2f630a53dd7bcf6f4dbef6b0707e4f",
+      "build/GALE01/src/sysdolphin/baselib/hsd_3B2E.o": "1ada04dd1d43b0103e8111db6fba7ad6ed03e67a32ac0cf57bccc4c787309d90",
+      "build/GALE01/src/sysdolphin/baselib/hsd_4D11.o": "8782c260f1e2b9d75de357237566468bae3c278ba77ae7c1b83d1305d8f6f9b8"
+    },
+    "iso_dol_sha1": "08e0bf20134dfcb260699671004527b2d6bb1a45",
+    "dolphin_version": "Dolphin [feature/dap-server] 1225d09",
+    "dolphin_binary_sha256": "63abd556cce4ce3968d4e22347025f3d53a58ad0dc8db2fa1fef28a3ea299184",
+    "clang_version": "Homebrew clang version 23.1.0",
+    "driver_code_sha256": "74aa27107df6c6a9ac946858673221539ad746afe2e2a0b8be5c61ed5d2da901",
+    "audit_sha256": {
+      "driver.c": "22755b57acb4d4cb16ff746be945ffc98dd7a7beb9feccb1d21b58369a79b2af",
+      "rsp.py": "709343302c4d5e7cb0c5ef01a16a0fbe4bb2d0215585261c2f5c8c2710902792",
+      "run.py": "0b727a9e4f14f1647b7437695ba13029da9a5fbb3616b671ee84cad8991ad760"
+    },
+    "target_addresses": {
+      "CARDCheckAsync": 2150981428,
+      "CARDCreateAsync": 2150987832,
+      "CARDMountAsync": 2150983304,
+      "CARDProbeEx": 2150981524,
+      "CARDUnmount": 2150983876,
+      "hsd_803AAA48": 2151328328,
+      "hsd_803AC3E0": 2151334880,
+      "hsd_803B2374": 2151359348,
+      "hsd_803B24E4": 2151359716,
+      "hsd_803B2550": 2151359824,
+      "hsd_803B2674": 2151360116,
+      "hsd_803B27F4": 2151360500,
+      "hsd_803B286C": 2151360620,
+      "hsd_803B2928": 2151360808,
+      "hsd_803B29D8": 2151360984,
+      "hsd_803B2A4C": 2151361100,
+      "hsd_804D799C": 2152561052
+    },
+    "bootstrap_address": 2149733236
+  },
+  "cases": [
+    {
+      "name": "write_mode_0_roundtrip_header_and_verified_result",
+      "outcome": "passed",
+      "payload_bytes": 9000,
+      "payload_sha256": "4362024268a65c9afa9ea51b658fef5a365c7585c4345c014c400c3f1e43a370",
+      "file_zero_bytes": 180
+    },
+    {
+      "name": "write_mode_1_roundtrip_header_and_verified_result",
+      "outcome": "passed",
+      "payload_bytes": 9000,
+      "payload_sha256": "4362024268a65c9afa9ea51b658fef5a365c7585c4345c014c400c3f1e43a370",
+      "file_zero_bytes": 180
+    },
+    {
+      "name": "write_mode_2_roundtrip_header_and_verified_result",
+      "outcome": "passed",
+      "payload_bytes": 9000,
+      "payload_sha256": "4362024268a65c9afa9ea51b658fef5a365c7585c4345c014c400c3f1e43a370",
+      "file_zero_bytes": 180
+    },
+    {
+      "name": "write_mode_3_roundtrip_header_and_verified_result",
+      "outcome": "passed",
+      "payload_bytes": 9000,
+      "payload_sha256": "4362024268a65c9afa9ea51b658fef5a365c7585c4345c014c400c3f1e43a370",
+      "file_zero_bytes": 180
+    },
+    {
+      "name": "mirrored_file_zero_mode_1_reopen_error",
+      "outcome": "passed",
+      "reopen_result": -258
+    },
+    {
+      "name": "mirrored_file_zero_mode_2_reopen_error",
+      "outcome": "passed",
+      "reopen_result": -258
+    },
+    {
+      "name": "write_mode_0_persists_across_dolphin_restart",
+      "outcome": "passed"
+    },
+    {
+      "name": "write_mode_1_persists_across_dolphin_restart",
+      "outcome": "passed"
+    },
+    {
+      "name": "write_mode_2_persists_across_dolphin_restart",
+      "outcome": "passed"
+    },
+    {
+      "name": "write_mode_3_persists_across_dolphin_restart",
+      "outcome": "passed"
+    }
+  ],
+  "calls": [
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "write",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "INIT_STATE",
+      "args": [
+        2164326400,
+        2164334592
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "REGISTER_FILE",
+      "args": [
+        2164326400,
+        0,
+        180,
+        3,
+        2164346880
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "REGISTER_FILE",
+      "args": [
+        2164326400,
+        1,
+        9000,
+        0,
+        2164350976
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "BLOCK_COUNT",
+      "args": [
+        2164326400
+      ],
+      "result": 5
+    },
+    {
+      "phase": "write",
+      "operation": "CREATE_SAVE",
+      "args": [
+        2164326400,
+        2164383744,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "WRITE_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164350976,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        0,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "WRITE_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164350976,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "UPDATE_HEADER",
+      "args": [
+        2164326400,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_HEADER",
+      "args": [
+        2164326400,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "INIT_STATE",
+      "args": [
+        2164326400,
+        2164334592
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "OPEN_SAVE",
+      "args": [
+        2164326400,
+        2164383744,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        0,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "INIT_STATE",
+      "args": [
+        2164326400,
+        2164334592
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "REGISTER_FILE",
+      "args": [
+        2164326400,
+        0,
+        180,
+        3,
+        2164346880
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "REGISTER_FILE",
+      "args": [
+        2164326400,
+        1,
+        9000,
+        1,
+        2164350976
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "BLOCK_COUNT",
+      "args": [
+        2164326400
+      ],
+      "result": 5
+    },
+    {
+      "phase": "write",
+      "operation": "CREATE_SAVE",
+      "args": [
+        2164326400,
+        2164383744,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "WRITE_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164350976,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        0,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "WRITE_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164350976,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "UPDATE_HEADER",
+      "args": [
+        2164326400,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_HEADER",
+      "args": [
+        2164326400,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "INIT_STATE",
+      "args": [
+        2164326400,
+        2164334592
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "OPEN_SAVE",
+      "args": [
+        2164326400,
+        2164383744,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        0,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "INIT_STATE",
+      "args": [
+        2164326400,
+        2164334592
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "REGISTER_FILE",
+      "args": [
+        2164326400,
+        0,
+        180,
+        3,
+        2164346880
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "REGISTER_FILE",
+      "args": [
+        2164326400,
+        1,
+        9000,
+        2,
+        2164350976
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "BLOCK_COUNT",
+      "args": [
+        2164326400
+      ],
+      "result": 4
+    },
+    {
+      "phase": "write",
+      "operation": "CREATE_SAVE",
+      "args": [
+        2164326400,
+        2164383744,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "WRITE_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164350976,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        0,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "WRITE_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164350976,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "UPDATE_HEADER",
+      "args": [
+        2164326400,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_HEADER",
+      "args": [
+        2164326400,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "INIT_STATE",
+      "args": [
+        2164326400,
+        2164334592
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "OPEN_SAVE",
+      "args": [
+        2164326400,
+        2164383744,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        0,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "INIT_STATE",
+      "args": [
+        2164326400,
+        2164334592
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "REGISTER_FILE",
+      "args": [
+        2164326400,
+        0,
+        180,
+        3,
+        2164346880
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "REGISTER_FILE",
+      "args": [
+        2164326400,
+        1,
+        9000,
+        3,
+        2164350976
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "BLOCK_COUNT",
+      "args": [
+        2164326400
+      ],
+      "result": 3
+    },
+    {
+      "phase": "write",
+      "operation": "CREATE_SAVE",
+      "args": [
+        2164326400,
+        2164383744,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "WRITE_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164350976,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        0,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "WRITE_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164350976,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "UPDATE_HEADER",
+      "args": [
+        2164326400,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_HEADER",
+      "args": [
+        2164326400,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "INIT_STATE",
+      "args": [
+        2164326400,
+        2164334592
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "OPEN_SAVE",
+      "args": [
+        2164326400,
+        2164383744,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        0,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "INIT_STATE",
+      "args": [
+        2164326400,
+        2164334592
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "REGISTER_FILE",
+      "args": [
+        2164326400,
+        0,
+        180,
+        0,
+        2164346880
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "REGISTER_FILE",
+      "args": [
+        2164326400,
+        1,
+        128,
+        1,
+        2164350976
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "BLOCK_COUNT",
+      "args": [
+        2164326400
+      ],
+      "result": 3
+    },
+    {
+      "phase": "write",
+      "operation": "CREATE_SAVE",
+      "args": [
+        2164326400,
+        2164383744,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "WRITE_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164350976,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "INIT_STATE",
+      "args": [
+        2164326400,
+        2164334592
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "OPEN_SAVE",
+      "args": [
+        2164326400,
+        2164383744,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "INIT_STATE",
+      "args": [
+        2164326400,
+        2164334592
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "REGISTER_FILE",
+      "args": [
+        2164326400,
+        0,
+        180,
+        0,
+        2164346880
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "REGISTER_FILE",
+      "args": [
+        2164326400,
+        1,
+        128,
+        2,
+        2164350976
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "BLOCK_COUNT",
+      "args": [
+        2164326400
+      ],
+      "result": 3
+    },
+    {
+      "phase": "write",
+      "operation": "CREATE_SAVE",
+      "args": [
+        2164326400,
+        2164383744,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "WRITE_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164350976,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "INIT_STATE",
+      "args": [
+        2164326400,
+        2164334592
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "OPEN_SAVE",
+      "args": [
+        2164326400,
+        2164383744,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "UNMOUNT",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "INIT_STATE",
+      "args": [
+        2164326400,
+        2164334592
+      ],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "OPEN_SAVE",
+      "args": [
+        2164326400,
+        2164383744,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        0,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "READ_HEADER",
+      "args": [
+        2164326400,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "INIT_STATE",
+      "args": [
+        2164326400,
+        2164334592
+      ],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "OPEN_SAVE",
+      "args": [
+        2164326400,
+        2164383744,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        0,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "READ_HEADER",
+      "args": [
+        2164326400,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "INIT_STATE",
+      "args": [
+        2164326400,
+        2164334592
+      ],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "OPEN_SAVE",
+      "args": [
+        2164326400,
+        2164383744,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        0,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "READ_HEADER",
+      "args": [
+        2164326400,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "INIT_STATE",
+      "args": [
+        2164326400,
+        2164334592
+      ],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "OPEN_SAVE",
+      "args": [
+        2164326400,
+        2164383744,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        0,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "READ_HEADER",
+      "args": [
+        2164326400,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "UNMOUNT",
+      "args": [],
+      "result": 0
+    }
+  ],
+  "callbacks": [
+    {
+      "phase": "write",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "CREATE_SAVE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "WRITE_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "WRITE_FILE",
+      "argument": 1,
+      "result": 1
+    },
+    {
+      "phase": "write",
+      "operation": "UPDATE_HEADER",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_HEADER",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "OPEN_SAVE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "CREATE_SAVE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "WRITE_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "WRITE_FILE",
+      "argument": 1,
+      "result": 1
+    },
+    {
+      "phase": "write",
+      "operation": "UPDATE_HEADER",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_HEADER",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "OPEN_SAVE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "CREATE_SAVE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "WRITE_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "WRITE_FILE",
+      "argument": 1,
+      "result": 1
+    },
+    {
+      "phase": "write",
+      "operation": "UPDATE_HEADER",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_HEADER",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "OPEN_SAVE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "CREATE_SAVE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "WRITE_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "WRITE_FILE",
+      "argument": 1,
+      "result": 1
+    },
+    {
+      "phase": "write",
+      "operation": "UPDATE_HEADER",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_HEADER",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "OPEN_SAVE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "CREATE_SAVE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "WRITE_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "OPEN_SAVE",
+      "argument": 0,
+      "result": -258
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "CREATE_SAVE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "WRITE_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "write",
+      "operation": "OPEN_SAVE",
+      "argument": 0,
+      "result": -258
+    },
+    {
+      "phase": "write",
+      "operation": "READ_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "OPEN_SAVE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "READ_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "READ_FILE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "READ_HEADER",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "OPEN_SAVE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "READ_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "READ_FILE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "READ_HEADER",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "OPEN_SAVE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "READ_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "READ_FILE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "READ_HEADER",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "OPEN_SAVE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "READ_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "READ_FILE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "fresh_boot",
+      "operation": "READ_HEADER",
+      "argument": 0,
+      "result": 0
+    }
+  ],
+  "cards": [
+    {
+      "phase": "write",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    },
+    {
+      "phase": "fresh_boot",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    }
+  ],
+  "status": "passed",
+  "card_after_write_sha256": "28ab5bbc0743ce03a9715c8cafc401e3ae409649240f710a9c4e930252b9e428"
+}

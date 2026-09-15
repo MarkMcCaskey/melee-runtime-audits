@@ -31,7 +31,7 @@
       "build/GALE01/src/sysdolphin/baselib/hsd_4D11.o": "8782c260f1e2b9d75de357237566468bae3c278ba77ae7c1b83d1305d8f6f9b8"
     },
     "harness_sha256": {
-      "audit.py": "a600c324950358bce1357f109924029225f27fc9f2afd47f57ff227263b7988b",
+      "audit.py": "da8f89ced9bcdfc2710dabc6632f44445a30250a8b3eb0dc250272339a66ef72",
       "cardlab/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "cardlab/card.py": "2cd9b4001f24ee31a7eca96f31e51370881e6b88261c17b3d37f8061ee5cb37f",
       "cardlab/lab.py": "80678bb9c12676ec4c6032e926d051e908fa261837c2a7eb4f5e7504b5330ba6",

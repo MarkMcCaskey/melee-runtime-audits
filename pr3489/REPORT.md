@@ -7,12 +7,29 @@ Source: [PR #3489](https://github.com/doldecomp/melee/pull/3489), commit [`26a2f
 These are executions of the locally built, matching PowerPC decomp in Unicorn,
 with an in-memory Dolphin CARD interface. They are not live-game or hardware tests.
 
-## Findings
+## How much this establishes
+
+117 passing scenarios are a regression count, not a percentage of names verified.
+The queue/codec/save routines execute from the matching ELF, but CARD results, file-system
+behavior, and completion scheduling in this report come from our Python model.
+A dispatched enum tag establishes reachability, not the correctness of its English name.
+
+| Evidence | What it supports | What it does not establish |
+|---|---|---|
+| Byte/state assertions on actual PPC routines | Observed checksum, queue, encoding and descriptor behavior | Original names or all possible inputs |
+| CARD call traces | Which SDK operation the decomp requests | Whether the mock implements that SDK operation correctly |
+| Mock error/timing cases | How the decomp reacts to those supplied conditions | Whether real hardware can produce each modeled condition |
+| Enum visitation | Every declared value has an exercised scenario | Complete branches or naming correctness |
+
+The separate [Dolphin integration audit](dolphin/REPORT.md) removes the Python CARD model
+and records which scenarios also pass through the game's actual SDK and emulated card hardware.
+
+## Findings within this model
 
 - All 18 command tags were dispatched, including the empty and unknown tags.
 - All six nonempty request tags, all eight active tags, and all 14 nonempty task tags were observed.
   The two remaining NONE sentinels have explicit empty-queue/unused-slot tests.
-- Known operation names are supported by CARD traces and byte/state assertions.
+- CARD traces and byte/state assertions support specific operation descriptions within the model.
   Trace coverage alone is not treated as proof of every semantic claim.
 - `CARD_CMD_UNK_0x03` stalls at the head without performing an operation.
   `CARD_TASK_UNK_0x03` maps results 0 and 2 to 1; its intended role remains unknown.
@@ -28,7 +45,8 @@ with an in-memory Dolphin CARD interface. They are not live-game or hardware tes
 - With all mirrors corrupted, the error can be `-0x101` when file-table metadata is also lost,
   or `-0x103` when that metadata survives in block zero. REPAIR is not unconditional recovery.
 - A deliberately inline CARD callback is ignored before the busy flag is set and leaves the
-  request waiting. Deferred callbacks work; completion remains blocked while interrupts are disabled.
+  request waiting. Deferred callbacks work in the tested schedule. The mock itself enforces
+  the interrupt-disabled completion restriction; that assertion is not independent SDK validation.
 - Snapshot listing filters by game/company and an initial decimal filename prefix;
   it does not validate a snapshot payload type.
 

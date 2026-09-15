@@ -5,7 +5,15 @@ Dolphin `CARD*` interface. This audit checks the semantic names in
 [doldecomp/melee PR #3489](https://github.com/doldecomp/melee/pull/3489).
 The recorded run targets commit `26a2fdf763b56fd2071cb115f92925379c0a6701`.
 
-Read [REPORT.md](REPORT.md) for the results and limitations, and
+There are two distinct layers:
+
+- **Unicorn/model tests:** [REPORT.md](REPORT.md). Broad scenarios, but CARD behavior
+  and injected errors come from our Python implementation.
+- **Dolphin integration:** [dolphin/README.md](dolphin/README.md) and
+  [results](dolphin/REPORT.md). A compiled C driver invokes the original game SDK
+  through Dolphin's EXI/card hardware, using a disposable real card image.
+
+Read [REPORT.md](REPORT.md) for the model-test results and limitations, and
 [reports/evidence.json](reports/evidence.json) for per-test runtime observations
 and input hashes. The suite exercises every command tag, every nonempty request
 and task tag, and every active tag. It is **not** exhaustive branch coverage or
@@ -105,3 +113,18 @@ The CARD model is intentionally narrower than the real SDK: no FAT or device
 emulation, permissions, two independent slots, derived CARDStat icon offsets,
 or power-loss model. The report keeps those limits and observed counterexamples
 visible. No original game binary, save image, or copied decomp source is committed.
+
+## Naming confidence
+
+The useful question is whether a specific claim has a byte/state/call assertion,
+not how many tests visited its enum value. Checksums, descriptor copying, and
+queue boundaries have direct executable evidence. A call to `CARDReadAsync`
+supports a read operation name; it does not establish the meaning of every
+higher-level state or error. Both `UNK_0x03` intended roles remain unknown.
+
+Some tests deliberately assert model behavior: a failed modeled write is atomic
+because `card.py` implements it that way; callback delivery while interrupts are
+disabled is refused by the model. Those are assumptions used to test the caller,
+not discoveries about the SDK. The model also fills `CARDFileInfo` during create
+completion, whereas the SDK sets its channel/file number during launch. The
+current queue tests do not establish conformance for that timing detail.
