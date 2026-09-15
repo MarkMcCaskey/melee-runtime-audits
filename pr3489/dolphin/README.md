@@ -127,3 +127,12 @@ The task sweep initializes a dedicated heap using the game's `OSInitAlloc`,
 It confirms a basic effect for each known operation and records both unknown
 behaviors without assigning them speculative meanings. These tests still do not
 establish original symbol names, exhaustive branches, or exact hardware timing.
+
+### Maintainer cleanup compatibility
+
+The sweep accepts both `hsd_804D7988` and its descriptive replacement,
+`_card_result`, by resolving the actual symbol in the matching ELF. Against
+[the merged maintainer cleanup](https://github.com/MarkMcCaskey/melee/commit/1da32c523cb256248a5fb4d6bfd8917d18171afc),
+the full DOL, compiled C driver, trace code, and all patch sites remain identical
+to the recorded enum run. The 117 model regressions were rerun on that revision;
+the published Dolphin evidence retains its original run provenance.

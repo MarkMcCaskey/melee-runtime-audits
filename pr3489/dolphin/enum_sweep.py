@@ -173,7 +173,10 @@ class Sweep:
 
             def gate():
                 s.g.write(DEST, b"KEEP")
-                self.put(self.sym["hsd_804D7988"], previous)
+                result_symbol = (
+                    "_card_result" if "_card_result" in self.sym else "hsd_804D7988"
+                )
+                self.put(self.sym[result_symbol], previous)
                 active = self.sym["hsd_804D1138"]
                 for offset, value in [
                     (0, 1),

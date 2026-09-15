@@ -3,35 +3,33 @@
   "provenance": {
     "source_repository": "https://github.com/doldecomp/melee",
     "source_pr": "https://github.com/doldecomp/melee/pull/3489",
-    "commit": "26a2fdf763b56fd2071cb115f92925379c0a6701",
+    "commit": "1da32c523cb256248a5fb4d6bfd8917d18171afc",
     "dol_sha1": "08e0bf20134dfcb260699671004527b2d6bb1a45",
-    "elf_sha256": "00fbfcb4d3b5ebc0b6b14c9c1172a773ba9a8d2bcc6a276f4b77237ebd454993",
+    "elf_sha256": "dc12acb45adc10574762a8dfde4b195a3c03573a467f6035977702b6f1b885a1",
     "source_sha256": {
-      "src/melee/lb/lbcardnew.c": "fd6ae0a537024923fcdc337e3e2af145d2b2656e2a40545dd6f53c35748a51f9",
-      "src/melee/lb/lbcardnew.h": "6361dacd497c5db7b38881526f4445c0046640ee7821dd338d18bf855b5674a2",
-      "src/sysdolphin/baselib/hsd_3A94.c": "0cd5d579f29388d38625e71a85b12c2904cfa0c008be1d202cbced32611abe60",
-      "src/sysdolphin/baselib/hsd_3A94.h": "edfd667423412ae6142ce57071f21e1dab26705566f198f20a938bc0f940cdc1",
-      "src/sysdolphin/baselib/hsd_3B27.c": "a4a69c81e736bf0fc7c0eaaa0dfd0f53ae5c47bf7a4243db0896c09c272436e8",
-      "src/sysdolphin/baselib/hsd_3B27.h": "37d26074d33856fca270a28e13a683b8795c5e55bddc78e3aedaa730da84fc4b",
+      "src/melee/lb/lbcardnew.c": "cf99fbcb1d869ae018af633321263b6e3ac50cc02d235c415d0a0e02926d9445",
+      "src/melee/lb/lbcardnew.h": "ba314c8f60d6b654bea0bb93ec0519ed2c94277ccf41d17f60cf922b949b7cce",
+      "src/sysdolphin/baselib/hsd_3A94.c": "a0aa781c5d848dd1f8be87eab2589e0e6e484f32ec25dc168b36bc3536ab2513",
+      "src/sysdolphin/baselib/hsd_3A94.h": "84c665fbb3d41a5e2ce53871ac98f88306672bd66353eeec2c28de27b60fa451",
+      "src/sysdolphin/baselib/hsd_3B27.c": "c79c0518ed9bca336b526bec0250bc640b7ecab73b0de3700b323714b3d6b26e",
+      "src/sysdolphin/baselib/hsd_3B27.h": "281fc8650493260910699dc83f8f698b1681002becc298eeabb8b90eb764119c",
       "src/sysdolphin/baselib/hsd_3B2B.c": "2e0442b1f2836a20b4046df409615e5a14a7acb747be6d27d6c05f3ce1b3e3d1",
       "src/sysdolphin/baselib/hsd_3B2B.h": "33100cdfbce4086d97d78af458f69d924ab1e06be88851e7c0e6aaaecb62a0f5",
       "src/sysdolphin/baselib/hsd_3B2E.c": "21073cf2c5e1cd0934693a51899ed7d6300574981971d82a0c2c13edc3832ad9",
       "src/sysdolphin/baselib/hsd_3B2E.h": "b6b9ac5cdade690fbffd7cb44aca3b27c9e9fb5ae327386e1f571227c135c469",
-      "src/sysdolphin/baselib/hsd_4D11.c": "c3ec23cf5366773b2b287e908b30514aa3764104cc275022f4b4a6cef8ba5551",
       "extern/dolphin/include/dolphin/card.h": "2e14ca2faba918ab561a210e3505efcb9c55ceb38782a890a0771ef4bb15cff2",
       "extern/dolphin/include/dolphin/card/CARDStat.h": "a621d5777fed08808a38085a03a59f9699d2df70b41e2ffa716b6b1899b14146",
       "extern/dolphin/src/dolphin/card/CARDCreate.c": "3a153179401f6a7773b50566dab00f1cecde2e4b0b3ec13d1db74211cf6bc6f3"
     },
     "object_sha256": {
-      "build/GALE01/src/melee/lb/lbcardnew.o": "a8cc65b8caa6e10480f743fb3f56a9f5b387ab095292c4a818be2732e41ad32c",
-      "build/GALE01/src/sysdolphin/baselib/hsd_3A94.o": "052ee5a85b6742ed7c72352c58cb6c15a992e69d9853d0fb037cdc333f3313be",
-      "build/GALE01/src/sysdolphin/baselib/hsd_3B27.o": "4b85aba13e399a81c0208192ebdb5315e167f45c3dd38d131e7bfbd734fcf80d",
+      "build/GALE01/src/melee/lb/lbcardnew.o": "161067aeabce654d00b5aed5dd01820999bf73eaf172fe9d52bfc484465736c5",
+      "build/GALE01/src/sysdolphin/baselib/hsd_3A94.o": "3e0bdfd453d9147a4313912fe13524a4d57faf3347e4bbac7c8a44a00bdce95b",
+      "build/GALE01/src/sysdolphin/baselib/hsd_3B27.o": "9f4fa1fc95c30dbf328be9bb4f02d07e6c6bbe1820f667d931674a6812aabc11",
       "build/GALE01/src/sysdolphin/baselib/hsd_3B2B.o": "6321d497889bba638b9db2452f1ed8d19d2f630a53dd7bcf6f4dbef6b0707e4f",
-      "build/GALE01/src/sysdolphin/baselib/hsd_3B2E.o": "1ada04dd1d43b0103e8111db6fba7ad6ed03e67a32ac0cf57bccc4c787309d90",
-      "build/GALE01/src/sysdolphin/baselib/hsd_4D11.o": "8782c260f1e2b9d75de357237566468bae3c278ba77ae7c1b83d1305d8f6f9b8"
+      "build/GALE01/src/sysdolphin/baselib/hsd_3B2E.o": "1ada04dd1d43b0103e8111db6fba7ad6ed03e67a32ac0cf57bccc4c787309d90"
     },
     "harness_sha256": {
-      "audit.py": "da8f89ced9bcdfc2710dabc6632f44445a30250a8b3eb0dc250272339a66ef72",
+      "audit.py": "8f974096091d1b3b9598696fe68c7c76b227491af9a180a9d8812c5b05d54a4c",
       "cardlab/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "cardlab/card.py": "2cd9b4001f24ee31a7eca96f31e51370881e6b88261c17b3d37f8061ee5cb37f",
       "cardlab/lab.py": "80678bb9c12676ec4c6032e926d051e908fa261837c2a7eb4f5e7504b5330ba6",
@@ -42,7 +40,7 @@
       "tests/test_errors_and_timing.py": "9095cb6adbf3e7f53ca0b097ea570995fe2e80b7225926dc5e2d0c1093d7fb6a",
       "tests/test_format_semantics.py": "34a4a4222c523538fdd60247e1150b51f7786545a12b668619436ca23e2d03f2",
       "tests/test_headers.py": "ef18a65b11008ea06068ea7864810cd3c97a2f9aab16af04d850ab0516694b15",
-      "tests/test_queue_contracts.py": "f9319cc2c326213e40b3f669a738cbef1828c7c4f2baff59e0ffe0e75b4d86b9",
+      "tests/test_queue_contracts.py": "55f5e9b525a9dfad443643d57c0821f8a8776af65409d0cf2a302e26e87f61fd",
       "tests/test_repair_and_sectors.py": "6c07f6c13703faf4cae1e89bd6e793f77efd6d7597e041d7fb9ed63451d1310d",
       "tests/test_roundtrip.py": "a8c8ea4b56fb7ccf0a1c9f523eea96790dc64d347aab793847b57593845e2e83",
       "tests/test_smoke.py": "9847a0a3b50623f8dbd1871f8741414adddfce577d2e934b0584005ea23a0a2a",
@@ -5408,14 +5406,14 @@
         0
       ],
       "functions_executed": {
-        "fn_8001A008": 1,
         "hsd_803AAA48": 1,
         "hsd_803B2374": 1,
         "hsd_803B24E4": 1,
         "lb_80019CB0": 2,
         "lb_80019EF0": 1,
         "lb_8001A184": 1,
-        "lb_8001B6F8": 1
+        "lb_8001B6F8": 1,
+        "onCardComplete": 1
       },
       "card_calls": [
         "CARDMountAsync",
@@ -5438,14 +5436,14 @@
         1
       ],
       "functions_executed": {
-        "fn_8001A008": 1,
         "hsd_803AAA48": 1,
         "hsd_803B2374": 1,
         "hsd_803B24E4": 1,
         "lb_80019CB0": 2,
         "lb_80019EF0": 1,
         "lb_8001A3A4": 1,
-        "lb_8001B6F8": 1
+        "lb_8001B6F8": 1,
+        "onCardComplete": 1
       },
       "card_calls": [
         "CARDCheckAsync",
@@ -5467,14 +5465,14 @@
         4
       ],
       "functions_executed": {
-        "fn_8001A008": 1,
         "hsd_803AAA48": 1,
         "hsd_803B2374": 1,
         "hsd_803B24E4": 1,
         "lb_80019CB0": 2,
         "lb_80019EF0": 1,
         "lb_8001A8A4": 1,
-        "lb_8001B6F8": 1
+        "lb_8001B6F8": 1,
+        "onCardComplete": 1
       },
       "card_calls": [
         "CARDFormatAsync",
@@ -5496,14 +5494,14 @@
         5
       ],
       "functions_executed": {
-        "fn_8001A008": 1,
         "hsd_803AAA48": 1,
         "hsd_803B2374": 1,
         "hsd_803B24E4": 1,
         "lb_80019CB0": 2,
         "lb_80019EF0": 1,
         "lb_8001A9CC": 1,
-        "lb_8001B6F8": 1
+        "lb_8001B6F8": 1,
+        "onCardComplete": 1
       },
       "card_calls": [
         "CARDDeleteAsync",
@@ -5525,14 +5523,14 @@
         6
       ],
       "functions_executed": {
-        "fn_8001A008": 1,
         "hsd_803AAA48": 1,
         "hsd_803B2374": 1,
         "hsd_803B24E4": 1,
         "lb_80019CB0": 2,
         "lb_80019EF0": 1,
         "lb_8001AAE4": 1,
-        "lb_8001B6F8": 1
+        "lb_8001B6F8": 1,
+        "onCardComplete": 1
       },
       "card_calls": [
         "CARDRenameAsync",

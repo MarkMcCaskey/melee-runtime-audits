@@ -2,7 +2,7 @@
 
 **117 passed; 0 failed.**
 
-Source: [PR #3489](https://github.com/doldecomp/melee/pull/3489), commit [`26a2fdf76`](https://github.com/MarkMcCaskey/melee/commit/26a2fdf763b56fd2071cb115f92925379c0a6701).
+Source: [PR #3489](https://github.com/doldecomp/melee/pull/3489), commit [`1da32c523`](https://github.com/MarkMcCaskey/melee/commit/1da32c523cb256248a5fb4d6bfd8917d18171afc).
 
 These are executions of the locally built, matching PowerPC decomp in Unicorn,
 with an in-memory Dolphin CARD interface. They are not live-game or hardware tests.

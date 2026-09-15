@@ -58,7 +58,8 @@ def test_write_empty_logical_file_fails_before_queueing(lab):
 @pytest.mark.parametrize("previous,expected", [(0, 1), (1, 1), (2, 0)])
 def test_check_verified_controls_following_clear(lab, previous, expected):
     target = lab.m.alloc(4, b"KEEP")
-    lab.m.put32("hsd_804D7988", previous)
+    result_symbol = "_card_result" if "_card_result" in lab.m.symbols else "hsd_804D7988"
+    lab.m.put32(result_symbol, previous)
     lab.enqueue("CARD_CMD_CHECK_VERIFIED")
     lab.enqueue("CARD_CMD_CLEAR_BUF", 0, 0, 0, 0, target, 0, 4)
     # Install a real active completion so result is captured before idle reset.
