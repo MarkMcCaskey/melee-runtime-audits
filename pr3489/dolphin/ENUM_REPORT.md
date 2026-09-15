@@ -122,3 +122,11 @@ Scenario numbers below refer to the assertion list at the end. Counts are dispat
 - Empty sentinel tests inspect real idle queue state; no fake sentinel dispatch is counted. Active states are sampled rather than independently dispatched.
 - Most enum flows use 128-byte data payloads. The earlier [10-scenario integration run](REPORT.md) additionally covers 9,000-byte transfers and persistence across emulator restarts. Its evidence records the runner version used then.
 - This is focused behavioral coverage, not exhaustive error, corruption, power-loss, timing, graphical banner/icon, normal-gameplay, or physical GameCube validation. Shared end-to-end checks and static control-flow analysis together support the descriptive names; the tests cannot recover original identifiers.
+
+## Subsequent source cleanup
+
+The PR subsequently replaced `CMD_FIELD`/`CMD_HEAD`/`CMD_STATE` with direct union
+member access and moved the globals into `hsd_3A94.c`, removing `hsd_4D11.c`.
+The full DOL still matches the SHA-1 above. These recorded emulator results
+retain their original source provenance; preparation also supports the newer
+layout. No enum names or numeric values changed in that cleanup.

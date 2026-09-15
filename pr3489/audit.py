@@ -22,11 +22,14 @@ SOURCES = [
     "src/sysdolphin/baselib/hsd_3B2B.h",
     "src/sysdolphin/baselib/hsd_3B2E.c",
     "src/sysdolphin/baselib/hsd_3B2E.h",
-    "src/sysdolphin/baselib/hsd_4D11.c",
     "extern/dolphin/include/dolphin/card.h",
     "extern/dolphin/include/dolphin/card/CARDStat.h",
     "extern/dolphin/src/dolphin/card/CARDCreate.c",
 ]
+
+# The PR originally kept card globals in a separate translation unit.
+# Later matching revisions moved them into hsd_3A94.c and removed this file.
+OPTIONAL_SOURCES = ["src/sysdolphin/baselib/hsd_4D11.c"]
 
 
 def digest(path, algorithm="sha256"):
@@ -53,13 +56,19 @@ def prepare(repo):
     if actual != expected:
         raise SystemExit(f"DOL mismatch: {actual} != {expected}")
     destination = ROOT / ".local-inputs"
-    paths = SOURCES + ["build/GALE01/main.elf"]
+    sources = list(SOURCES)
+    for path in OPTIONAL_SOURCES:
+        if (repo / path).is_file():
+            sources.append(path)
+        else:
+            (destination / path).unlink(missing_ok=True)
+    paths = sources + ["build/GALE01/main.elf"]
     for path in paths:
         target = destination / path
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(repo / path, target)
     objects = {}
-    for source in SOURCES:
+    for source in sources:
         if source.startswith("src/") and source.endswith(".c"):
             obj = "build/GALE01/" + source[:-2] + ".o"
             objects[obj] = digest(repo / obj)
@@ -69,7 +78,7 @@ def prepare(repo):
         "commit": commit,
         "dol_sha1": actual,
         "elf_sha256": digest(destination / "build/GALE01/main.elf"),
-        "source_sha256": {path: digest(destination / path) for path in SOURCES},
+        "source_sha256": {path: digest(destination / path) for path in sources},
         "object_sha256": objects,
     }
     (destination / "provenance.json").write_text(
