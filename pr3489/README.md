@@ -128,3 +128,7 @@ disabled is refused by the model. Those are assumptions used to test the caller,
 not discoveries about the SDK. The model also fills `CARDFileInfo` during create
 completion, whereas the SDK sets its channel/file number during launch. The
 current queue tests do not establish conformance for that timing detail.
+
+The [focused Dolphin enum sweep](dolphin/ENUM_REPORT.md) adds per-value runtime
+observations and semantic assertions for every command, request, active state,
+and task, including explicit empty-sentinel and unknown-value cases.

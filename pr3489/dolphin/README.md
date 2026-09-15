@@ -95,8 +95,8 @@ function that could simply replace `card.py`.
 ## Limits
 
 This is focused integration coverage, not the complete 117-scenario model suite.
-It does not independently cover every task/command tag, graphical banner/icon
-variants, all injected errors, every repair/corruption case, power loss, or
+That earlier run does not independently cover every task/command tag (see the
+separate enum sweep below), graphical banner/icon variants, all injected errors, every repair/corruption case, power loss, or
 real GameCube hardware. It calls the save subsystem before normal game scene
 initialization; it does not establish which configurations ordinary gameplay
 uses. Original symbol names and both `UNK_0x03` intended roles remain unresolved.
@@ -105,3 +105,25 @@ The recorded emulator is the local `feature/dap-server` build `1225d09`, identif
 by its binary hash; the audit uses its GDB interface, not DAP. A stock GUI build
 was not successfully launched for this audit. Results should not be represented
 as validation of every stock Dolphin release.
+
+## Focused enum sweep
+
+Run `enum_sweep.py` with the same arguments as `run.py` to exercise all four enum
+families. It uses small payloads and a disposable card, including formatting it.
+The [per-enum report](ENUM_REPORT.md) maps each value to passing scenarios and
+asserted effects; [enum-evidence.json](../reports/enum-evidence.json) contains the
+underlying counts, operations, callback results, and trace-patch provenance.
+
+Unlike the earlier uninstrumented integration run, this sweep installs small PPC
+trace probes at the actual command/task switch dispatches, request-dispatch entry,
+and selected SDK entries. The probes increment counters, preserve registers/CR,
+and execute the displaced instruction. They do not provide CARD results, file
+bytes, or callback completions. Command/task counts are dispatch observations;
+active-type counts sample the real active state at the pump and wrapper callback.
+Empty request/task sentinels have explicit state tests instead of fake dispatches.
+
+The task sweep initializes a dedicated heap using the game's `OSInitAlloc`,
+`OSCreateHeap`, and `HSD_SetHeap`, so snapshot listing uses the real allocator.
+It confirms a basic effect for each known operation and records both unknown
+behaviors without assigning them speculative meanings. These tests still do not
+establish original symbol names, exhaustive branches, or exact hardware timing.

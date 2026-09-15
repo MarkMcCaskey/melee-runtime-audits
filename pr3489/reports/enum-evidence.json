@@ -1,0 +1,5597 @@
+{
+  "status": "passed",
+  "provenance": {
+    "source_repository": "https://github.com/doldecomp/melee",
+    "source_pr": "https://github.com/doldecomp/melee/pull/3489",
+    "commit": "26a2fdf763b56fd2071cb115f92925379c0a6701",
+    "dol_sha1": "08e0bf20134dfcb260699671004527b2d6bb1a45",
+    "elf_sha256": "00fbfcb4d3b5ebc0b6b14c9c1172a773ba9a8d2bcc6a276f4b77237ebd454993",
+    "source_sha256": {
+      "src/melee/lb/lbcardnew.c": "fd6ae0a537024923fcdc337e3e2af145d2b2656e2a40545dd6f53c35748a51f9",
+      "src/melee/lb/lbcardnew.h": "6361dacd497c5db7b38881526f4445c0046640ee7821dd338d18bf855b5674a2",
+      "src/sysdolphin/baselib/hsd_3A94.c": "0cd5d579f29388d38625e71a85b12c2904cfa0c008be1d202cbced32611abe60",
+      "src/sysdolphin/baselib/hsd_3A94.h": "edfd667423412ae6142ce57071f21e1dab26705566f198f20a938bc0f940cdc1",
+      "src/sysdolphin/baselib/hsd_3B27.c": "a4a69c81e736bf0fc7c0eaaa0dfd0f53ae5c47bf7a4243db0896c09c272436e8",
+      "src/sysdolphin/baselib/hsd_3B27.h": "37d26074d33856fca270a28e13a683b8795c5e55bddc78e3aedaa730da84fc4b",
+      "src/sysdolphin/baselib/hsd_3B2B.c": "2e0442b1f2836a20b4046df409615e5a14a7acb747be6d27d6c05f3ce1b3e3d1",
+      "src/sysdolphin/baselib/hsd_3B2B.h": "33100cdfbce4086d97d78af458f69d924ab1e06be88851e7c0e6aaaecb62a0f5",
+      "src/sysdolphin/baselib/hsd_3B2E.c": "21073cf2c5e1cd0934693a51899ed7d6300574981971d82a0c2c13edc3832ad9",
+      "src/sysdolphin/baselib/hsd_3B2E.h": "b6b9ac5cdade690fbffd7cb44aca3b27c9e9fb5ae327386e1f571227c135c469",
+      "src/sysdolphin/baselib/hsd_4D11.c": "c3ec23cf5366773b2b287e908b30514aa3764104cc275022f4b4a6cef8ba5551",
+      "extern/dolphin/include/dolphin/card.h": "2e14ca2faba918ab561a210e3505efcb9c55ceb38782a890a0771ef4bb15cff2",
+      "extern/dolphin/include/dolphin/card/CARDStat.h": "a621d5777fed08808a38085a03a59f9699d2df70b41e2ffa716b6b1899b14146",
+      "extern/dolphin/src/dolphin/card/CARDCreate.c": "3a153179401f6a7773b50566dab00f1cecde2e4b0b3ec13d1db74211cf6bc6f3"
+    },
+    "object_sha256": {
+      "build/GALE01/src/melee/lb/lbcardnew.o": "a8cc65b8caa6e10480f743fb3f56a9f5b387ab095292c4a818be2732e41ad32c",
+      "build/GALE01/src/sysdolphin/baselib/hsd_3A94.o": "052ee5a85b6742ed7c72352c58cb6c15a992e69d9853d0fb037cdc333f3313be",
+      "build/GALE01/src/sysdolphin/baselib/hsd_3B27.o": "4b85aba13e399a81c0208192ebdb5315e167f45c3dd38d131e7bfbd734fcf80d",
+      "build/GALE01/src/sysdolphin/baselib/hsd_3B2B.o": "6321d497889bba638b9db2452f1ed8d19d2f630a53dd7bcf6f4dbef6b0707e4f",
+      "build/GALE01/src/sysdolphin/baselib/hsd_3B2E.o": "1ada04dd1d43b0103e8111db6fba7ad6ed03e67a32ac0cf57bccc4c787309d90",
+      "build/GALE01/src/sysdolphin/baselib/hsd_4D11.o": "8782c260f1e2b9d75de357237566468bae3c278ba77ae7c1b83d1305d8f6f9b8"
+    },
+    "iso_dol_sha1": "08e0bf20134dfcb260699671004527b2d6bb1a45",
+    "dolphin_version": "Dolphin [feature/dap-server] 1225d09",
+    "dolphin_binary_sha256": "63abd556cce4ce3968d4e22347025f3d53a58ad0dc8db2fa1fef28a3ea299184",
+    "clang_version": "Homebrew clang version 23.1.0",
+    "driver_code_sha256": "d8193314d76859232281aeeb0b034bd348123e4b6b73aa96af6ea6bb038df648",
+    "audit_sha256": {
+      "driver.c": "146c04c7561db1344f988693b28eb87f30e282c506d009c61153eea4d080f7e0",
+      "enum_sweep.py": "63fd5cd9c1a4c909cb9d5f02f943d63309f9382c5a5be8a7e54231861acd5f6a",
+      "enum_trace.py": "b922311f3295a8f793afdffe72995de416c056f3946a4148659ed51e344ed984",
+      "rsp.py": "d76161f56fcefc45d1c2ca5e4fb0438c939354af8e55a75005956f47efea1788",
+      "run.py": "290a6d31142866614a8d34d2104241a6022daba3738c02f08711577e03cec3ef"
+    },
+    "target_addresses": {
+      "CARDCheckAsync": 2150981428,
+      "CARDClose": 2150987436,
+      "CARDCreateAsync": 2150987832,
+      "CARDMountAsync": 2150983304,
+      "CARDOpen": 2150987060,
+      "CARDProbeEx": 2150981524,
+      "CARDRead": 2150989448,
+      "CARDUnmount": 2150983876,
+      "CARDWrite": 2150990340,
+      "HSD_SetHeap": 2151109644,
+      "OSCreateHeap": 2150908136,
+      "OSInitAlloc": 2150908024,
+      "fn_803AC168": 2151334248,
+      "hsd_803AAA48": 2151328328,
+      "hsd_803AC3E0": 2151334880,
+      "hsd_803B2374": 2151359348,
+      "hsd_803B24E4": 2151359716,
+      "hsd_803B2550": 2151359824,
+      "hsd_803B2674": 2151360116,
+      "hsd_803B27F4": 2151360500,
+      "hsd_803B286C": 2151360620,
+      "hsd_803B2928": 2151360808,
+      "hsd_803B29D8": 2151360984,
+      "hsd_803B2A4C": 2151361100,
+      "lb_80019CB0": 2147589296,
+      "lb_80019EF0": 2147589872,
+      "lb_8001B760": 2147596128,
+      "hsd_804D799C": 2152561052
+    },
+    "bootstrap_address": 2149733236
+  },
+  "enums": {
+    "command": {
+      "CARD_CMD_NONE": 0,
+      "CARD_CMD_WRITE_BLOCK": 1,
+      "CARD_CMD_READ_BLOCK": 2,
+      "CARD_CMD_UNK_0x03": 3,
+      "CARD_CMD_CLEAR_BUF": 4,
+      "CARD_CMD_VERIFY_BLOCK": 5,
+      "CARD_CMD_CHECK_VERIFIED": 6,
+      "CARD_CMD_CREATE_FILE": 7,
+      "CARD_CMD_SET_STATUS": 8,
+      "CARD_CMD_WRITE_HEADER": 9,
+      "CARD_CMD_VERIFY_HEADER": 10,
+      "CARD_CMD_READ_HEADER": 11,
+      "CARD_CMD_GET_STATUS": 12,
+      "CARD_CMD_SCAN_BLOCK": 13,
+      "CARD_CMD_REPAIR": 14,
+      "CARD_CMD_READ_SECTOR": 15,
+      "CARD_CMD_WRITE_SECTOR": 16,
+      "CARD_CMD_SCAN_FILE": 17
+    },
+    "request": {
+      "CARD_REQ_NONE": 0,
+      "CARD_REQ_READ_FILE": 1,
+      "CARD_REQ_WRITE_FILE": 2,
+      "CARD_REQ_CREATE_FILE": 3,
+      "CARD_REQ_SET_STATUS": 4,
+      "CARD_REQ_OPEN_FILE": 5,
+      "CARD_REQ_READ_HEADER": 6
+    },
+    "active": {
+      "CARD_ACTIVE_NONE": 0,
+      "CARD_ACTIVE_READ_FILE": 1,
+      "CARD_ACTIVE_WRITE_FILE": 2,
+      "CARD_ACTIVE_WRITE_FILE_1_2": 3,
+      "CARD_ACTIVE_WRITE_FILE_3": 4,
+      "CARD_ACTIVE_OPEN_OR_READ_HEADER": 5,
+      "CARD_ACTIVE_CREATE_FILE": 6,
+      "CARD_ACTIVE_SET_STATUS": 7
+    },
+    "task": {
+      "CARD_TASK_MOUNT_CARD": 0,
+      "CARD_TASK_CHECK_CARD": 1,
+      "CARD_TASK_OPEN_FILE": 2,
+      "CARD_TASK_UNK_0x03": 3,
+      "CARD_TASK_FORMAT_CARD": 4,
+      "CARD_TASK_DELETE_FILE": 5,
+      "CARD_TASK_RENAME_FILE": 6,
+      "CARD_TASK_CREATE_FILE": 7,
+      "CARD_TASK_READ_FILES": 8,
+      "CARD_TASK_WRITE_FILES": 9,
+      "CARD_TASK_SET_STATUS": 10,
+      "CARD_TASK_READ_HEADER": 11,
+      "CARD_TASK_LIST_SNAPSHOTS": 12,
+      "CARD_TASK_FIND_FILE": 13,
+      "CARD_TASK_NONE": 14
+    }
+  },
+  "cases": [
+    {
+      "name": "write_mode_0_named_flows",
+      "outcome": "passed",
+      "effects_asserted": "Create/read/write/reopen exact bytes, header read/update, and no SDK writes for verified data.",
+      "observed": {
+        "command": {
+          "CARD_CMD_NONE": 22,
+          "CARD_CMD_WRITE_BLOCK": 7,
+          "CARD_CMD_READ_BLOCK": 7,
+          "CARD_CMD_CLEAR_BUF": 1,
+          "CARD_CMD_VERIFY_BLOCK": 4,
+          "CARD_CMD_CHECK_VERIFIED": 4,
+          "CARD_CMD_CREATE_FILE": 1,
+          "CARD_CMD_SET_STATUS": 3,
+          "CARD_CMD_WRITE_HEADER": 3,
+          "CARD_CMD_VERIFY_HEADER": 2,
+          "CARD_CMD_READ_HEADER": 2,
+          "CARD_CMD_GET_STATUS": 1,
+          "CARD_CMD_SCAN_BLOCK": 3,
+          "CARD_CMD_REPAIR": 1,
+          "CARD_CMD_SCAN_FILE": 1
+        },
+        "request": {
+          "CARD_REQ_READ_FILE": 4,
+          "CARD_REQ_WRITE_FILE": 2,
+          "CARD_REQ_CREATE_FILE": 1,
+          "CARD_REQ_SET_STATUS": 2,
+          "CARD_REQ_OPEN_FILE": 1,
+          "CARD_REQ_READ_HEADER": 1
+        },
+        "active": {
+          "CARD_ACTIVE_NONE": 11,
+          "CARD_ACTIVE_READ_FILE": 309446,
+          "CARD_ACTIVE_WRITE_FILE": 1882413,
+          "CARD_ACTIVE_OPEN_OR_READ_HEADER": 386810,
+          "CARD_ACTIVE_CREATE_FILE": 4615781,
+          "CARD_ACTIVE_SET_STATUS": 1469851
+        },
+        "task": {},
+        "sdk": {
+          "CARDCreateAsync": 1,
+          "CARDReadAsync": 16,
+          "CARDWriteAsync": 7,
+          "CARDGetStatus": 3,
+          "CARDSetStatusAsync": 2,
+          "CARDOpen": 1,
+          "CARDFastOpen": 23,
+          "CARDClose": 25
+        }
+      }
+    },
+    {
+      "name": "write_mode_1_named_flows",
+      "outcome": "passed",
+      "effects_asserted": "Create/read/write/reopen exact bytes, header read/update, and no SDK writes for verified data.",
+      "observed": {
+        "command": {
+          "CARD_CMD_NONE": 22,
+          "CARD_CMD_WRITE_BLOCK": 5,
+          "CARD_CMD_READ_BLOCK": 7,
+          "CARD_CMD_CLEAR_BUF": 1,
+          "CARD_CMD_VERIFY_BLOCK": 2,
+          "CARD_CMD_CHECK_VERIFIED": 4,
+          "CARD_CMD_CREATE_FILE": 1,
+          "CARD_CMD_SET_STATUS": 3,
+          "CARD_CMD_WRITE_HEADER": 3,
+          "CARD_CMD_VERIFY_HEADER": 2,
+          "CARD_CMD_READ_HEADER": 2,
+          "CARD_CMD_GET_STATUS": 1,
+          "CARD_CMD_SCAN_BLOCK": 3,
+          "CARD_CMD_REPAIR": 1,
+          "CARD_CMD_SCAN_FILE": 1
+        },
+        "request": {
+          "CARD_REQ_READ_FILE": 4,
+          "CARD_REQ_WRITE_FILE": 2,
+          "CARD_REQ_CREATE_FILE": 1,
+          "CARD_REQ_SET_STATUS": 2,
+          "CARD_REQ_OPEN_FILE": 1,
+          "CARD_REQ_READ_HEADER": 1
+        },
+        "active": {
+          "CARD_ACTIVE_NONE": 11,
+          "CARD_ACTIVE_READ_FILE": 309446,
+          "CARD_ACTIVE_WRITE_FILE_1_2": 979885,
+          "CARD_ACTIVE_OPEN_OR_READ_HEADER": 386815,
+          "CARD_ACTIVE_CREATE_FILE": 4615772,
+          "CARD_ACTIVE_SET_STATUS": 1469855
+        },
+        "task": {},
+        "sdk": {
+          "CARDCreateAsync": 1,
+          "CARDReadAsync": 15,
+          "CARDWriteAsync": 6,
+          "CARDGetStatus": 3,
+          "CARDSetStatusAsync": 2,
+          "CARDOpen": 1,
+          "CARDFastOpen": 21,
+          "CARDClose": 23
+        }
+      }
+    },
+    {
+      "name": "write_mode_2_named_flows",
+      "outcome": "passed",
+      "effects_asserted": "Create/read/write/reopen exact bytes, header read/update, and no SDK writes for verified data.",
+      "observed": {
+        "command": {
+          "CARD_CMD_NONE": 22,
+          "CARD_CMD_WRITE_BLOCK": 5,
+          "CARD_CMD_READ_BLOCK": 7,
+          "CARD_CMD_CLEAR_BUF": 1,
+          "CARD_CMD_VERIFY_BLOCK": 2,
+          "CARD_CMD_CHECK_VERIFIED": 4,
+          "CARD_CMD_CREATE_FILE": 1,
+          "CARD_CMD_SET_STATUS": 3,
+          "CARD_CMD_WRITE_HEADER": 3,
+          "CARD_CMD_VERIFY_HEADER": 2,
+          "CARD_CMD_READ_HEADER": 2,
+          "CARD_CMD_GET_STATUS": 1,
+          "CARD_CMD_SCAN_BLOCK": 3,
+          "CARD_CMD_REPAIR": 1,
+          "CARD_CMD_SCAN_FILE": 1
+        },
+        "request": {
+          "CARD_REQ_READ_FILE": 4,
+          "CARD_REQ_WRITE_FILE": 2,
+          "CARD_REQ_CREATE_FILE": 1,
+          "CARD_REQ_SET_STATUS": 2,
+          "CARD_REQ_OPEN_FILE": 1,
+          "CARD_REQ_READ_HEADER": 1
+        },
+        "active": {
+          "CARD_ACTIVE_NONE": 11,
+          "CARD_ACTIVE_READ_FILE": 309456,
+          "CARD_ACTIVE_WRITE_FILE_1_2": 979887,
+          "CARD_ACTIVE_OPEN_OR_READ_HEADER": 386810,
+          "CARD_ACTIVE_CREATE_FILE": 4615781,
+          "CARD_ACTIVE_SET_STATUS": 1469852
+        },
+        "task": {},
+        "sdk": {
+          "CARDCreateAsync": 1,
+          "CARDReadAsync": 15,
+          "CARDWriteAsync": 6,
+          "CARDGetStatus": 3,
+          "CARDSetStatusAsync": 2,
+          "CARDOpen": 1,
+          "CARDFastOpen": 21,
+          "CARDClose": 23
+        }
+      }
+    },
+    {
+      "name": "write_mode_3_named_flows",
+      "outcome": "passed",
+      "effects_asserted": "Create/read/write/reopen exact bytes, header read/update, and no SDK writes for verified data.",
+      "observed": {
+        "command": {
+          "CARD_CMD_NONE": 22,
+          "CARD_CMD_WRITE_BLOCK": 4,
+          "CARD_CMD_READ_BLOCK": 7,
+          "CARD_CMD_CLEAR_BUF": 1,
+          "CARD_CMD_VERIFY_BLOCK": 2,
+          "CARD_CMD_CHECK_VERIFIED": 4,
+          "CARD_CMD_CREATE_FILE": 1,
+          "CARD_CMD_SET_STATUS": 3,
+          "CARD_CMD_WRITE_HEADER": 3,
+          "CARD_CMD_VERIFY_HEADER": 2,
+          "CARD_CMD_READ_HEADER": 2,
+          "CARD_CMD_GET_STATUS": 1,
+          "CARD_CMD_SCAN_BLOCK": 2,
+          "CARD_CMD_REPAIR": 1,
+          "CARD_CMD_SCAN_FILE": 1
+        },
+        "request": {
+          "CARD_REQ_READ_FILE": 4,
+          "CARD_REQ_WRITE_FILE": 2,
+          "CARD_REQ_CREATE_FILE": 1,
+          "CARD_REQ_SET_STATUS": 2,
+          "CARD_REQ_OPEN_FILE": 1,
+          "CARD_REQ_READ_HEADER": 1
+        },
+        "active": {
+          "CARD_ACTIVE_NONE": 11,
+          "CARD_ACTIVE_READ_FILE": 309451,
+          "CARD_ACTIVE_WRITE_FILE_3": 979887,
+          "CARD_ACTIVE_OPEN_OR_READ_HEADER": 309458,
+          "CARD_ACTIVE_CREATE_FILE": 3790615,
+          "CARD_ACTIVE_SET_STATUS": 1469854
+        },
+        "task": {},
+        "sdk": {
+          "CARDCreateAsync": 1,
+          "CARDReadAsync": 14,
+          "CARDWriteAsync": 5,
+          "CARDGetStatus": 3,
+          "CARDSetStatusAsync": 2,
+          "CARDOpen": 1,
+          "CARDFastOpen": 19,
+          "CARDClose": 21
+        }
+      }
+    },
+    {
+      "name": "sector_decode_reencode_and_bookkeeping",
+      "outcome": "passed",
+      "effects_asserted": "Sector read decodes payload; sector write preserves embedded header while recording descriptor sequence 7 in RAM.",
+      "observed": {
+        "command": {
+          "CARD_CMD_NONE": 2,
+          "CARD_CMD_READ_SECTOR": 1,
+          "CARD_CMD_WRITE_SECTOR": 1
+        },
+        "request": {},
+        "active": {
+          "CARD_ACTIVE_NONE": 902528
+        },
+        "task": {},
+        "sdk": {
+          "CARDReadAsync": 2,
+          "CARDWriteAsync": 1,
+          "CARDOpen": 1,
+          "CARDFastOpen": 2,
+          "CARDClose": 3
+        }
+      }
+    },
+    {
+      "name": "scan_file_scans_blocks_and_repairs_corrupt_mirror",
+      "outcome": "passed",
+      "effects_asserted": "Reopen restores corrupted physical sector from valid mirror, reconstructs block IDs, and does not mount.",
+      "observed": {
+        "command": {
+          "CARD_CMD_NONE": 2,
+          "CARD_CMD_READ_HEADER": 1,
+          "CARD_CMD_GET_STATUS": 1,
+          "CARD_CMD_SCAN_BLOCK": 3,
+          "CARD_CMD_REPAIR": 1,
+          "CARD_CMD_READ_SECTOR": 1,
+          "CARD_CMD_WRITE_SECTOR": 1,
+          "CARD_CMD_SCAN_FILE": 1
+        },
+        "request": {
+          "CARD_REQ_OPEN_FILE": 1
+        },
+        "active": {
+          "CARD_ACTIVE_NONE": 1,
+          "CARD_ACTIVE_OPEN_OR_READ_HEADER": 1211972
+        },
+        "task": {},
+        "sdk": {
+          "CARDReadAsync": 7,
+          "CARDWriteAsync": 1,
+          "CARDGetStatus": 1,
+          "CARDOpen": 3,
+          "CARDFastOpen": 6,
+          "CARDClose": 9
+        }
+      }
+    },
+    {
+      "name": "clear_buffer_copies_descriptor",
+      "outcome": "passed",
+      "effects_asserted": "Queued descriptor survives caller overwrite and clears precisely four destination bytes.",
+      "observed": {
+        "command": {
+          "CARD_CMD_NONE": 1,
+          "CARD_CMD_CLEAR_BUF": 1
+        },
+        "request": {},
+        "active": {
+          "CARD_ACTIVE_NONE": 1
+        },
+        "task": {},
+        "sdk": {}
+      }
+    },
+    {
+      "name": "check_verified_result_0",
+      "outcome": "passed",
+      "effects_asserted": "Prior result 0 becomes 1; following clear is gated accordingly.",
+      "observed": {
+        "command": {
+          "CARD_CMD_NONE": 1,
+          "CARD_CMD_CLEAR_BUF": 1,
+          "CARD_CMD_CHECK_VERIFIED": 1
+        },
+        "request": {},
+        "active": {
+          "CARD_ACTIVE_READ_FILE": 1
+        },
+        "task": {},
+        "sdk": {}
+      }
+    },
+    {
+      "name": "check_verified_result_2",
+      "outcome": "passed",
+      "effects_asserted": "Prior result 2 becomes 0; following clear is gated accordingly.",
+      "observed": {
+        "command": {
+          "CARD_CMD_NONE": 1,
+          "CARD_CMD_CLEAR_BUF": 1,
+          "CARD_CMD_CHECK_VERIFIED": 1
+        },
+        "request": {},
+        "active": {
+          "CARD_ACTIVE_READ_FILE": 1
+        },
+        "task": {},
+        "sdk": {}
+      }
+    },
+    {
+      "name": "unknown_command_03_stays_at_head",
+      "outcome": "passed",
+      "effects_asserted": "Two pumps leave unknown tag at head; no invented operation or intended name.",
+      "observed": {
+        "command": {
+          "CARD_CMD_UNK_0x03": 2
+        },
+        "request": {},
+        "active": {
+          "CARD_ACTIVE_NONE": 2
+        },
+        "task": {},
+        "sdk": {}
+      }
+    },
+    {
+      "name": "empty_command_request_active_sentinels",
+      "outcome": "passed",
+      "effects_asserted": "Empty pump leaves no active operation and all 32 request slots marked NONE.",
+      "observed": {
+        "command": {
+          "CARD_CMD_NONE": 1
+        },
+        "request": {},
+        "active": {
+          "CARD_ACTIVE_NONE": 1
+        },
+        "task": {},
+        "sdk": {}
+      }
+    },
+    {
+      "name": "CARD_TASK_MOUNT_CARD",
+      "outcome": "passed",
+      "effects_asserted": "Real task reaches named asynchronous SDK operation and completes successfully.",
+      "observed": {
+        "command": {
+          "CARD_CMD_NONE": 203995
+        },
+        "request": {},
+        "active": {
+          "CARD_ACTIVE_NONE": 203995
+        },
+        "task": {
+          "CARD_TASK_MOUNT_CARD": 1
+        },
+        "sdk": {
+          "CARDMountAsync": 1,
+          "CARDUnmount": 1
+        }
+      }
+    },
+    {
+      "name": "CARD_TASK_CHECK_CARD",
+      "outcome": "passed",
+      "effects_asserted": "Real task reaches named asynchronous SDK operation and completes successfully.",
+      "observed": {
+        "command": {},
+        "request": {},
+        "active": {},
+        "task": {
+          "CARD_TASK_CHECK_CARD": 1
+        },
+        "sdk": {
+          "CARDCheckAsync": 1,
+          "CARDUnmount": 1
+        }
+      }
+    },
+    {
+      "name": "CARD_TASK_OPEN_FILE",
+      "outcome": "passed",
+      "effects_asserted": "Task completes and its opened metadata, read/write bytes, or header contents match the requested operation.",
+      "observed": {
+        "command": {
+          "CARD_CMD_NONE": 2,
+          "CARD_CMD_READ_HEADER": 1,
+          "CARD_CMD_GET_STATUS": 1,
+          "CARD_CMD_SCAN_BLOCK": 3,
+          "CARD_CMD_REPAIR": 1,
+          "CARD_CMD_SCAN_FILE": 1
+        },
+        "request": {
+          "CARD_REQ_OPEN_FILE": 1
+        },
+        "active": {
+          "CARD_ACTIVE_NONE": 1,
+          "CARD_ACTIVE_OPEN_OR_READ_HEADER": 256997
+        },
+        "task": {
+          "CARD_TASK_OPEN_FILE": 1
+        },
+        "sdk": {
+          "CARDMountAsync": 1,
+          "CARDCheckAsync": 1,
+          "CARDReadAsync": 4,
+          "CARDGetStatus": 1,
+          "CARDOpen": 2,
+          "CARDFastOpen": 4,
+          "CARDClose": 6,
+          "CARDUnmount": 1
+        }
+      }
+    },
+    {
+      "name": "CARD_TASK_READ_FILES",
+      "outcome": "passed",
+      "effects_asserted": "Task completes and its opened metadata, read/write bytes, or header contents match the requested operation.",
+      "observed": {
+        "command": {
+          "CARD_CMD_NONE": 3,
+          "CARD_CMD_READ_BLOCK": 2
+        },
+        "request": {
+          "CARD_REQ_READ_FILE": 2
+        },
+        "active": {
+          "CARD_ACTIVE_NONE": 1,
+          "CARD_ACTIVE_READ_FILE": 128500
+        },
+        "task": {
+          "CARD_TASK_READ_FILES": 1
+        },
+        "sdk": {
+          "CARDMountAsync": 1,
+          "CARDCheckAsync": 1,
+          "CARDReadAsync": 2,
+          "CARDFastOpen": 2,
+          "CARDClose": 2,
+          "CARDUnmount": 1
+        }
+      }
+    },
+    {
+      "name": "CARD_TASK_WRITE_FILES",
+      "outcome": "passed",
+      "effects_asserted": "Task completes and its opened metadata, read/write bytes, or header contents match the requested operation.",
+      "observed": {
+        "command": {
+          "CARD_CMD_NONE": 7,
+          "CARD_CMD_WRITE_BLOCK": 3,
+          "CARD_CMD_READ_BLOCK": 2,
+          "CARD_CMD_VERIFY_BLOCK": 3,
+          "CARD_CMD_CHECK_VERIFIED": 2,
+          "CARD_CMD_READ_HEADER": 1,
+          "CARD_CMD_GET_STATUS": 1,
+          "CARD_CMD_SCAN_BLOCK": 3,
+          "CARD_CMD_REPAIR": 1,
+          "CARD_CMD_SCAN_FILE": 1
+        },
+        "request": {
+          "CARD_REQ_READ_FILE": 1,
+          "CARD_REQ_WRITE_FILE": 2,
+          "CARD_REQ_OPEN_FILE": 1
+        },
+        "active": {
+          "CARD_ACTIVE_NONE": 3,
+          "CARD_ACTIVE_READ_FILE": 77362,
+          "CARD_ACTIVE_WRITE_FILE": 1434789,
+          "CARD_ACTIVE_WRITE_FILE_3": 64250,
+          "CARD_ACTIVE_OPEN_OR_READ_HEADER": 309446
+        },
+        "task": {
+          "CARD_TASK_WRITE_FILES": 1
+        },
+        "sdk": {
+          "CARDMountAsync": 1,
+          "CARDCheckAsync": 1,
+          "CARDReadAsync": 7,
+          "CARDWriteAsync": 2,
+          "CARDGetStatus": 1,
+          "CARDOpen": 1,
+          "CARDFastOpen": 9,
+          "CARDClose": 10,
+          "CARDUnmount": 1
+        }
+      }
+    },
+    {
+      "name": "CARD_TASK_SET_STATUS",
+      "outcome": "passed",
+      "effects_asserted": "Task completes and its opened metadata, read/write bytes, or header contents match the requested operation.",
+      "observed": {
+        "command": {
+          "CARD_CMD_NONE": 2,
+          "CARD_CMD_READ_BLOCK": 1,
+          "CARD_CMD_CHECK_VERIFIED": 1,
+          "CARD_CMD_SET_STATUS": 1,
+          "CARD_CMD_WRITE_HEADER": 1,
+          "CARD_CMD_VERIFY_HEADER": 1
+        },
+        "request": {
+          "CARD_REQ_SET_STATUS": 1
+        },
+        "active": {
+          "CARD_ACTIVE_NONE": 1,
+          "CARD_ACTIVE_SET_STATUS": 1156427
+        },
+        "task": {
+          "CARD_TASK_SET_STATUS": 1
+        },
+        "sdk": {
+          "CARDMountAsync": 1,
+          "CARDCheckAsync": 1,
+          "CARDReadAsync": 3,
+          "CARDWriteAsync": 1,
+          "CARDGetStatus": 1,
+          "CARDSetStatusAsync": 1,
+          "CARDOpen": 1,
+          "CARDFastOpen": 3,
+          "CARDClose": 4,
+          "CARDUnmount": 1
+        }
+      }
+    },
+    {
+      "name": "CARD_TASK_READ_HEADER",
+      "outcome": "passed",
+      "effects_asserted": "Task completes and its opened metadata, read/write bytes, or header contents match the requested operation.",
+      "observed": {
+        "command": {
+          "CARD_CMD_NONE": 2,
+          "CARD_CMD_READ_HEADER": 1
+        },
+        "request": {
+          "CARD_REQ_READ_HEADER": 1
+        },
+        "active": {
+          "CARD_ACTIVE_NONE": 1,
+          "CARD_ACTIVE_OPEN_OR_READ_HEADER": 64250
+        },
+        "task": {
+          "CARD_TASK_READ_HEADER": 1
+        },
+        "sdk": {
+          "CARDMountAsync": 1,
+          "CARDCheckAsync": 1,
+          "CARDReadAsync": 1,
+          "CARDFastOpen": 1,
+          "CARDClose": 1,
+          "CARDUnmount": 1
+        }
+      }
+    },
+    {
+      "name": "CARD_TASK_CREATE_FILE",
+      "outcome": "passed",
+      "effects_asserted": "Creates named file containing supplied comment.",
+      "observed": {
+        "command": {
+          "CARD_CMD_NONE": 2,
+          "CARD_CMD_WRITE_BLOCK": 3,
+          "CARD_CMD_READ_BLOCK": 1,
+          "CARD_CMD_CLEAR_BUF": 1,
+          "CARD_CMD_CREATE_FILE": 1,
+          "CARD_CMD_SET_STATUS": 1,
+          "CARD_CMD_WRITE_HEADER": 1
+        },
+        "request": {
+          "CARD_REQ_CREATE_FILE": 1
+        },
+        "active": {
+          "CARD_ACTIVE_NONE": 1,
+          "CARD_ACTIVE_CREATE_FILE": 3833257
+        },
+        "task": {
+          "CARD_TASK_CREATE_FILE": 1
+        },
+        "sdk": {
+          "CARDMountAsync": 1,
+          "CARDCheckAsync": 1,
+          "CARDCreateAsync": 1,
+          "CARDReadAsync": 2,
+          "CARDWriteAsync": 4,
+          "CARDGetStatus": 1,
+          "CARDSetStatusAsync": 1,
+          "CARDOpen": 1,
+          "CARDFastOpen": 5,
+          "CARDClose": 7,
+          "CARDUnmount": 1
+        }
+      }
+    },
+    {
+      "name": "CARD_TASK_RENAME_FILE",
+      "outcome": "passed",
+      "effects_asserted": "Old name no longer opens; new name preserves file contents.",
+      "observed": {
+        "command": {
+          "CARD_CMD_NONE": 217525
+        },
+        "request": {},
+        "active": {
+          "CARD_ACTIVE_NONE": 217525
+        },
+        "task": {
+          "CARD_TASK_RENAME_FILE": 1
+        },
+        "sdk": {
+          "CARDMountAsync": 1,
+          "CARDCheckAsync": 1,
+          "CARDRenameAsync": 1,
+          "CARDReadAsync": 1,
+          "CARDOpen": 2,
+          "CARDClose": 1,
+          "CARDUnmount": 1
+        }
+      }
+    },
+    {
+      "name": "CARD_TASK_FIND_FILE",
+      "outcome": "passed",
+      "effects_asserted": "Finds exact filename with matching game/company metadata.",
+      "observed": {
+        "command": {},
+        "request": {},
+        "active": {},
+        "task": {
+          "CARD_TASK_FIND_FILE": 1
+        },
+        "sdk": {
+          "CARDGetStatus": 6,
+          "CARDUnmount": 1
+        }
+      }
+    },
+    {
+      "name": "CARD_TASK_FIND_FILE_missing",
+      "outcome": "passed",
+      "effects_asserted": "Missing filename produces result 13.",
+      "observed": {
+        "command": {},
+        "request": {},
+        "active": {},
+        "task": {
+          "CARD_TASK_FIND_FILE": 1
+        },
+        "sdk": {
+          "CARDGetStatus": 127,
+          "CARDUnmount": 1
+        }
+      }
+    },
+    {
+      "name": "CARD_TASK_DELETE_FILE",
+      "outcome": "passed",
+      "effects_asserted": "Deleted name no longer opens through real SDK.",
+      "observed": {
+        "command": {
+          "CARD_CMD_NONE": 440779
+        },
+        "request": {},
+        "active": {
+          "CARD_ACTIVE_NONE": 440779
+        },
+        "task": {
+          "CARD_TASK_DELETE_FILE": 1
+        },
+        "sdk": {
+          "CARDMountAsync": 1,
+          "CARDCheckAsync": 1,
+          "CARDDeleteAsync": 1,
+          "CARDOpen": 1,
+          "CARDUnmount": 1
+        }
+      }
+    },
+    {
+      "name": "CARD_TASK_UNK_0x03_result_0",
+      "outcome": "passed",
+      "effects_asserted": "Stored result 0 becomes 1; intended role remains unknown.",
+      "observed": {
+        "command": {},
+        "request": {},
+        "active": {},
+        "task": {
+          "CARD_TASK_UNK_0x03": 1
+        },
+        "sdk": {
+          "CARDUnmount": 1
+        }
+      }
+    },
+    {
+      "name": "CARD_TASK_UNK_0x03_result_2",
+      "outcome": "passed",
+      "effects_asserted": "Stored result 2 becomes 1; intended role remains unknown.",
+      "observed": {
+        "command": {},
+        "request": {},
+        "active": {},
+        "task": {
+          "CARD_TASK_UNK_0x03": 1
+        },
+        "sdk": {
+          "CARDUnmount": 1
+        }
+      }
+    },
+    {
+      "name": "CARD_TASK_UNK_0x03_result_4",
+      "outcome": "passed",
+      "effects_asserted": "Stored result 4 becomes 4; intended role remains unknown.",
+      "observed": {
+        "command": {},
+        "request": {},
+        "active": {},
+        "task": {
+          "CARD_TASK_UNK_0x03": 1
+        },
+        "sdk": {
+          "CARDUnmount": 1
+        }
+      }
+    },
+    {
+      "name": "CARD_TASK_LIST_SNAPSHOTS",
+      "outcome": "passed",
+      "effects_asserted": "Lists decimal filename prefixes newest first, accepts 200-extra, excludes nonnumeric names; real SDK and allocator.",
+      "observed": {
+        "command": {},
+        "request": {},
+        "active": {},
+        "task": {
+          "CARD_TASK_LIST_SNAPSHOTS": 1
+        },
+        "sdk": {
+          "CARDGetStatus": 127,
+          "CARDUnmount": 1,
+          "HSD_MemAlloc": 1,
+          "HSD_Free": 1
+        }
+      }
+    },
+    {
+      "name": "CARD_TASK_NONE",
+      "outcome": "passed",
+      "effects_asserted": "Eleven unused task slots do not dispatch mount, whose enum value is zero.",
+      "observed": {
+        "command": {},
+        "request": {},
+        "active": {},
+        "task": {},
+        "sdk": {
+          "CARDUnmount": 1
+        }
+      }
+    },
+    {
+      "name": "CARD_TASK_FORMAT_CARD",
+      "outcome": "passed",
+      "effects_asserted": "Formats disposable card; previously present file no longer opens.",
+      "observed": {
+        "command": {
+          "CARD_CMD_NONE": 1108090
+        },
+        "request": {},
+        "active": {
+          "CARD_ACTIVE_NONE": 1108090
+        },
+        "task": {
+          "CARD_TASK_FORMAT_CARD": 1
+        },
+        "sdk": {
+          "CARDMountAsync": 1,
+          "CARDCheckAsync": 1,
+          "CARDFormatAsync": 1,
+          "CARDOpen": 1,
+          "CARDUnmount": 1
+        }
+      }
+    }
+  ],
+  "calls": [
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": -1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "INIT_STATE",
+      "args": [
+        2164326400,
+        2164334592
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "REGISTER_FILE",
+      "args": [
+        2164326400,
+        0,
+        180,
+        3,
+        2164346880
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "REGISTER_FILE",
+      "args": [
+        2164326400,
+        1,
+        128,
+        0,
+        2164350976
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "BLOCK_COUNT",
+      "args": [
+        2164326400
+      ],
+      "result": 3
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CREATE_SAVE",
+      "args": [
+        2164326400,
+        2164383744,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WRITE_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164350976,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WRITE_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164350976,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "UPDATE_HEADER",
+      "args": [
+        2164326400,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "UPDATE_HEADER",
+      "args": [
+        2164326400,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_HEADER",
+      "args": [
+        2164326400,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "INIT_STATE",
+      "args": [
+        2164326400,
+        2164334592
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "OPEN_SAVE",
+      "args": [
+        2164326400,
+        2164383744,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        0,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "INIT_STATE",
+      "args": [
+        2164326400,
+        2164334592
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "REGISTER_FILE",
+      "args": [
+        2164326400,
+        0,
+        180,
+        3,
+        2164346880
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "REGISTER_FILE",
+      "args": [
+        2164326400,
+        1,
+        128,
+        1,
+        2164350976
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "BLOCK_COUNT",
+      "args": [
+        2164326400
+      ],
+      "result": 3
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CREATE_SAVE",
+      "args": [
+        2164326400,
+        2164383744,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WRITE_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164350976,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WRITE_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164350976,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "UPDATE_HEADER",
+      "args": [
+        2164326400,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "UPDATE_HEADER",
+      "args": [
+        2164326400,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_HEADER",
+      "args": [
+        2164326400,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "INIT_STATE",
+      "args": [
+        2164326400,
+        2164334592
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "OPEN_SAVE",
+      "args": [
+        2164326400,
+        2164383744,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        0,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "INIT_STATE",
+      "args": [
+        2164326400,
+        2164334592
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "REGISTER_FILE",
+      "args": [
+        2164326400,
+        0,
+        180,
+        3,
+        2164346880
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "REGISTER_FILE",
+      "args": [
+        2164326400,
+        1,
+        128,
+        2,
+        2164350976
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "BLOCK_COUNT",
+      "args": [
+        2164326400
+      ],
+      "result": 3
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CREATE_SAVE",
+      "args": [
+        2164326400,
+        2164383744,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WRITE_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164350976,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WRITE_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164350976,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "UPDATE_HEADER",
+      "args": [
+        2164326400,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "UPDATE_HEADER",
+      "args": [
+        2164326400,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_HEADER",
+      "args": [
+        2164326400,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "INIT_STATE",
+      "args": [
+        2164326400,
+        2164334592
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "OPEN_SAVE",
+      "args": [
+        2164326400,
+        2164383744,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        0,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "INIT_STATE",
+      "args": [
+        2164326400,
+        2164334592
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "REGISTER_FILE",
+      "args": [
+        2164326400,
+        0,
+        180,
+        3,
+        2164346880
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "REGISTER_FILE",
+      "args": [
+        2164326400,
+        1,
+        128,
+        3,
+        2164350976
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "BLOCK_COUNT",
+      "args": [
+        2164326400
+      ],
+      "result": 2
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CREATE_SAVE",
+      "args": [
+        2164326400,
+        2164383744,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WRITE_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164350976,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WRITE_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164350976,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "UPDATE_HEADER",
+      "args": [
+        2164326400,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "UPDATE_HEADER",
+      "args": [
+        2164326400,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_HEADER",
+      "args": [
+        2164326400,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "INIT_STATE",
+      "args": [
+        2164326400,
+        2164334592
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "OPEN_SAVE",
+      "args": [
+        2164326400,
+        2164383744,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        0,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "INIT_STATE",
+      "args": [
+        2164326400,
+        2164334592
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "REGISTER_FILE",
+      "args": [
+        2164326400,
+        0,
+        180,
+        3,
+        2164346880
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "REGISTER_FILE",
+      "args": [
+        2164326400,
+        1,
+        128,
+        0,
+        2164350976
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "BLOCK_COUNT",
+      "args": [
+        2164326400
+      ],
+      "result": 3
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CREATE_SAVE",
+      "args": [
+        2164326400,
+        2164383744,
+        2164383808,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RAW_OPEN",
+      "args": [
+        2164383744,
+        2164396032
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RAW_READ",
+      "args": [
+        2164396032,
+        2164408320,
+        8192,
+        8192
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RAW_CLOSE",
+      "args": [
+        2164396032
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "QUEUE_COMMAND",
+      "args": [
+        2164391936
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "QUEUE_COMMAND",
+      "args": [
+        2164391936
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RAW_OPEN",
+      "args": [
+        2164383744,
+        2164396032
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RAW_READ",
+      "args": [
+        2164396032,
+        2164408320,
+        8192,
+        16384
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RAW_CLOSE",
+      "args": [
+        2164396032
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RAW_OPEN",
+      "args": [
+        2164383744,
+        2164396032
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RAW_WRITE",
+      "args": [
+        2164396032,
+        2164408320,
+        8192,
+        8192
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RAW_CLOSE",
+      "args": [
+        2164396032
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "INIT_STATE",
+      "args": [
+        2164326400,
+        2164334592
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "OPEN_SAVE",
+      "args": [
+        2164326400,
+        2164383744,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RAW_OPEN",
+      "args": [
+        2164383744,
+        2164396032
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RAW_READ",
+      "args": [
+        2164396032,
+        2164408320,
+        8192,
+        8192
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RAW_CLOSE",
+      "args": [
+        2164396032
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RAW_OPEN",
+      "args": [
+        2164383744,
+        2164396032
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RAW_READ",
+      "args": [
+        2164396032,
+        2164408320,
+        8192,
+        16384
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RAW_CLOSE",
+      "args": [
+        2164396032
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "QUEUE_COMMAND",
+      "args": [
+        2164391936
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "QUEUE_COMMAND",
+      "args": [
+        2164391936
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "QUEUE_COMMAND",
+      "args": [
+        2164391936
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "QUEUE_COMMAND",
+      "args": [
+        2164391936
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "QUEUE_COMMAND",
+      "args": [
+        2164391936
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "QUEUE_COMMAND",
+      "args": [
+        2164391936
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PUMP_ONCE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PUMP_ONCE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PUMP_ONCE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "HEAP_INIT",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_INIT",
+      "args": [
+        2164260896
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "UNMOUNT",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_RUN",
+      "args": [
+        16
+      ],
+      "result": 11
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_DRAIN",
+      "args": [
+        11
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_INIT",
+      "args": [
+        2164260896
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_RUN",
+      "args": [
+        16
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_DRAIN",
+      "args": [
+        0
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_INIT",
+      "args": [
+        2164260896
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_RUN",
+      "args": [
+        16
+      ],
+      "result": 11
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_DRAIN",
+      "args": [
+        11
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_INIT",
+      "args": [
+        2164260896
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_RUN",
+      "args": [
+        16
+      ],
+      "result": 11
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_DRAIN",
+      "args": [
+        11
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_INIT",
+      "args": [
+        2164260896
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_RUN",
+      "args": [
+        16
+      ],
+      "result": 11
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_DRAIN",
+      "args": [
+        11
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "INIT_STATE",
+      "args": [
+        2164326400,
+        2164334592
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "OPEN_SAVE",
+      "args": [
+        2164326400,
+        2164383744,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "args": [
+        2164326400,
+        1,
+        2164367360,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "DRAIN",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_INIT",
+      "args": [
+        2164260896
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_RUN",
+      "args": [
+        16
+      ],
+      "result": 11
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_DRAIN",
+      "args": [
+        11
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RAW_OPEN",
+      "args": [
+        2164383744,
+        2164396032
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RAW_READ",
+      "args": [
+        2164396032,
+        2164408320,
+        8192,
+        0
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RAW_CLOSE",
+      "args": [
+        2164396032
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_INIT",
+      "args": [
+        2164260896
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_RUN",
+      "args": [
+        16
+      ],
+      "result": 11
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_DRAIN",
+      "args": [
+        11
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_INIT",
+      "args": [
+        2164260896
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_RUN",
+      "args": [
+        16
+      ],
+      "result": 11
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_DRAIN",
+      "args": [
+        11
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RAW_OPEN",
+      "args": [
+        2164383744,
+        2164396032
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RAW_READ",
+      "args": [
+        2164396032,
+        2164408320,
+        8192,
+        0
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RAW_CLOSE",
+      "args": [
+        2164396032
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_INIT",
+      "args": [
+        2164260896
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_RUN",
+      "args": [
+        16
+      ],
+      "result": 11
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_DRAIN",
+      "args": [
+        11
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RAW_OPEN",
+      "args": [
+        2164383744,
+        2164396032
+      ],
+      "result": -4
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RAW_OPEN",
+      "args": [
+        2164383744,
+        2164396032
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RAW_READ",
+      "args": [
+        2164396032,
+        2164408320,
+        8192,
+        0
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RAW_CLOSE",
+      "args": [
+        2164396032
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_INIT",
+      "args": [
+        2164260896
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_RUN",
+      "args": [
+        16
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_DRAIN",
+      "args": [
+        0
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_INIT",
+      "args": [
+        2164260896
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_RUN",
+      "args": [
+        16
+      ],
+      "result": 13
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_DRAIN",
+      "args": [
+        13
+      ],
+      "result": 13
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_INIT",
+      "args": [
+        2164260896
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_RUN",
+      "args": [
+        16
+      ],
+      "result": 11
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_DRAIN",
+      "args": [
+        11
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RAW_OPEN",
+      "args": [
+        2164383744,
+        2164396032
+      ],
+      "result": -4
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_INIT",
+      "args": [
+        2164260896
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_RUN",
+      "args": [
+        16
+      ],
+      "result": 1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_DRAIN",
+      "args": [
+        1
+      ],
+      "result": 1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_INIT",
+      "args": [
+        2164260896
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_RUN",
+      "args": [
+        16
+      ],
+      "result": 1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_DRAIN",
+      "args": [
+        1
+      ],
+      "result": 1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_INIT",
+      "args": [
+        2164260896
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_RUN",
+      "args": [
+        16
+      ],
+      "result": 4
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_DRAIN",
+      "args": [
+        4
+      ],
+      "result": 4
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CREATE_RAW",
+      "args": [
+        2164383744,
+        8192,
+        2164396032,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CREATE_RAW",
+      "args": [
+        2164383744,
+        8192,
+        2164396032,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CREATE_RAW",
+      "args": [
+        2164383744,
+        8192,
+        2164396032,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_INIT",
+      "args": [
+        2164260896
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_RUN",
+      "args": [
+        16
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_DRAIN",
+      "args": [
+        0
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_INIT",
+      "args": [
+        2164260896
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_RUN",
+      "args": [
+        16
+      ],
+      "result": 16
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_INIT",
+      "args": [
+        2164260896
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_RUN",
+      "args": [
+        16
+      ],
+      "result": 11
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "LB_DRAIN",
+      "args": [
+        11
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "PROBE",
+      "args": [
+        2164267040,
+        2164267044
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "args": [
+        2164269056,
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "args": [
+        2164260864
+      ],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WAIT_CALLBACK",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RESET_QUEUE",
+      "args": [],
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "RAW_OPEN",
+      "args": [
+        2164383744,
+        2164396032
+      ],
+      "result": -4
+    }
+  ],
+  "callbacks": [
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CREATE_SAVE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WRITE_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WRITE_FILE",
+      "argument": 1,
+      "result": 1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "UPDATE_HEADER",
+      "argument": 0,
+      "result": 1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "UPDATE_HEADER",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_HEADER",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "OPEN_SAVE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CREATE_SAVE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WRITE_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WRITE_FILE",
+      "argument": 1,
+      "result": 1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "UPDATE_HEADER",
+      "argument": 0,
+      "result": 1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "UPDATE_HEADER",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_HEADER",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "OPEN_SAVE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CREATE_SAVE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WRITE_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WRITE_FILE",
+      "argument": 1,
+      "result": 1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "UPDATE_HEADER",
+      "argument": 0,
+      "result": 1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "UPDATE_HEADER",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_HEADER",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "OPEN_SAVE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CREATE_SAVE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WRITE_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "WRITE_FILE",
+      "argument": 1,
+      "result": 1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "UPDATE_HEADER",
+      "argument": 0,
+      "result": 1
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "UPDATE_HEADER",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_HEADER",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "OPEN_SAVE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CREATE_SAVE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "OPEN_SAVE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "OPEN_SAVE",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "READ_FILE",
+      "argument": 1,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CREATE_RAW",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CREATE_RAW",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CREATE_RAW",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "MOUNT",
+      "argument": 0,
+      "result": 0
+    },
+    {
+      "phase": "enum_sweep",
+      "operation": "CHECK",
+      "argument": 0,
+      "result": 0
+    }
+  ],
+  "cards": [
+    {
+      "phase": "enum_sweep",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    },
+    {
+      "phase": "enum_sweep",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    },
+    {
+      "phase": "enum_sweep",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    },
+    {
+      "phase": "enum_sweep",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    },
+    {
+      "phase": "enum_sweep",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    },
+    {
+      "phase": "enum_sweep",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    },
+    {
+      "phase": "enum_sweep",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    },
+    {
+      "phase": "enum_sweep",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    },
+    {
+      "phase": "enum_sweep",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    },
+    {
+      "phase": "enum_sweep",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    },
+    {
+      "phase": "enum_sweep",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    },
+    {
+      "phase": "enum_sweep",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    },
+    {
+      "phase": "enum_sweep",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    },
+    {
+      "phase": "enum_sweep",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    },
+    {
+      "phase": "enum_sweep",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    },
+    {
+      "phase": "enum_sweep",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    },
+    {
+      "phase": "enum_sweep",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    },
+    {
+      "phase": "enum_sweep",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    },
+    {
+      "phase": "enum_sweep",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    },
+    {
+      "phase": "enum_sweep",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    },
+    {
+      "phase": "enum_sweep",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    },
+    {
+      "phase": "enum_sweep",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    },
+    {
+      "phase": "enum_sweep",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    },
+    {
+      "phase": "enum_sweep",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    },
+    {
+      "phase": "enum_sweep",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    },
+    {
+      "phase": "enum_sweep",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    },
+    {
+      "phase": "enum_sweep",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    },
+    {
+      "phase": "enum_sweep",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    },
+    {
+      "phase": "enum_sweep",
+      "capacity_mbits": 64,
+      "sector_bytes": 8192
+    }
+  ],
+  "trace_code_sha256": "347f6df5f654eac714aa50d7e5fbd3ef6f8b020e4d5cdad7dfa4fb7e64f0e47c",
+  "trace_patches": [
+    {
+      "site": 2151328576,
+      "original": 1317012512,
+      "family": "command",
+      "index": 0,
+      "target": 2164457472
+    },
+    {
+      "site": 2151327632,
+      "original": 2080899750,
+      "family": "request",
+      "index": 1,
+      "target": 2164457584
+    },
+    {
+      "site": 2147589516,
+      "original": 1317012512,
+      "family": "task",
+      "index": 2,
+      "target": 2164457700
+    },
+    {
+      "site": 2151328328,
+      "original": 2080899750,
+      "family": "active",
+      "index": 3,
+      "target": 2164457784
+    },
+    {
+      "site": 2147590320,
+      "original": 2080899750,
+      "family": "active",
+      "index": 4,
+      "target": 2164457880
+    },
+    {
+      "site": 2150983304,
+      "original": 2080899750,
+      "family": "sdk",
+      "index": 5,
+      "target": 2164457976
+    },
+    {
+      "site": 2150981428,
+      "original": 2080899750,
+      "family": "sdk",
+      "index": 6,
+      "target": 2164458064
+    },
+    {
+      "site": 2150985996,
+      "original": 2080899750,
+      "family": "sdk",
+      "index": 7,
+      "target": 2164458152
+    },
+    {
+      "site": 2150990576,
+      "original": 2080899750,
+      "family": "sdk",
+      "index": 8,
+      "target": 2164458240
+    },
+    {
+      "site": 2150992024,
+      "original": 2080899750,
+      "family": "sdk",
+      "index": 9,
+      "target": 2164458328
+    },
+    {
+      "site": 2150987832,
+      "original": 2080899750,
+      "family": "sdk",
+      "index": 10,
+      "target": 2164458416
+    },
+    {
+      "site": 2150989120,
+      "original": 2080899750,
+      "family": "sdk",
+      "index": 11,
+      "target": 2164458504
+    },
+    {
+      "site": 2150990064,
+      "original": 2080899750,
+      "family": "sdk",
+      "index": 12,
+      "target": 2164458592
+    },
+    {
+      "site": 2150991352,
+      "original": 2080899750,
+      "family": "sdk",
+      "index": 13,
+      "target": 2164458680
+    },
+    {
+      "site": 2150991652,
+      "original": 2080899750,
+      "family": "sdk",
+      "index": 14,
+      "target": 2164458768
+    },
+    {
+      "site": 2150987060,
+      "original": 2080899750,
+      "family": "sdk",
+      "index": 15,
+      "target": 2164458856
+    },
+    {
+      "site": 2150986708,
+      "original": 2080899750,
+      "family": "sdk",
+      "index": 16,
+      "target": 2164458944
+    },
+    {
+      "site": 2150987436,
+      "original": 2080899750,
+      "family": "sdk",
+      "index": 17,
+      "target": 2164459032
+    },
+    {
+      "site": 2150983876,
+      "original": 2080899750,
+      "family": "sdk",
+      "index": 18,
+      "target": 2164459120
+    },
+    {
+      "site": 2151150052,
+      "original": 2080899750,
+      "family": "sdk",
+      "index": 19,
+      "target": 2164459208
+    },
+    {
+      "site": 2151150000,
+      "original": 2080899750,
+      "family": "sdk",
+      "index": 20,
+      "target": 2164459296
+    }
+  ],
+  "totals": {
+    "command": {
+      "CARD_CMD_NONE": 1970505,
+      "CARD_CMD_WRITE_BLOCK": 30,
+      "CARD_CMD_READ_BLOCK": 35,
+      "CARD_CMD_UNK_0x03": 2,
+      "CARD_CMD_CLEAR_BUF": 9,
+      "CARD_CMD_VERIFY_BLOCK": 13,
+      "CARD_CMD_CHECK_VERIFIED": 21,
+      "CARD_CMD_CREATE_FILE": 6,
+      "CARD_CMD_SET_STATUS": 15,
+      "CARD_CMD_WRITE_HEADER": 15,
+      "CARD_CMD_VERIFY_HEADER": 9,
+      "CARD_CMD_READ_HEADER": 12,
+      "CARD_CMD_GET_STATUS": 7,
+      "CARD_CMD_SCAN_BLOCK": 20,
+      "CARD_CMD_REPAIR": 7,
+      "CARD_CMD_READ_SECTOR": 2,
+      "CARD_CMD_WRITE_SECTOR": 2,
+      "CARD_CMD_SCAN_FILE": 7
+    },
+    "request": {
+      "CARD_REQ_NONE": 0,
+      "CARD_REQ_READ_FILE": 19,
+      "CARD_REQ_WRITE_FILE": 10,
+      "CARD_REQ_CREATE_FILE": 6,
+      "CARD_REQ_SET_STATUS": 9,
+      "CARD_REQ_OPEN_FILE": 7,
+      "CARD_REQ_READ_HEADER": 5
+    },
+    "active": {
+      "CARD_ACTIVE_NONE": 2872975,
+      "CARD_ACTIVE_READ_FILE": 1443663,
+      "CARD_ACTIVE_WRITE_FILE": 3317202,
+      "CARD_ACTIVE_WRITE_FILE_1_2": 1959772,
+      "CARD_ACTIVE_WRITE_FILE_3": 1044137,
+      "CARD_ACTIVE_OPEN_OR_READ_HEADER": 3312558,
+      "CARD_ACTIVE_CREATE_FILE": 26086988,
+      "CARD_ACTIVE_SET_STATUS": 7035839
+    },
+    "task": {
+      "CARD_TASK_MOUNT_CARD": 1,
+      "CARD_TASK_CHECK_CARD": 1,
+      "CARD_TASK_OPEN_FILE": 1,
+      "CARD_TASK_UNK_0x03": 3,
+      "CARD_TASK_FORMAT_CARD": 1,
+      "CARD_TASK_DELETE_FILE": 1,
+      "CARD_TASK_RENAME_FILE": 1,
+      "CARD_TASK_CREATE_FILE": 1,
+      "CARD_TASK_READ_FILES": 1,
+      "CARD_TASK_WRITE_FILES": 1,
+      "CARD_TASK_SET_STATUS": 1,
+      "CARD_TASK_READ_HEADER": 1,
+      "CARD_TASK_LIST_SNAPSHOTS": 1,
+      "CARD_TASK_FIND_FILE": 2,
+      "CARD_TASK_NONE": 0
+    },
+    "sdk": {
+      "CARDMountAsync": 30,
+      "CARDCheckAsync": 30,
+      "CARDFormatAsync": 1,
+      "CARDDeleteAsync": 1,
+      "CARDRenameAsync": 1,
+      "CARDCreateAsync": 9,
+      "CARDReadAsync": 91,
+      "CARDWriteAsync": 38,
+      "CARDGetStatus": 278,
+      "CARDSetStatusAsync": 11,
+      "CARDOpen": 19,
+      "CARDFastOpen": 121,
+      "CARDClose": 143,
+      "CARDUnmount": 19,
+      "HSD_MemAlloc": 1,
+      "HSD_Free": 1
+    }
+  }
+}

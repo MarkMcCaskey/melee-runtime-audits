@@ -21,12 +21,20 @@ struct Mailbox {
 enum Operation {
     PROBE = 1, MOUNT, CHECK, RESET_QUEUE, INIT_STATE, REGISTER_FILE, BLOCK_COUNT,
     CREATE_SAVE, READ_FILE, WRITE_FILE, OPEN_SAVE, READ_HEADER, UPDATE_HEADER,
-    UNMOUNT, WAIT_CALLBACK, DRAIN, CREATE_RAW
+    UNMOUNT, WAIT_CALLBACK, DRAIN, CREATE_RAW, QUEUE_COMMAND, PUMP_ONCE, RAW_OPEN, RAW_READ,
+    RAW_WRITE, RAW_CLOSE, LB_INIT, LB_RUN, LB_DRAIN, HEAP_INIT
 };
 
 void callback(s32 argument, s32 result)
 {
     COMPLETION[1] = argument;
+    COMPLETION[2] = result;
+    COMPLETION[0] = 1;
+}
+
+void lb_callback(s32 result)
+{
+    COMPLETION[1] = 0;
     COMPLETION[2] = result;
     COMPLETION[0] = 1;
 }
@@ -88,6 +96,32 @@ static __attribute__((always_inline)) inline s32 dispatch(struct Mailbox* box)
     case CREATE_RAW:
         return FN(CARDCreateAsync, s32, s32, const char*, u32, struct FileInfo*, Callback)(
             0, POINTER(0), box->args[1], POINTER(2), (Callback) box->args[3]);
+    case QUEUE_COMMAND:
+        return FN(fn_803AC168, int, void*)(POINTER(0));
+    case PUMP_ONCE:
+        FN(hsd_803AAA48, void, void)();
+        return 0;
+    case RAW_OPEN:
+        return FN(CARDOpen, s32, s32, const char*, struct FileInfo*)(0, POINTER(0), POINTER(1));
+    case RAW_READ:
+        return FN(CARDRead, s32, struct FileInfo*, void*, s32, s32)(POINTER(0), POINTER(1), box->args[2], box->args[3]);
+    case RAW_WRITE:
+        return FN(CARDWrite, s32, struct FileInfo*, const void*, s32, s32)(POINTER(0), POINTER(1), box->args[2], box->args[3]);
+    case RAW_CLOSE:
+        return FN(CARDClose, s32, struct FileInfo*)(POINTER(0));
+    case LB_INIT:
+        FN(lb_80019EF0, void, int, void*, void*, void*)(0, (void*) 0, (void*) 0, POINTER(0));
+        return 0;
+    case LB_RUN:
+        return FN(lb_80019CB0, int, int)(box->args[0]);
+    case LB_DRAIN:
+        return FN(lb_8001B760, int, int)(box->args[0]);
+    case HEAP_INIT: {
+        void* start = FN(OSInitAlloc, void*, void*, void*, int)((void*) 0x81100000, (void*) 0x81200000, 1);
+        int heap = FN(OSCreateHeap, int, void*, void*)(start, (void*) 0x81200000);
+        FN(HSD_SetHeap, void, int)(heap);
+        return heap;
+    }
     default:
         return -0x3489;
     }

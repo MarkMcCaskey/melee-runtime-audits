@@ -49,6 +49,16 @@ OPERATIONS = {
             "WAIT_CALLBACK",
             "DRAIN",
             "CREATE_RAW",
+            "QUEUE_COMMAND",
+            "PUMP_ONCE",
+            "RAW_OPEN",
+            "RAW_READ",
+            "RAW_WRITE",
+            "RAW_CLOSE",
+            "LB_INIT",
+            "LB_RUN",
+            "LB_DRAIN",
+            "HEAP_INIT",
         ]
     )
 }
@@ -116,7 +126,7 @@ def build(args, output):
         exports = {
             s.name: CODE + s["st_value"]
             for s in obj.get_section_by_name(".symtab").iter_symbols()
-            if s.name in ("driver", "callback")
+            if s.name in ("driver", "callback", "lb_callback")
         }
     assert len(code) < 0x1000, "Driver overlaps mailbox"
     provenance = {
@@ -193,6 +203,8 @@ class Session:
             self.g.write(
                 start, struct.pack(">I", 0x48000000 | (displacement & 0x03FFFFFC))
             )
+            if getattr(args, "install_trace", None):
+                args.install_trace(self.g)
             self.g.send("c")
             self.until(MAILBOX + 36, 0x34890001)
         except BaseException:

@@ -77,7 +77,7 @@ class Remote:
                 if reply != b"E00":
                     break
                 time.sleep(0.01)
-            if reply.startswith(b"E"):
+            if len(reply) == 3 and reply.startswith(b"E"):
                 raise RuntimeError(f"Debugger memory read: {reply!r}")
             chunk = bytes.fromhex(reply.decode())
             if len(chunk) != size:
@@ -88,7 +88,15 @@ class Remote:
     def write(self, address, data):
         for offset in range(0, len(data), 256):
             chunk = data[offset : offset + 256]
-            self.ok(f"M{address + offset:x},{len(chunk):x}:{chunk.hex()}")
+            for attempt in range(100):
+                reply = self.command(
+                    f"M{address + offset:x},{len(chunk):x}:{chunk.hex()}"
+                )
+                if reply != b"E00":
+                    break
+                time.sleep(0.01)
+            if reply != b"OK":
+                raise RuntimeError(f"Debugger memory write: {reply!r}")
 
     def u32(self, address):
         return int.from_bytes(self.read(address, 4), "big")
